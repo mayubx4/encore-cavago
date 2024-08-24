@@ -57,7 +57,11 @@ export default function SwiperSliderGrid({
         className='swiper-grid'
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={i}>{slide}</SwiperSlide>
+          <React.Fragment key={i}>
+            <SwiperSlide key={i}>
+              <React.Fragment key={i}>{slide}</React.Fragment>
+            </SwiperSlide>
+          </React.Fragment>
         ))}
       </Swiper>
     </>

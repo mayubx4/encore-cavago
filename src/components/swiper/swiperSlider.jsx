@@ -41,13 +41,17 @@ const SwiperSlider = ({
         <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
       </Button>
       <Swiper
-        navigation={{ prevEl: ".back", nextEl: ".next", }}
+        navigation={{ prevEl: ".back", nextEl: ".next" }}
         modules={[Navigation]}
         className='mySwiper'
         slidesPerView={5}
       >
-        {slides.map((slide,i) => (
-          <SwiperSlide key={i}>{slide}</SwiperSlide>
+        {slides.map((slide, i) => (
+          <React.Fragment key={i}>
+            <SwiperSlide key={i}>
+              <React.Fragment key={i}>{slide}</React.Fragment>
+            </SwiperSlide>
+          </React.Fragment>
         ))}
       </Swiper>
       <Button className='next' shape='circle'>

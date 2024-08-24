@@ -36,7 +36,7 @@ const HomeHero = () => {
         level={2}
         style={{ textAlign: "center", fontSize: "28px", color: "white" }}
       >
-        {`Plan an equestrian holiday you'll never forget!`}
+        Plan an equestrian holiday you&apos;ll never forget!
       </Title>
       <Flex justify='center' gap={20}>
         <Flex
