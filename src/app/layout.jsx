@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider } from "antd";
 import Footer from "@/components/footer/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,12 +15,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={inter.className}
+        className={figtree.className}
         style={{ margin: "auto", maxWidth: "1728px" }}
       >
         <AntdRegistry>
           <ConfigProvider
             theme={{
+              token: {
+                fontFamily: figtree.style.fontFamily, // Apply Figtree font to all Ant Design components
+              },
               components: {
                 Button: {
                   fontSize: "18px",
