@@ -25,14 +25,14 @@ import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
 
 const SwiperSlider = ({
   slides = [
-    <Slide />,
-    <Slide title='Equestrian Festivals' />,
-    <Slide />,
-    <Slide />,
-    <Slide />,
-    <Slide />,
-    <Slide />,
-    <Slide />,
+    <Slide key={1} />,
+    <Slide key={2} title='Equestrian Festivals' />,
+    <Slide key={3} />,
+    <Slide key={4} />,
+    <Slide key={5} />,
+    <Slide key={6} />,
+    <Slide key={7} />,
+    <Slide key={8} />,
   ],
 }) => {
   return (
@@ -41,17 +41,14 @@ const SwiperSlider = ({
         <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
       </Button>
       <Swiper
+        key={"qwe"}
         navigation={{ prevEl: ".back", nextEl: ".next" }}
         modules={[Navigation]}
         className='mySwiper'
         slidesPerView={5}
       >
         {slides.map((slide, i) => (
-          <React.Fragment key={i}>
-            <SwiperSlide key={i}>
-              <React.Fragment key={i}>{slide}</React.Fragment>
-            </SwiperSlide>
-          </React.Fragment>
+          <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
       <Button className='next' shape='circle'>

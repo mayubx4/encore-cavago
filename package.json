@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:quiet": "next lint --quiet && next build --no-lint",
     "start": "next start",
     "lint": "next lint"
   },
