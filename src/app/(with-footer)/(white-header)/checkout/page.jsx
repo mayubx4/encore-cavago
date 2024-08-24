@@ -147,7 +147,7 @@ const Checkout = () => {
           <Title level={5}>Payment plan</Title>
           <Text>At reservation today (20%): £429.6</Text>
           <br />
-          <Text>At Cavago's confirmation (50%): £1,074</Text>
+          <Text>{`At Cavago's confirmation (50%): £1,074`}</Text>
           <br />
           <Text>Before travel (30%): £644.4</Text>
 

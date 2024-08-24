@@ -37,36 +37,6 @@ export default function SwiperSliderGrid({
 }) {
   const swiperRef = useRef(null);
 
-  // const [activeIndex, setActiveIndex] = useState(0);
-
-  // const updateActiveIndex = index => {
-  //   setActiveIndex(index);
-  //   swiperRef.current.swiper.slideTo(index);
-  // };
-
-  // const goToNextSlide = () => {
-  //   const swiper = swiperRef.current.swiper;
-  //   swiper.slideNext();
-  //   setActiveIndex(swiper.activeIndex);
-  // };
-
-  // const goToPrevSlide = () => {
-  //   const swiper = swiperRef.current.swiper;
-  //   swiper.slidePrev();
-  //   setActiveIndex(swiper.activeIndex);
-  // };
-
-  // const goToFirstSlide = () => {
-  //   swiperRef.current.swiper.slideTo(0);
-  //   setActiveIndex(0);
-  // };
-
-  // const goToLastSlide = () => {
-  //   const lastSlideIndex = swiperRef.current.swiper.slides.length - 1;
-  //   swiperRef.current.swiper.slideTo(lastSlideIndex);
-  //   setActiveIndex(lastSlideIndex);
-  // };
-
   return (
     <>
       <Swiper
@@ -90,35 +60,6 @@ export default function SwiperSliderGrid({
           <SwiperSlide key={i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
-      {/* <div className='swiper-custom-pagination'>
-        <button onClick={goToFirstSlide} disabled={activeIndex === 0}>
-          {"<<"}
-        </button>
-        <button onClick={goToPrevSlide} disabled={activeIndex === 0}>
-          {"<"}
-        </button>
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => updateActiveIndex(index)}
-            className={activeIndex === index ? "active" : ""}
-          >
-            {index + 1}
-          </button>
-        ))}
-        <button
-          onClick={goToNextSlide}
-          disabled={activeIndex === slides.length - 1}
-        >
-          {">"}
-        </button>
-        <button
-          onClick={goToLastSlide}
-          disabled={activeIndex === slides.length - 1}
-        >
-          {">>"}
-        </button>
-      </div> */}
     </>
   );
 }
