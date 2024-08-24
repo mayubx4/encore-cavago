@@ -1,10 +1,10 @@
 import { Button, Card, Flex, Space } from "antd";
 import Image from "next/image";
 import React from "react";
-import img from "../../../public/assets/images/g1.png";
-import StarIcon from "../../../public/assets/images/star.svg";
-import CrownIcon from "../../../public/assets/images/crown.svg";
-import HeartIcon from "../../../public/assets/images/heart.svg";
+import img from "@public/assets/images/g1.png";
+import StarIcon from "@public/assets/images/star.svg";
+import CrownIcon from "@public/assets/images/crown.svg";
+import HeartIcon from "@public/assets/images/heart.svg";
 
 const GridSlide = () => {
   return (

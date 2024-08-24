@@ -38,7 +38,6 @@ export default function RootLayout({ children }) {
             }}
           >
             {children}
-            <Footer />
           </ConfigProvider>
         </AntdRegistry>
       </body>

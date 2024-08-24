@@ -20,8 +20,8 @@ import "swiper/css/scrollbar";
 import { Button } from "antd";
 import Slide from "./slide";
 import Image from "next/image";
-import ArrowRightCircleIcon from "../../../public/assets/images/arrow-right-circle.svg";
-import ArrowLeftCircleIcon from "../../../public/assets/images/arrow-left-circle.svg";
+import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
+import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
 
 const SwiperSlider = ({
   slides = [

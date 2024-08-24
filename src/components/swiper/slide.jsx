@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Typography } from "antd";
-import MountainIcon from "../../../public/assets/images/mountain.svg";
+import MountainIcon from "@public/assets/images/mountain.svg";
 import Image from "next/image";
 
 const Slide = ({ title = "View All" }) => (

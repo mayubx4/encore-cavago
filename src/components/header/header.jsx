@@ -2,7 +2,7 @@
 import React from "react";
 import { Button, Flex } from "antd";
 import Image from "next/image";
-// import logo from '../../../public/assets/images/logo.svg'
+// import logo from '@public/assets/images/logo.svg'
 
 const Header = ({ isTransparent = false }) => (
   <Flex

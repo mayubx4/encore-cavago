@@ -2,9 +2,9 @@ import { AutoComplete, Button, Flex, Typography } from "antd";
 import Title from "antd/es/typography/Title";
 import Image from "next/image";
 import React from "react";
-import SettingIcon from "../../../public/assets/images/setting.svg";
+import SettingIcon from "@public/assets/images/setting.svg";
 import { SearchOutlined } from "@ant-design/icons";
-import MouseIcon from "../../../public/assets/images/mouse.svg";
+import MouseIcon from "@public/assets/images/mouse.svg";
 import SwiperSlider from "../swiper/swiperSlider";
 
 const HomeHero = () => {
@@ -112,7 +112,7 @@ const HomeHero = () => {
           width: "1103px",
           height: "211px",
           margin: "44px auto 0",
-          paddingInline: "24px",
+          padding: "24px",
         }}
       >
         <SwiperSlider />

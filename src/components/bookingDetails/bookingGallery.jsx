@@ -1,11 +1,11 @@
 import { Col, Flex, Row, Space } from "antd";
 import Image from "next/image";
 import React from "react";
-import g1 from "../../../public/assets/images/g1.png";
-import g2 from "../../../public/assets/images/g2.png";
-import g3 from "../../../public/assets/images/g3.png";
-import g4 from "../../../public/assets/images/g4.png";
-import g5 from "../../../public/assets/images/g5.png";
+import g1 from "@public/assets/images/g1.png";
+import g2 from "@public/assets/images/g2.png";
+import g3 from "@public/assets/images/g3.png";
+import g4 from "@public/assets/images/g4.png";
+import g5 from "@public/assets/images/g5.png";
 
 const BookingGallery = () => {
   return (

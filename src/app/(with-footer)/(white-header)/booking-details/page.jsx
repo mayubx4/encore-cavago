@@ -5,12 +5,11 @@ import { Flex } from "antd";
 
 export default function page() {
   return (
-    <Flex vertical>
-      <Header />
+    
       <Flex vertical style={{ marginTop: "55px", paddingInline: "240px" }}>
         <BookingTitle />
         <BookingGallery />
       </Flex>
-    </Flex>
+    
   );
 }
