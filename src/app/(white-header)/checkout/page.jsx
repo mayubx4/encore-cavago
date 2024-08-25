@@ -15,7 +15,6 @@ import { AppleFilled, MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import Option from "antd/es/select/index";
-import "./style.css";
 import ApplePayIcon from "@public/assets/images/applePay.svg";
 import DebitCardIcon from "@public/assets/images/debitCard.svg";
 import g1 from "@public/assets/images/g1.png";
