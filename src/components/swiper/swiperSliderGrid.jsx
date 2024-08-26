@@ -1,18 +1,8 @@
 "use client";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-
-import "./stylesGrid.css";
-
-// import required modules
-import { Grid, Pagination } from "swiper/modules";
+import React, { useRef } from "react";
 import GridSlide from "./gridSlide";
+import { Col, Flex, Pagination, Row } from "antd";
+import CustomPagination from "../shared/customPagination";
 
 export default function SwiperSliderGrid({
   slides = [
@@ -39,28 +29,28 @@ export default function SwiperSliderGrid({
 
   return (
     <>
-      <Swiper
-        key={"asd"}
-        ref={swiperRef}
-        slidesPerView={4}
-        grid={{
-          rows: 3,
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-
-          renderBullet: function (index, className) {
-            return `<span class="${className}"> ${index + 1} </span>`;
-          },
-        }}
-        modules={[Grid, Pagination]}
-        className='swiper-grid'
+      <Row
+        className='xxldesktop:!px-24 md:px-16 sm:px-5 !m-auto bg-[#F9F6F1]'
+        gutter={[24, 24]}
       >
-        {slides.map((slide, i) => (
-          <SwiperSlide key={"asd" + i}>{slide}</SwiperSlide>
+        {slides.map(slide => (
+          <Col
+            xxl={24 / 4}
+            xl={24 / 4}
+            lg={24 / 3}
+            md={24 / 2}
+            sm={24 / 2}
+            xs={24}
+          >
+            {slide}
+          </Col>
         ))}
-      </Swiper>
+        <Col span={24}>
+          <Flex justify='center'>
+            <CustomPagination />
+          </Flex>
+        </Col>
+      </Row>
     </>
   );
 }

@@ -6,9 +6,10 @@ import Image from "next/image";
 
 const Header = ({ isTransparent = false }) => (
   <Flex
+    className='xxldesktop:px-[129px] sm:px-10'
     style={{
       height: "128px",
-      paddingInline: "129px",
+      // paddingInline: "129px",
       borderBottom: isTransparent ? "none" : "1px solid #D5D9DC",
       boxShadow: isTransparent ? "none" : "0px 0px 8px 1px #00000026",
     }}

@@ -19,7 +19,11 @@ const layout = ({ children }) => {
           zIndex: -1,
         }}
       >
-        <Image alt='home' src={homeHero} fill />
+        <Image
+          alt='home'
+          src={homeHero}
+          style={{ objectFit: "cover", width: "100%" }}
+        />
       </Flex>
       <Header isTransparent />
       <HomeHero />

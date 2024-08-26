@@ -1,7 +1,7 @@
 import { Button, Card, Flex, Space } from "antd";
 import Image from "next/image";
 import React from "react";
-import img from "@public/assets/images/g1.png";
+import g1 from "@public/assets/images/g1.png";
 import StarIcon from "@public/assets/images/star.svg";
 import CrownIcon from "@public/assets/images/crown.svg";
 import HeartIcon from "@public/assets/images/heart.svg";
@@ -9,8 +9,14 @@ import HeartIcon from "@public/assets/images/heart.svg";
 const GridSlide = () => {
   return (
     <Card
+      className='!bg-transparent '
       hoverable
-      style={{ width: "350px", height: "361px", padding: 0 }}
+      style={{
+        // width: "350px",
+        height: "361px",
+        padding: 0,
+        flexGrow: 1,
+      }}
       cover={
         <Flex
           style={{
@@ -63,25 +69,44 @@ const GridSlide = () => {
           </Flex>
           <Image
             alt='card'
-            src={img}
-            width={350}
+            src={g1}
+            // width={350}
             height={250}
-            style={{ borderRadius: "8px" }}
+            style={{
+              borderRadius: "8px",
+              objectFit: "cover",
+              width: "100%",
+              // maxWidth: "350px",
+            }}
           />
         </Flex>
       }
     >
       <Flex vertical justify='space-between'>
-        <p style={{ color: "#566573", fontSize: "14px" }}>
+        <p style={{ color: "#566573", fontSize: "14px", margin: 0 }}>
           Equestrian Festivals
         </p>
-        <p style={{ color: "#2C3F50", fontSize: "18px", fontWeight: "bold" }}>
+        <p
+          style={{
+            color: "#2C3F50",
+            fontSize: "18px",
+            fontWeight: "bold",
+            margin: 0,
+          }}
+        >
           Doñana Experience Route
         </p>
-        <p style={{ color: "#566573", fontSize: "14px" }}>
+        <p style={{ color: "#566573", fontSize: "14px", margin: 0 }}>
           Turismo Ecuestre Doñana, Spain
         </p>
-        <p style={{ color: "#2C3F50", fontSize: "16px", fontWeight: "bold" }}>
+        <p
+          style={{
+            color: "#2C3F50",
+            fontSize: "16px",
+            fontWeight: "bold",
+            margin: 0,
+          }}
+        >
           Starting from £180.00
         </p>
       </Flex>

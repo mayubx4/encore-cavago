@@ -9,13 +9,15 @@
   /* background: #F9F6F1; */
 
   /* Center slide text vertically */
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
-
 .swiper-slide img {
   display: block;
   object-fit: cover;
+}
+.ant-card-body {
+  padding: 0 !important;
 }

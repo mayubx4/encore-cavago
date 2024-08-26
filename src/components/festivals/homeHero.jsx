@@ -104,18 +104,23 @@ const HomeHero = () => {
         </Typography>
         <Image alt='mouse' src={MouseIcon} />
       </Flex>
-      <Flex
-        align='center'
-        style={{
-          backgroundColor: "#F9F6F1",
-          borderRadius: "16px",
-          width: "1103px",
-          height: "211px",
-          margin: "44px auto 0",
-          padding: "24px",
-        }}
-      >
-        <SwiperSlider />
+      <Flex className='xxldesktop:px-80 desktop:px-48 tablet:px-16'>
+        <Flex
+          align='center'
+          className='bg-[#F9F6F1]'
+          style={{
+            // backgroundColor: "#F9F6F1",
+            borderRadius: "16px",
+            width: "100%",
+            // maxWidth: "1103px",
+            // height: "211px",
+            marginTop: "44px",
+            padding: "24px",
+          }}
+          gap={24}
+        >
+          <SwiperSlider />
+        </Flex>
       </Flex>
     </Flex>
   );

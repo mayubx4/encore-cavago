@@ -4,8 +4,13 @@ import DropdownFilter from "./dropdownFilter";
 
 const GridFilters = () => {
   return (
-    <Flex justify='space-between' style={{ marginBlock: "64px" }}>
-      <Space>
+    <Flex
+      justify='space-between'
+      style={{ marginBlock: "64px" }}
+      className='xxldesktop:px-[97px] xl:px-20 sm:px-10'
+      gap={12}
+    >
+      <div className='flex gap-4 flex-col md:flex-row'>
         <Button
           shape='round'
           style={{
@@ -37,7 +42,7 @@ const GridFilters = () => {
         >
           Wishlist Packages
         </Button>
-      </Space>
+      </div>
       <DropdownFilter />
     </Flex>
   );
