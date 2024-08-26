@@ -2,7 +2,6 @@ import { Col, Flex, Row } from "antd";
 import Image from "next/image";
 import React from "react";
 import purpleBg from "@public/assets/images/purpleBg.png";
-import AutoCompleteWithTabsStyled from "@/components/searchbar/searchBar";
 
 const page = () => {
   return (
@@ -31,7 +30,6 @@ const page = () => {
             }}
           />
         </Flex>
-        <AutoCompleteWithTabsStyled />
       </Col>
     </Row>
   );

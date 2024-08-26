@@ -33,8 +33,9 @@ export default function SwiperSliderGrid({
         className='xxldesktop:!px-24 md:px-16 sm:px-5 !m-auto bg-[#F9F6F1]'
         gutter={[24, 24]}
       >
-        {slides.map(slide => (
+        {slides.map((slide, i) => (
           <Col
+            key={i}
             xxl={24 / 4}
             xl={24 / 4}
             lg={24 / 3}
