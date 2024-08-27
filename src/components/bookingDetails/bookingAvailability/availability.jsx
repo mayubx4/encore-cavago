@@ -9,9 +9,10 @@ const Availability = ({ day, date }) => {
       style={{
         backgroundColor: "#F9F6F1",
         borderRadius: "8px",
-        padding: "24px",
-        paddingRight: "100px",
+        // padding: "24px",
+        // paddingRight: "100px",
       }}
+      className='lg:pr-28  pr-8 p-6'
     >
       <Flex align='center' gap={20}>
         <Image alt='calander' src={calander} />

@@ -2,20 +2,26 @@ import { Divider, Flex } from "antd";
 import Image from "next/image";
 import React from "react";
 import flower from "@public/assets/images/flower.svg";
-import Title from "antd/es/typography/Title";
 import ScheduleStep from "./scheduleStep";
 
 const PaymentSchedule = () => {
   return (
     <Flex vertical>
-      <Flex align='center' style={{ width: "82%", paddingLeft: "80px" }}>
+      <Flex align='center' className='xxldesktop:px-40 lg:pl-32 lg:pr-20 pl-20 pr-14'>
         <Image alt='flower' src={flower} />
-        <Divider style={{ borderColor: "#F2E9DB" }}>
+        <Divider
+          style={{
+            borderColor: "#F2E9DB",
+            minWidth: 0,
+            width: "auto",
+            flexGrow: 1,
+          }}
+        >
           <Image alt='flower' src={flower} />
         </Divider>
         <Image alt='flower' src={flower} />
       </Flex>
-      <Flex justify='space-between'>
+      <Flex justify='space-between' className='px-2'>
         <ScheduleStep
           title={"First Payment"}
           amount={"20% (£429.6)"}
