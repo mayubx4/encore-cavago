@@ -11,11 +11,7 @@ import BookingThingsToKnow from "@/components/bookingDetails/bookingThingsToKnow
 
 export default function page() {
   return (
-    <Flex
-      vertical
-      style={{ marginTop: "55px" }}
-      className='xxldesktop:px-60 md:px-10 '
-    >
+    <>
       <BookingTitle />
       <BookingGallery />
       <Row>
@@ -31,6 +27,6 @@ export default function page() {
         <BookingPayment />
         <BookingThingsToKnow />
       </Flex>
-    </Flex>
+    </>
   );
 }

@@ -6,7 +6,13 @@ const layout = ({ children }) => {
   return (
     <Flex vertical>
       <Header />
-      {children}
+      <Flex
+        vertical
+        style={{ marginTop: "55px" }}
+        className='xxldesktop:px-60 md:px-10 '
+      >
+        {children}
+      </Flex>
     </Flex>
   );
 };

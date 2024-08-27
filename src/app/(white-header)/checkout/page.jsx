@@ -10,8 +10,14 @@ import {
   Select,
   Divider,
   Flex,
+  Space,
 } from "antd";
-import { AppleFilled, MinusOutlined, PlusOutlined } from "@ant-design/icons";
+import {
+  AppleFilled,
+  LeftOutlined,
+  MinusOutlined,
+  PlusOutlined,
+} from "@ant-design/icons";
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import Option from "antd/es/select/index";
@@ -21,19 +27,11 @@ import g1 from "@public/assets/images/g1.png";
 import ratingStar from "@public/assets/images/ratingStar.svg";
 import Image from "next/image";
 import TextAndAmount from "@/components/checkout/textAndAmount";
+import AddOns from "@/components/checkout/addOns";
 // const { Title, Text } = Typography;
 // const { Option } = Select;
 
 const Checkout = () => {
-  const [addonCount, setAddonCount] = useState({ single: 1, transfer: 1 });
-
-  const handleAddonChange = (type, value) => {
-    setAddonCount(prevState => ({
-      ...prevState,
-      [type]: value,
-    }));
-  };
-
   return (
     <Row
       gutter={16}
@@ -41,6 +39,20 @@ const Checkout = () => {
     >
       <Col xs={24} md={10}>
         {/* <Card> */}
+        <Button
+          type='text'
+          style={{
+            border: "1px solid #D5D9DC",
+            borderRadius: "4px",
+            width: "32px",
+          }}
+        >
+          <LeftOutlined
+            style={{
+              color: "#797B86",
+            }}
+          />
+        </Button>
         <Title
           level={3}
           style={{ fontSize: "40px", fontWeight: "bold", color: "#233240" }}
@@ -86,106 +98,11 @@ const Checkout = () => {
           >
             Add-ons
           </Title>
-          <Flex justify='space-between'>
-            <Text style={{ color: "#2C3F50", fontSize: "18px" }}>
-              Single Supplement
-            </Text>
-            <Text
-              style={{ color: "#2C3F50", fontSize: "18px", fontWeight: "600" }}
-            >
-              £374/person
-            </Text>
 
-            <Flex
-              style={{
-                width: "102px",
-                borderRadius: "999px",
-                border: "1px solid #808C96",
-                padding: "0px 10px",
-              }}
-              justify='space-between'
-              align='center'
-            >
-              <Button
-                icon={<MinusOutlined />}
-                type='text'
-                shape='circle'
-                onClick={() =>
-                  handleAddonChange(
-                    "single",
-                    Math.max(addonCount.single - 1, 0)
-                  )
-                }
-              />
-              <Text
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "600",
-                  color: "#2C3F50",
-                }}
-              >
-                1
-              </Text>
-              <Button
-                icon={<PlusOutlined />}
-                shape='circle'
-                type='text'
-                onClick={() =>
-                  handleAddonChange("single", addonCount.single + 1)
-                }
-              />
-            </Flex>
-          </Flex>
-          <Flex justify='space-between' style={{ marginTop: "40px" }}>
-            <Text style={{ color: "#2C3F50", fontSize: "18px" }}>
-              Single Supplement
-            </Text>
-            <Text
-              style={{ color: "#2C3F50", fontSize: "18px", fontWeight: "600" }}
-            >
-              £374/person
-            </Text>
-
-            <Flex
-              style={{
-                width: "102px",
-                borderRadius: "999px",
-                border: "1px solid #808C96",
-                padding: "0px 10px",
-              }}
-              justify='space-between'
-              align='center'
-            >
-              <Button
-                icon={<MinusOutlined />}
-                shape='circle'
-                type='text'
-                onClick={() =>
-                  handleAddonChange(
-                    "single",
-                    Math.max(addonCount.single - 1, 0)
-                  )
-                }
-              />
-              <Text
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "600",
-                  color: "#2C3F50",
-                }}
-              >
-                1
-              </Text>
-              <Button
-                icon={<PlusOutlined />}
-                shape='circle'
-                type='text'
-                onClick={() =>
-                  handleAddonChange("single", addonCount.single + 1)
-                }
-              />
-            </Flex>
-          </Flex>
+          <Space direction='vertical' size='large' style={{ width: "100%" }}>
+            <AddOns />
+            <AddOns />
+          </Space>
           <Divider />
           <Flex vertical>
             <Text
@@ -277,7 +194,7 @@ const Checkout = () => {
         {/* </Card> */}
       </Col>
 
-      <Col xs={24} md={10} offset={4} style={{ padding: "0" }}>
+      <Col xs={24} md={11} offset={3} style={{ padding: "0" }}>
         <Card
           style={{
             boxShadow: "0px 2px 7px 0px #00000026",
@@ -285,18 +202,20 @@ const Checkout = () => {
             border: "1px solid #D5D9DC",
           }}
         >
-          <Flex gap={40}>
-            <Image
-              alt='image'
-              src={g1}
-              width={250}
-              height={150}
-              style={{
-                borderRadius: "18px",
-                overflow: "hidden",
-                objectFit: "cover",
-              }}
-            />
+          <div className='flex flex-col lg:flex-row gap-10'>
+            <Flex className='flex-grow lg:w-[250px] lg:h-[150px]'>
+              <Image
+                alt='image'
+                src={g1}
+                style={{
+                  borderRadius: "18px",
+                  overflow: "hidden",
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </Flex>
             <Flex vertical>
               <Title
                 level={4}
@@ -304,6 +223,7 @@ const Checkout = () => {
                   fontSize: "20px",
                   fontWeight: "600",
                   color: "#233240",
+                  margin: 0,
                 }}
               >
                 Oman Sea Side & Desert Ride 2024
@@ -312,6 +232,7 @@ const Checkout = () => {
                 style={{
                   fontSize: "18px",
                   color: "#566573",
+                  margin: 0,
                 }}
               >
                 Princess Taghreed street, Jordan
@@ -321,12 +242,13 @@ const Checkout = () => {
                   fontSize: "18px",
                   fontWeight: "600",
                   color: "#233240",
+                  margin: 0,
                 }}
               >
                 <Image alt='rating' src={ratingStar} /> 4.9
               </Text>
             </Flex>
-          </Flex>
+          </div>
 
           <Title
             level={5}

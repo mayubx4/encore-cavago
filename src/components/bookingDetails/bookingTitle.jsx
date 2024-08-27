@@ -8,7 +8,8 @@ import Image from "next/image";
 
 const BookingTitle = () => {
   return (
-<>      <Space>
+    <>
+      <Space>
         <Button
           type='text'
           style={{
@@ -24,7 +25,7 @@ const BookingTitle = () => {
           />
         </Button>
       </Space>
-      <Flex vertical style={{ marginTop: "27px" }} gap={2} >
+      <Flex vertical style={{ marginTop: "27px" }} gap={2}>
         <Title style={{ color: "#2C3F50", fontWeight: "bold" }}>
           Oman Sea Side & Desert Ride 2024
         </Title>
@@ -54,7 +55,7 @@ const BookingTitle = () => {
           </Space>
         </Flex>
       </Flex>
-      <Divider style={{color:'#D5D9DC'}}/>
+      <Divider style={{ color: "#D5D9DC" }} />
     </>
   );
 };
