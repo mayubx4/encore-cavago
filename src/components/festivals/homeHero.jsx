@@ -9,7 +9,7 @@ import SwiperSlider from "../swiper/swiperSlider";
 
 const HomeHero = () => {
   return (
-    <Flex vertical>
+    <div>
       <Flex align='center' justify='center'>
         <Button type='text' style={{ color: "white", padding: "20px" }}>
           Experiences
@@ -38,7 +38,7 @@ const HomeHero = () => {
       >
         Plan an equestrian holiday you&apos;ll never forget!
       </Title>
-      <Flex justify='center' gap={20}>
+      <Flex justify='center' gap={20} className='px-40'>
         <Flex
           align='center'
           style={{
@@ -104,25 +104,21 @@ const HomeHero = () => {
         </Typography>
         <Image alt='mouse' src={MouseIcon} />
       </Flex>
-      <Flex className='xxldesktop:px-80 desktop:px-48 tablet:px-16'>
-        <Flex
-          align='center'
-          className='bg-[#F9F6F1]'
-          style={{
-            // backgroundColor: "#F9F6F1",
-            borderRadius: "16px",
-            width: "100%",
-            // maxWidth: "1103px",
-            // height: "211px",
-            marginTop: "44px",
-            padding: "24px",
-          }}
-          gap={24}
-        >
-          <SwiperSlider />
-        </Flex>
+      <Flex
+        align='center'
+        className='bg-[#F9F6F1] md:w-9/12 w-full md:mx-auto mx-3'
+        style={{
+          borderRadius: "16px",
+          maxWidth: "1103px",
+          // height: "211px",
+          marginTop: "44px",
+          padding: "24px",
+        }}
+        gap={24}
+      >
+        <SwiperSlider />
       </Flex>
-    </Flex>
+    </div>
   );
 };
 

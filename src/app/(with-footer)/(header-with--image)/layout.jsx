@@ -9,26 +9,22 @@ import GridFilters from "@/components/swiper/gridFilters";
 
 const layout = ({ children }) => {
   return (
-    <Flex vertical style={{ minHeight: "700px" }}>
-      <Flex
+    <div>
+      <Image
+        alt='home'
+        src={homeHero}
         style={{
-          maxWidth: "1728px",
+          objectFit: "cover",
           width: "100%",
-          height: "700px",
+          maxWidth: "1728px",
           position: "absolute",
           zIndex: -1,
         }}
-      >
-        <Image
-          alt='home'
-          src={homeHero}
-          style={{ objectFit: "cover", width: "100%" }}
-        />
-      </Flex>
+      />
       <Header isTransparent />
       <HomeHero />
       {children}
-    </Flex>
+    </div>
   );
 };
 

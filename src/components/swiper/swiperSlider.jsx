@@ -37,17 +37,17 @@ const SwiperSlider = ({
 }) => {
   return (
     <>
-      <Button className='back' shape='circle'>
+      <Button className='back !hidden md:!flex' shape='circle'>
         <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
       </Button>
       <Swiper
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            // spaceBetween: 10,
+          1: {
+            slidesPerView: 3,
+            spaceBetween: 40,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 40,
           },
           1024: {
@@ -69,7 +69,7 @@ const SwiperSlider = ({
           <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
-      <Button className='next' shape='circle'>
+      <Button className='next !hidden md:!flex' shape='circle'>
         <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
       </Button>
     </>

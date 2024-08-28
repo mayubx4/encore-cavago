@@ -7,11 +7,12 @@ const Slide = ({ title = "View All" }) => (
   <Flex
     vertical
     style={{
-      width: "163px",
+      width: "100%",
       height: "163px",
       backgroundColor: "#ED665F",
       borderRadius: "8px",
-      paddingInline: "23px",
+      // paddingInline: "23px",
+      minWidth:'100px'
     }}
     align='center'
     justify='center'

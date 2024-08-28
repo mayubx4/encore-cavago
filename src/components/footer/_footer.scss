@@ -3,9 +3,16 @@
 .site-footer {
   background-color: $white-200;
   .footerContainer {
-    padding: 80px 15px 60px;
+    padding: 80px 160px 60px;
     margin: 0 auto;
     max-width: 1400px;
+
+    @media (max-width: 1024px) {
+      padding-inline: 8rem;
+    }
+    @media (max-width: 768px) {
+      padding-inline: 20px;
+    }
   }
   .footer-top {
     display: flex;
@@ -25,9 +32,11 @@
         line-height: 22px;
         color: $neutrals-300;
         margin: 0 0 35px;
+        // padding-inline-start: 40px;
       }
       ul {
         list-style: none;
+        padding: 0;
         li {
           margin: 0 0 20px;
           font-weight: 600;
