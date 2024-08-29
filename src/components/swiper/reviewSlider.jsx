@@ -66,17 +66,23 @@ const ReviewSlider = ({
         centeredSlides
         loop
         key={"review"}
-        className='review relative !w-[calc(100%+200px)] !-ml-[100px]'
+        className='review relative !w-[calc(100%+5rem)] xxldesktop:!w-[calc(100%+200px)] !-ml-[2.5rem] xxldesktop:!-ml-[100px]'
         onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={"qwe" + i}>
-            <div key={"slide" + i} className="w-full">{slide}</div>
+            <div key={"slide" + i} className='w-full'>
+              {slide}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
       <div className='swiper-custom-pagination items-center'>
-        <Button className='!p-0 !w-auto !bg-transparent' shape='circle' onClick={goToPrevSlide}>
+        <Button
+          className='!p-0 !w-auto !bg-transparent'
+          shape='circle'
+          onClick={goToPrevSlide}
+        >
           <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
         </Button>
         {slides.map((_, index) => (
@@ -86,7 +92,11 @@ const ReviewSlider = ({
             className={activeIndex === index ? "active" : ""}
           ></button>
         ))}
-        <Button className='!p-0 !w-auto !bg-transparent' shape='circle' onClick={goToNextSlide}>
+        <Button
+          className='!p-0 !w-auto !bg-transparent'
+          shape='circle'
+          onClick={goToNextSlide}
+        >
           <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
         </Button>
       </div>
