@@ -1,28 +1,30 @@
 "use client";
 import React, { useRef } from "react";
 import GridSlide from "./gridSlide";
-import { Col, Flex, Pagination, Row } from "antd";
+import { Button, Col, Flex, Pagination, Row } from "antd";
 import CustomPagination from "../shared/customPagination";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 export default function SwiperSliderGrid({
+  disablepagination,
   slides = [
-    <GridSlide key={1} />,
-    <GridSlide key={2} />,
-    <GridSlide key={3} />,
-    <GridSlide key={4} />,
-    <GridSlide key={5} />,
-    <GridSlide key={6} />,
-    <GridSlide key={7} />,
-    <GridSlide key={8} />,
-    <GridSlide key={9} />,
-    <GridSlide key={10} />,
-    <GridSlide key={11} />,
-    <GridSlide key={2} />,
-    <GridSlide key={3} />,
-    <GridSlide key={14} />,
-    <GridSlide key={15} />,
-    <GridSlide key={16} />,
-    <GridSlide key={17} />,
+    <GridSlide key={1} disableBodyPadding />,
+    <GridSlide key={2} disableBodyPadding />,
+    <GridSlide key={3} disableBodyPadding />,
+    <GridSlide key={4} disableBodyPadding />,
+    <GridSlide key={5} disableBodyPadding />,
+    <GridSlide key={6} disableBodyPadding />,
+    <GridSlide key={7} disableBodyPadding />,
+    <GridSlide key={8} disableBodyPadding />,
+    <GridSlide key={9} disableBodyPadding />,
+    <GridSlide key={10} disableBodyPadding />,
+    <GridSlide key={11} disableBodyPadding />,
+    <GridSlide key={2} disableBodyPadding />,
+    <GridSlide key={3} disableBodyPadding />,
+    <GridSlide key={14} disableBodyPadding />,
+    <GridSlide key={15} disableBodyPadding />,
+    <GridSlide key={16} disableBodyPadding />,
+    <GridSlide key={17} disableBodyPadding />,
   ],
 }) {
   const swiperRef = useRef(null);
@@ -30,7 +32,7 @@ export default function SwiperSliderGrid({
   return (
     <>
       <Row
-        className='xxldesktop:!px-24 md:px-16 sm:px-5 !m-auto bg-[#F9F6F1]'
+        className='xxldesktop:!px-24 md:px-16 sm:px-5 !m-auto'
         gutter={[24, 24]}
       >
         {slides.map((slide, i) => (
@@ -48,7 +50,16 @@ export default function SwiperSliderGrid({
         ))}
         <Col span={24}>
           <Flex justify='center'>
-            <CustomPagination />
+            {!disablepagination ? (
+              <CustomPagination />
+            ) : (
+              <Button
+                shape='round'
+                className='border-[#533736] text-[#533736] mt-5'
+              >
+                See all <ArrowRightOutlined />
+              </Button>
+            )}
           </Flex>
         </Col>
       </Row>

@@ -10,6 +10,16 @@ li {
   font-size: 16px;
   font-weight: 400;
 }
+.ant-btn {
+  height: auto !important;
+}
+.ant-rate {
+  display: flex !important;
+  align-items: start !important;
+}
+.ant-rate-star {
+  margin-bottom: 0 !important;
+}
 @layer tailwind-base, antd;
 
 @layer tailwind-base {

@@ -7,7 +7,7 @@ const Availability = ({ day, date }) => {
   return (
     <Flex
       style={{
-        backgroundColor: "#F9F6F1",
+        backgroundColor: "#F7F3F2",
         borderRadius: "8px",
         // padding: "24px",
         // paddingRight: "100px",

@@ -17,7 +17,7 @@ const BookingPayment = () => {
       <Flex
         vertical
         style={{
-          backgroundColor: "#F9F6F1",
+          backgroundColor: "#F7F3F2",
           borderRadius: "20px",
           padding: "60px 40px",
         }}

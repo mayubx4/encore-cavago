@@ -81,7 +81,7 @@ const HomeHero = () => {
             // height: "64px",
             fontSize: "18px",
             fontWeight: "normal",
-            padding: "28px 24px",
+            // padding: "28px 24px",
           }}
           icon={<Image src={SettingIcon} alt='share' width={20} height={20} />}
           iconPosition='end'
@@ -106,13 +106,15 @@ const HomeHero = () => {
       </Flex>
       <Flex
         align='center'
-        className='bg-[#F9F6F1] md:w-9/12 w-full md:mx-auto mx-3'
+        className='bg-[#F7F3F2] md:w-9/12 w-full md:mx-auto mx-3'
         style={{
           borderRadius: "16px",
           maxWidth: "1103px",
           // height: "211px",
           marginTop: "44px",
           padding: "24px",
+          position: "relative",
+          zIndex: 10,
         }}
         gap={24}
       >

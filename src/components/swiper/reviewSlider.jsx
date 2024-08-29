@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,58 +22,45 @@ import Slide from "./slide";
 import Image from "next/image";
 import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
 import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
+import ReviewCard from "../holidays/ratingAndReviews/reviewCard";
 
-const SwiperSlider = ({
+const ReviewSlider = ({
   slides = [
-    <Slide key={1} />,
-    <Slide key={2} title='Equestrian Festivals' />,
-    <Slide key={3} title='Safari Riding Holidays' />,
-    <Slide key={4} title='Beach Riding Holidays' />,
-    <Slide key={5} title='Desert Riding Holidays' />,
-    <Slide key={6} />,
-    <Slide key={7} />,
-    <Slide key={8} />,
+    <ReviewCard key={1} />,
+    <ReviewCard key={2} />,
+    <ReviewCard key={3} />,
+    <ReviewCard key={4} />,
+    <ReviewCard key={5} />,
+    <ReviewCard key={6} />,
+    <ReviewCard key={7} />,
+    <ReviewCard key={8} />,
   ],
 }) => {
   return (
     <>
-      <Button className='back !hidden md:!flex !p-0' shape='circle'>
+      {/* <Button className='back !hidden md:!flex !p-0' shape='circle'>
         <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
-      </Button>
+      </Button> */}
       <Swiper
-        breakpoints={{
-          1: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          1440: {
-            slidesPerView: 5,
-            spaceBetween: 24,
-          },
-        }}
+        slidesPerView={1.5}
+        spaceBetween={"40px"}
+        centeredSlides
+        loop
+        pagination={true}
         key={"qwe"}
         navigation={{ prevEl: ".back", nextEl: ".next" }}
-        modules={[Navigation]}
-        className='mySwiper'
-        // slidesPerView={5}
+        modules={[Navigation, Pagination]}
+        className='review relative !w-[calc(100%+200px)] !-ml-[100px]'
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
-      <Button className='next !hidden md:!flex !p-0' shape='circle'>
+      {/* <Button className='next !hidden md:!flex !p-0' shape='circle'>
         <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
-      </Button>
+      </Button> */}
     </>
   );
 };
 
-export default SwiperSlider;
+export default ReviewSlider;

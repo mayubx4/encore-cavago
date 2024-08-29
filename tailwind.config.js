@@ -7,25 +7,24 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-   
     extend: {
       screens: {
-        'tablet': '640px',
+        tablet: "640px",
         // => @media (min-width: 640px) { ... }
-  
-        'laptop': '1024px',
+
+        laptop: "1024px",
         // => @media (min-width: 1024px) { ... }
-  
-        'desktop': '1280px',
+
+        desktop: "1280px",
         // => @media (min-width: 1280px) { ... }
-        
-        'xxldesktop': '1720px',
-        // => @media (min-width: 1720px) { ... }
+
+        xxldesktop: "1440px",
+        // => @media (min-width: 1440px) { ... }
       },
     },
   },
   plugins: [],
   corePlugins: {
-    preflight: false // <== disable this!
+    preflight: false, // <== disable this!
   },
 };

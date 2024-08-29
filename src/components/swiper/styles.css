@@ -6,7 +6,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /* background: #F9F6F1; */
 
   /* Center slide text vertically */
   display: flex !important;
@@ -18,6 +17,6 @@
   display: block;
   object-fit: cover;
 }
-.ant-card-body {
+.disableBodyPadding > .ant-card-body {
   padding: 0 !important;
 }

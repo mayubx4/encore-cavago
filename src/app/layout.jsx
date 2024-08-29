@@ -28,13 +28,13 @@ export default function RootLayout({ children }) {
                 Button: {
                   fontSize: "18px",
                   fontWeight: "bold",
-                  padding: "16px 20px 16px 20px",
+                  paddingBlock: "16px",
+                  paddingInline: "20px",
                   colorText: "#233240",
-
                   colorTextSecondary: "#2C3F50",
                 },
                 Typography: {
-                  fontSizeHeading1: "32px",
+                  fontSizeHeading2: "32px",
                   fontSize: "24px",
                 },
               },
