@@ -37,7 +37,10 @@ const SwiperSlider = ({
 }) => {
   return (
     <>
-      <Button className='back !hidden md:!flex !p-0' shape='circle'>
+      <Button
+        className='back !hidden md:!flex !p-0 !w-auto !bg-transparent'
+        shape='circle'
+      >
         <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
       </Button>
       <Swiper
@@ -69,7 +72,10 @@ const SwiperSlider = ({
           <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
-      <Button className='next !hidden md:!flex !p-0' shape='circle'>
+      <Button
+        className='next !hidden md:!flex !p-0 !w-auto !bg-transparent'
+        shape='circle'
+      >
         <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
       </Button>
     </>

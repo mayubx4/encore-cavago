@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-import { Typography, Avatar, Rate } from "antd";
+import { Rate } from "antd";
 import Image from "next/image";
-import profilePic from "@public/assets/images/g1.png"; // replace with actual path
 import review from "@public/assets/images/review.png"; // replace with actual path
 import secondaryImage from "@public/assets/images/g1.png"; // replace with actual path
 import Title from "antd/es/typography/Title";
-import Text from "antd/es/typography/Text";
 import { StarFilled, StarOutlined } from "@ant-design/icons";
 
 const ReviewCard = () => {
@@ -45,7 +43,6 @@ const ReviewCard = () => {
               disabled
               defaultValue={4}
               character={({ value, index }) => {
-                console.log(index < value);
 
                 return index < value ? (
                   <StarFilled style={{ color: "#FFB300" }} />

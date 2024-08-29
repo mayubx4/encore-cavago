@@ -1,0 +1,26 @@
+.swiper-custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.swiper-custom-pagination button {
+  width: 26.5px;
+  height: 2px;
+  margin: 0 6px;
+  border: none;
+  background-color: #2c3f4f;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.swiper-custom-pagination button.active {
+  background-color: #a37b7b;
+}
+
+.swiper-custom-pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

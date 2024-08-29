@@ -1,5 +1,8 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
+import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
+import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,49 +19,77 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { Button } from "antd";
-import Slide from "./slide";
-import Image from "next/image";
-import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
-import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
 import ReviewCard from "../holidays/ratingAndReviews/reviewCard";
+import "./review.css";
+import { Button } from "antd";
+import Image from "next/image";
 
 const ReviewSlider = ({
   slides = [
-    <ReviewCard key={1} />,
-    <ReviewCard key={2} />,
-    <ReviewCard key={3} />,
-    <ReviewCard key={4} />,
-    <ReviewCard key={5} />,
-    <ReviewCard key={6} />,
-    <ReviewCard key={7} />,
-    <ReviewCard key={8} />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
+    <ReviewCard />,
   ],
 }) => {
+  const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const updateActiveIndex = index => {
+    const swiper = swiperRef.current.swiper;
+    swiper.slideToLoop(index);
+    setActiveIndex(index);
+  };
+
+  const goToNextSlide = () => {
+    const swiper = swiperRef.current.swiper;
+    swiper.slideNext();
+    setActiveIndex(swiper.realIndex);
+  };
+
+  const goToPrevSlide = () => {
+    const swiper = swiperRef.current.swiper;
+    swiper.slidePrev();
+    setActiveIndex(swiper.realIndex);
+  };
+
   return (
     <>
-      {/* <Button className='back !hidden md:!flex !p-0' shape='circle'>
-        <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
-      </Button> */}
       <Swiper
+        ref={swiperRef}
         slidesPerView={1.5}
         spaceBetween={"40px"}
         centeredSlides
         loop
-        pagination={true}
-        key={"qwe"}
-        navigation={{ prevEl: ".back", nextEl: ".next" }}
-        modules={[Navigation, Pagination]}
+        key={"review"}
         className='review relative !w-[calc(100%+200px)] !-ml-[100px]'
+        onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
+          <SwiperSlide key={"qwe" + i}>
+            <div key={"slide" + i} className="w-full">{slide}</div>
+          </SwiperSlide>
         ))}
       </Swiper>
-      {/* <Button className='next !hidden md:!flex !p-0' shape='circle'>
-        <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
-      </Button> */}
+      <div className='swiper-custom-pagination items-center'>
+        <Button className='!p-0 !w-auto !bg-transparent' shape='circle' onClick={goToPrevSlide}>
+          <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
+        </Button>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => updateActiveIndex(index)}
+            className={activeIndex === index ? "active" : ""}
+          ></button>
+        ))}
+        <Button className='!p-0 !w-auto !bg-transparent' shape='circle' onClick={goToNextSlide}>
+          <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
+        </Button>
+      </div>
     </>
   );
 };
