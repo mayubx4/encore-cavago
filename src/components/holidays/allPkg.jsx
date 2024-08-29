@@ -16,14 +16,14 @@ const AllPkg = () => {
         <SwiperSliderGrid
           disablepagination
           slides={[
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
-            <GridSlide transparent={false} />,
+            <GridSlide key={1} transparent={false} />,
+            <GridSlide key={2} transparent={false} />,
+            <GridSlide key={3} transparent={false} />,
+            <GridSlide key={4} transparent={false} />,
+            <GridSlide key={5} transparent={false} />,
+            <GridSlide key={6} transparent={false} />,
+            <GridSlide key={7} transparent={false} />,
+            <GridSlide key={8} transparent={false} />,
           ]}
         />
       </div>
