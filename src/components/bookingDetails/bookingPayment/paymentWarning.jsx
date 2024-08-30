@@ -1,6 +1,6 @@
 import { Flex } from "antd";
 import React from "react";
-import questionMark from "@public/assets/images/questionMark.svg";
+import questionMark from "@public/assets/images/questionMark.png";
 import Image from "next/image";
 
 const PaymentWarning = () => {

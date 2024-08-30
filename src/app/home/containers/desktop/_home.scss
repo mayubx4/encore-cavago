@@ -1,0 +1,188 @@
+@import '@shared/theme/colors.scss';
+
+.categoriesContainer {
+    margin-left: auto;
+    max-width: calc(1598px + calc((100% - 1598px) / 2));
+    width: 100%;
+    padding: 24px 15px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        height: 100%;
+        top: 0;
+        width: 40px;
+        background: linear-gradient(90deg, #ffffff52 0%, #fff 60%);
+    }
+
+    .cat-holder {
+        display: flex;
+        gap: 60px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-right: 45px;
+
+        .btn-text {
+            text-transform: capitalize;
+            border-bottom: 2px solid transparent;
+            padding: 12px 0;
+            font-size: 18px;
+            line-height: 16px;
+            white-space: nowrap;
+
+            &.active {
+                border-color: $neutrals-500;
+            }
+        }
+    }
+}
+
+.subCategoriesContainer {
+    margin-left: auto;
+    max-width: calc(1599px + calc((100% - 1598px) / 2));
+    width: 100%;
+    padding: 18px 15px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        height: 100%;
+        top: 0;
+        width: 40px;
+        background: linear-gradient(90deg, #ffffff52 0%, #fff 60%);
+    }
+
+    .cat-holder {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-right: 45px;
+
+        .btn-outline {
+            text-transform: capitalize;
+            font-weight: 500;
+            border-color: $neutrals-100;
+            color: $neutrals-500;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 19.2px;
+            padding: 15px 24px;
+
+            &.active {
+                color: $neutrals-500;
+                border-color: $neutrals-500;
+                background: $icon-bg-grey;
+            }
+        }
+    }
+}
+
+.activitiesContainer {
+    margin: 0 auto;
+    padding: 42px 15px;
+    max-width: 1598px;
+
+    .backIcon {
+      padding-bottom: 40px;
+    }
+
+    .activities-holder {
+        border-bottom: 1px solid $neutrals-100;
+        padding: 0 0 60px;
+        margin: 0 0 60px;
+
+        &:last-child {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 24px;
+        }
+
+        h2 {
+            color: $neutrals-500;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .infinite-scroll-component {
+            overflow: unset !important;
+        }
+
+        .seeAllBtn {
+            line-height: 20px;
+        }
+
+        .activitiesScroller {
+            display: flex;
+            overflow-x: auto;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 0 0 10px;
+            scrollbar-width: none;
+
+            &.all-activities {
+                .cardContainer {
+                    min-width: inherit;
+                    width: 100%;
+                    max-width: calc(50% - 40px);
+
+                    @media (min-width: $d-screen) {
+                        max-width: calc(33.33% - 40px);
+                    }
+
+                    @media (min-width: $w-screen) {
+                        max-width: calc(25% - 40px);
+                    }
+                }
+            }
+        }
+    }
+
+    .all-activities {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .activitiesScroller {
+
+        .activityImage {
+            border-radius: 12px;
+            max-width: 350px;
+        }
+
+        &.all-activities {
+            .activityImage {
+                max-width: unset;
+            }
+        }
+
+        .activityImageContainer {
+            margin-bottom: 12px;
+        }
+
+        .titleTxtContainer {
+            margin-bottom: 0;
+
+            .titleTxt {
+                color: $neutrals-500;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 21.6px;
+            }
+        }
+    }
+}

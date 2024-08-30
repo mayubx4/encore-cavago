@@ -1,0 +1,166 @@
+@import '@shared/theme/colors.scss';
+
+.activityDesktop {
+    margin: 20px 80px;
+ 
+    .activityHeading {
+      color: $neutrals-500;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .activityLocation {
+      color: $neutrals-400;
+      font-weight: 400;
+      font-size: 24px;
+    }
+    
+    .seePhotosSection {
+      h1 {
+        .icon {
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .title {
+        margin-bottom: 0;
+        color: $neutrals-600;
+      }
+      .details {
+        margin-top: 5px;
+        font-size: 24px;
+        color: $neutrals-500;
+      }
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+        .share,
+        .wishlist {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .header {
+      .iconDisplay {
+        display: flex;
+        gap: 8px;
+        color: $neutrals-500;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    .collage {
+      margin-top: 40px;
+    }
+
+    .button {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 700;
+      height: 54px;
+      margin-top: 30px;
+      color: $neutrals-500;
+      border-radius: 25px !important;
+    }
+  
+    .hostInfo {
+      border-radius: 37.5px;
+    }
+
+    .hostInfoHeading {
+      padding-top: 24px;
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    .hostInfoSec {
+      display: flex;
+      gap: 8px;
+
+      p {
+        text-decoration: underline;
+        font-size: 20px;
+        font-weight: 500;
+        color: $neutrals-400;
+      }
+
+      svg {
+        padding-top: 5px;
+      }
+    }
+  
+    .attributes {
+      margin-bottom: 10px;
+    }
+    
+    .pricingDetails {
+      border: 1px solid #D5D9DC;
+      border-radius: 20px;
+      padding: 40px;
+      .priceText {
+        font-weight: 500;
+        color: #2C3F50;
+        font-size: 24px;
+        line-height: 28.8px;
+      }
+      .priceDetails {
+        color: #808C96;
+        text-decoration: underline;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .dropdownSelector {
+        margin-top: 20px;
+      }
+    }
+    
+    .activitiesScroller {
+      display: flex;
+      overflow-x: auto;
+      gap: 40px;
+      padding: 0 0 10px;
+
+      .activityImage {
+        border-radius: 12px;
+      }
+
+      .activityImageContainer {
+          margin-bottom: 12px;
+      }
+
+      .titleTxtContainer {
+        .titleTxt {
+            color: $neutrals-500;
+            font-size: 18px;
+            font-weight: 600;
+          }
+      }
+
+      &.all-activities {
+          .cardContainer {
+              min-width: inherit;
+              width: 100%;
+              max-width: calc(50% - 30px);
+
+              @media (min-width: $d-screen) {
+                  max-width: calc(33.33% - 30px);
+              }
+
+              @media (min-width: $w-screen) {
+                  max-width: calc(25% - 30px);
+              }
+          }
+      }
+  }
+
+  }
+  

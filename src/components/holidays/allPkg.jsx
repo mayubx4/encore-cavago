@@ -7,7 +7,7 @@ const AllPkg = () => {
   return (
     <div className='mt-20'>
       <Title className='!text-[32px] !font-semibold text-center text-[#2C3F4F] !m-0'>
-        Trending packages
+        All Packages
       </Title>
       <Title className='!text-[21px] text-center !font-medium text-[#2C3F4F] mt-3'>
         Explore all types of our latest trending packages.

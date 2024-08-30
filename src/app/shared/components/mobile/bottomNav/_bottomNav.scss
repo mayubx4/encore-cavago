@@ -1,0 +1,46 @@
+@import '@shared/theme/colors.scss';
+
+.bottomNavContainer {
+    padding: 20px 8px;
+    background-color: $white-100;
+    border-top: 1px $neutrals-100 solid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    a {
+        text-decoration: none;
+    }
+}
+
+.menuButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    p {
+        color: $light-neutrals-400;
+        font-size: 12px;
+        font-weight: 500;
+        word-wrap: break-word
+    }
+
+    svg {
+        color: $light-neutrals-400;
+    }
+
+    &.active {
+        svg {
+            color: $primary-400;
+        }
+
+        p {
+            color: $primary-400;
+        }
+    }
+
+}

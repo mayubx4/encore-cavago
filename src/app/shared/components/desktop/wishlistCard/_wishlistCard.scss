@@ -1,0 +1,40 @@
+@import '@shared/theme/colors.scss';
+
+.wishlistCardContainer {
+    .imageContainer {
+        position: relative;
+
+        .image {
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .closeButton {
+            border: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    .infoContainer {
+        margin-top: 16px;
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+
+        .cardtitle {
+            color: $neutrals-500;
+            font-size: 24px;
+            font-family: Figtree;
+            font-weight: 600;
+            word-wrap: break-word
+        }
+
+        .cardsubtitle {
+            color: $neutrals-400;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { Divider, Flex } from "antd";
 import Image from "next/image";
 import React from "react";
-import flower from "@public/assets/images/flower.svg";
+import flower from "@public/assets/images/flower.png";
 import ScheduleStep from "./scheduleStep";
 
 const PaymentSchedule = () => {

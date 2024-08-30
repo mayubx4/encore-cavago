@@ -1,0 +1,79 @@
+@import "@shared/theme/colors.scss";
+
+.paymentConfirmContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 70vh;
+  margin-top: 100px;
+  padding: 0 20px;
+
+  .congratulationsHeading {
+    color: $neutrals-600;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .congratulationsText {
+    color: $neutrals-500;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .congratulationsSubText {
+    color: $neutrals-500;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .exploreButton {
+    display: flex;
+    width: 85vw;
+    height: 52px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: $primary-500;
+
+    .text {
+      color: $neutrals-500;
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 14px;
+      font-style: normal;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .congratulationsHeading {
+      font-size: 48px;
+    }
+
+    .congratulationsText {
+      font-size: 28px;
+    }
+
+    .congratulationsSubText {
+      font-size: 20px;
+    }
+
+    .exploreButton {
+      width: 565px;
+      padding: 18px 16px;
+
+      .text {
+        font-size: 18px;
+      }
+    }
+  }
+}

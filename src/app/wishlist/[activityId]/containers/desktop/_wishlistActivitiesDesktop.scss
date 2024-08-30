@@ -1,0 +1,32 @@
+@import '@shared/theme/colors.scss';
+
+.wishlistActivitiesContainer {
+    padding: 40px;
+
+    .actionBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .actionBarIcons {
+            display: flex;
+            gap: 24px;
+            margin-top: 48px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .title {
+        margin-bottom: 40px;
+        color: $neutrals-600;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .itemLists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

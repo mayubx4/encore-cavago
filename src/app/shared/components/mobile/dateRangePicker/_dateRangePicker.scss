@@ -1,0 +1,33 @@
+@import '@shared/theme/colors.scss';
+
+.dateRangePickerMContainer {
+  .heading {
+    color: $neutrals-500;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .dateRangePickerButton {
+    height: 48px;
+    padding: 12px 8px 12px 16px;
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid $icon-bg-grey;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      color: $neutrals-500;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}

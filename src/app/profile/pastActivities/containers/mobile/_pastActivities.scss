@@ -1,0 +1,169 @@
+@import '@shared/theme/colors.scss';
+
+.pastActivitiesContainer {
+  padding: 20px;
+
+}
+
+.pastActivityCardContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $icon-bg-grey;
+  }
+
+  .image {
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .titleContainer {
+    .title {
+      color: $neutrals-500;
+      font-size: 14px;
+      font-family: Figtree;
+      font-weight: 600;
+      line-height: 20px;
+      word-wrap: break-word
+    }
+
+    .hostedBy {
+      color: $light-neutrals-100;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+
+      .cancelledStatus {
+        color: $error-700;
+        font-weight: 500;
+      }
+    }
+
+    .date {
+      color: $light-neutrals-100;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
+
+.pastActivityDrawerHeader {
+  .icon {
+    cursor: pointer;
+  }
+}
+.pastActivityDrawerContainer {
+  .heading {
+    color: $neutrals-500;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .attributes {
+    .details {
+      row-gap: 4px;
+
+      .title {
+        font-size: 12px;
+        color: $neutrals-300;
+      }
+
+      .info {
+        color: $neutrals-500;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .paidAmountHeading {
+    color: $neutrals-300;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .paidAmount {
+    color: $neutrals-500;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .messageHost {
+    color: $neutrals-500;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .messageHostName {
+    color: $neutrals-300;
+  }
+
+  .collapsedTextHeading {
+    color: $neutrals-500;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .expand {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .hostCardContainer {
+    .meetHost {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .hostCard {
+
+      .hostName {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .hostText {
+        color: $neutrals-500;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .furtherDetails {
+        color: $neutrals-300;
+        font-family: "Plus Jakarta Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .furtherDetailsValue {
+        color: $neutrals-500;
+        font-family: "Plus Jakarta Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+  }
+}

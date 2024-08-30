@@ -1,0 +1,19 @@
+@import '@shared/theme/colors.scss';
+
+.choiceOfFew {
+  margin-top: 30px;
+
+  .btnSpace {
+    .ant-btn-icon {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    color: $neutrals-500;
+  }
+}

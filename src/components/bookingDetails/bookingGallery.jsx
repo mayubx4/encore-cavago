@@ -6,7 +6,7 @@ import g2 from "@public/assets/images/g2.png";
 import g3 from "@public/assets/images/g3.png";
 import g4 from "@public/assets/images/g4.png";
 import g5 from "@public/assets/images/g5.png";
-import photo from "@public/assets/images/photo.svg";
+import photo from "@public/assets/images/photo.png";
 
 const BookingGallery = () => {
   return (

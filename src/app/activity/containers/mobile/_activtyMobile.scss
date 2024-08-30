@@ -1,0 +1,107 @@
+@import '@shared/theme/colors.scss';
+
+.activityMobile {
+
+  .heartButton {
+    border: none;
+    padding: 10%;
+
+    .icon {
+      height: 18px;
+      width: 18px;
+      margin-bottom: 4px;
+      margin-right: 4px;
+    }
+  }
+
+  .firstDiv {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .secondDiv {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .mainContent {
+    padding: 10px 20px;
+
+    .activityHeading {
+      font-size: 28px;
+      font-weight: 600;
+      color: $neutrals-500;
+      margin-bottom: 6px;
+    }
+  
+    .locName, .description {
+      color: $neutrals-500;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .description {
+      font-size: 14px;
+      margin: 10px 0 !important;
+    }
+
+    .hostInfo {
+      border-radius: 50%;
+      color: $neutrals-500;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .hostInfoSec {
+      color: $neutrals-300;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    .all-activities {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .attributes {
+      margin: 5px 0;
+    }
+
+    .activitiesScroller {
+      display: flex;
+      gap: 16px;
+      overflow: auto;
+
+      .activityImage {
+        border-radius: 12px;
+      }
+
+      .activityImageContainer {
+          margin-bottom: 12px;
+      }
+
+      .titleTxtContainer {
+        .titleTxt {
+            color: $neutrals-500;
+            font-size: 18px;
+            font-weight: 600;
+          }
+      }
+    }
+
+  }
+
+  .bookNow {
+    color: $neutrals-500;
+    border-radius: 25px;
+    width: 100%;
+  }
+}

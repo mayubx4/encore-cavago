@@ -1,0 +1,51 @@
+@import '@shared/theme/colors.scss';
+
+.loginAndSecurityContainer {
+    padding: 20px;
+
+    .content {
+        .title {
+            color: $neutrals-500;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+
+        .field {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .fieldLink {
+                color: $neutrals-500;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: underline;
+                line-height: 20px;
+            }
+
+            .fieldLeft {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .fieldInfo {
+                    .fieldLabel {
+                        color: $neutrals-500;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                    }
+
+                    .fieldValueText {
+                        color: $neutrals-300;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "@shared/theme/colors.scss";
+
+.policyContainer {
+  width: 565px;
+
+  .policyHeading {
+    color: $neutrals-500;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  li {
+    color: $neutrals-400;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .showMoreButton {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    border: none;
+    background-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    .policyHeading {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    li {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

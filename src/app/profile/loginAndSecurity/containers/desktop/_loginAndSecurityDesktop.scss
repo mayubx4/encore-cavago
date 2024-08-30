@@ -1,0 +1,141 @@
+@import '@shared/theme/colors.scss';
+
+
+.container {
+    padding: 40px;
+
+    .contentContainer {
+        margin: 44px 0;
+        display: flex;
+        flex-direction: column;
+
+        .titleContainer {
+
+            h2.title {
+                color: $neutrals-600;
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            p.subTitle {
+                color: $neutrals-300;
+                font-size: 24px;
+                font-weight: 500;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+        }
+
+        .titleContainer {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            margin-top: 60px;
+            gap: 18px
+        }
+
+        .form {
+            .textInputField {
+                flex: 1;
+
+
+                .fieldHeader {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 18px;
+
+                    .fieldLabel {
+                        color: $neutrals-500;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 20px;
+                    }
+
+                    .editButton {
+                        // Edit
+                        color: $neutrals-500;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: underline;
+                        line-height: 20px;
+                    }
+                }
+
+                .fieldValue {
+                    flex-direction: row;
+                    border-bottom: 1px $neutrals-100 solid;
+                    padding-bottom: 22px;
+                    justify-content: space-between;
+                    display: flex;
+                    margin-bottom: 100px;
+
+                    .fieldValueText {
+                        color: $neutrals-400;
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+
+                    .updatePasswordLink {
+                        color: $neutrals-500;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: underline;
+                        line-height: 20px;
+                    }
+                }
+
+            }
+
+            .socials {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .title {
+                    color: $neutrals-500;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+
+                .socialLineItem {
+                    display: flex;
+                    gap: 18px;
+
+                    .title {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .socialName {
+                            color: $neutrals-400;
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 20px;
+                        }
+
+                        .socialVal {
+                            margin-top: 12px;
+                            color: $neutrals-400;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+
+                        .link {
+                            color: $neutrals-500;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            line-height: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

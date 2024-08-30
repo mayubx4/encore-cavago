@@ -1,0 +1,30 @@
+@import '@shared/theme/colors.scss';
+
+.accordionWrapper {
+    .content-holder {
+        border-bottom: 1px solid $neutrals-100;
+        padding: 0 0 50px;
+        margin: 0 0 50px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $neutrals-500;
+
+        .opener {
+            display: block;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 34px;
+            color: $neutrals-600;
+            text-decoration: none;
+            position: relative;
+            padding: 0 30px 0 0;
+
+            svg {
+                position: absolute;
+                right: 0;
+                top: 13px;
+            }
+        }
+
+    }
+}

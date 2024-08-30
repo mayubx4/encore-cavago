@@ -1,0 +1,19 @@
+@import '@shared/theme/colors.scss';
+
+.roundedIconedInputField {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 40px;
+    border: 1px $primary-500 solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+
+    .textField {
+        padding: 0;
+        border: none;
+    }
+}

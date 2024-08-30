@@ -1,0 +1,94 @@
+@import '@shared/theme/colors.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "FigTree";
+    box-sizing: border-box;
+}
+
+.dividor {
+    height: 1px;
+    width: 100%;
+    background-color: $neutrals-100;
+}
+
+.link-plain {
+    // Forgot password?
+    color: $neutrals-400;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    line-height: 20px;
+}
+
+.display-block {
+    display: block;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-gray,
+.btn-danger,
+.btn-cancel,
+.btn-text {
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 16px;
+    background: $primary-500;
+    border-radius: 200px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $neutrals-500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $t-screen) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.btn-outline {
+    background: none;
+    padding: 12px 14px;
+    border: 1px solid $neutrals-500;
+}
+
+.btn-gray {
+    color: $white-100;
+    background: $neutrals-500;
+}
+
+.btn-danger {
+    background: none;
+    padding: 12px 14px;
+    color: $pending-color;
+    border: 1px solid $pending-color;
+}
+
+.btn-cancel {
+    background: none;
+    padding: 12px 14px;
+    color: #F04438;
+    border: 1px solid #F04438;
+}
+
+.btn-text {
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.sr-only {
+    display: none !important;
+}
+
+.error {
+    padding: 0px 20px;
+    color: red;
+}

@@ -1,0 +1,45 @@
+@import "@shared/theme/colors.scss";
+
+.plusButton {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 12px;
+  height: 35px;
+  border-radius: 400px;
+  border: 1px solid $neutrals-300;
+  background: $white-100;
+}
+
+.stepperWrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.addOnText {
+  color: $neutrals-500;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.addOnDescription {
+  color: $neutrals-300;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .addOnText {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .addOnDescription {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}

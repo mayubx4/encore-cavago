@@ -1,0 +1,42 @@
+@import '@shared/theme/colors.scss';
+
+.bookingContainer {
+  padding: 40px 80px;
+
+  .heading {
+    font-weight: 700;
+    font-size: 40px;
+    color: $neutrals-600;
+  }
+
+  .secondary {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    color: $neutrals-400;
+
+  }
+
+  .bookingDetails {
+    margin: 40px 5px;
+
+    .heading {
+      font-weight: 600;
+      font-size: 28px;
+      color: $neutrals-500;
+      margin: 30px 0;
+    }
+
+  }
+
+  .notfound {
+    font-weight: 400;
+    font-size: 18px;
+    color: $neutrals-500;
+
+    .contact {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

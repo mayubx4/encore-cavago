@@ -1,0 +1,17 @@
+@import "@shared/theme/colors.scss";
+
+.mainModalDiv {
+
+  .moreModalContent {
+    color: $neutrals-400;
+  }
+
+  .messageBtn {
+    width: 100%;
+    margin-top: 15px;
+    color: $neutrals-500;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+}

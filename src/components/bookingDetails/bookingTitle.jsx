@@ -2,8 +2,8 @@ import React from "react";
 import { LeftOutlined, UploadOutlined } from "@ant-design/icons";
 import { Button, Divider, Flex, Space, Typography } from "antd";
 import Title from "antd/es/typography/Title";
-import ShareIcon from "@public/assets/images/share.svg";
-import HeartIcon from "@public/assets/images/heart.svg";
+import ShareIcon from "@public/assets/images/share.png";
+import HeartIcon from "@public/assets/images/heart.png";
 import Image from "next/image";
 
 const BookingTitle = () => {

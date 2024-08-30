@@ -1,0 +1,9 @@
+@import '@shared/theme/colors.scss';
+
+.fieldLink {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    line-height: 20px;
+}

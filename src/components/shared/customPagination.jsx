@@ -27,7 +27,7 @@ const CustomPagination = () => {
         total={totalPages * 10}
         onChange={handlePageChange}
         showSizeChanger={false}
-        className='custom-pagination'
+        className='custom-pagination flex'
       />
       <button
         onClick={() => handlePageChange(totalPages)}

@@ -1,0 +1,63 @@
+@import "@shared/theme/colors.scss";
+
+.allWishlistsContainerMobile {
+    padding: 20px;
+
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 32px 0;
+
+        .title {
+            color: $neutrals-500;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .actionButton {
+            color: $neutrals-500;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: underline;
+            line-height: 20px;
+        }
+    }
+
+    .wishlistCardsContainrMobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+
+        .wishlistCardContainer {
+            .imageContainer {
+                .image {
+                    width: 167px;
+                    height: 125px;
+                }
+
+                .closeButton {
+                    right: 10px;
+                    top: 10px
+                }
+            }
+
+            .infoContainer {
+                margin-top: 12px;
+
+                .cardTitle {
+                    color: $neutrals-500;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .cardsubtitle {
+                    color: $neutrals-300;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}

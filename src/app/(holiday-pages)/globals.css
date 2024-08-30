@@ -1,0 +1,29 @@
+li {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+  color: #566573;
+  margin-block: 10px !important;
+}
+.ant-collapse-content-box li {
+  font-size: 16px;
+  font-weight: 400;
+}
+.ant-btn {
+  height: auto !important;
+}
+.ant-rate {
+  display: flex !important;
+  align-items: start !important;
+}
+.ant-rate-star {
+  margin-bottom: 0 !important;
+}
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;

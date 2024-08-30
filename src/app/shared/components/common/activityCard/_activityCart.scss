@@ -1,0 +1,61 @@
+@import '@shared/theme/colors.scss';
+
+.cardContainer {
+    max-width: 350px;
+    width: 100%;
+    .activityImageContainer {
+        position: relative;
+        width: 100%;
+        img {
+            width: 100%;
+            display: block;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .heartButton {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border: none;
+            background: $white-100;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 6px 0;
+        }
+    }
+    .locationtxt {
+        display: block;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: $neutrals-400;
+        margin: 0 0 8px;
+    }
+    .price-text  {
+        display: block;
+        font-size: 14px;
+        line-height: 16.8px;
+        font-weight: 500;
+        color: $neutrals-500;
+    }
+}
+
+.titleTxtContainer {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    .titleTxt {
+        font-size: 14px;
+        font-weight: 600;
+        color: $neutrals-500;
+        flex: 1;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

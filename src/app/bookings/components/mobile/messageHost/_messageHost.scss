@@ -1,0 +1,87 @@
+@import '@shared/theme/colors.scss';
+
+.messageHost {
+
+  .content {
+    padding: 20px;
+    height: calc(100vh - 2300px);
+
+    .secondary {
+      font-weight: 400;
+      font-size: 12px;
+      color: $neutrals-300;
+    }
+
+    .primary {
+      font-weight: 600;
+      font-size: 22px;
+      color: $neutrals-500;
+    }
+
+    .pill {
+      margin-top: 30px;
+      max-width: fit-content;
+      padding: 4px 10px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 12px;
+      color: $greens-500;
+      background-color: #FFF;
+    }
+  
+    .success {
+      background: $greens-200;
+    }
+  
+    .failure {
+      color: $reds-500;
+      background: $reds-100;
+    }
+
+    .name {
+      margin: 10px 0;
+      font-weight: 700;
+      font-size: 22px;
+      color: $neutrals-500;
+    }
+
+    .secLocation {
+      margin-top: 5px;
+      font-weight: 600;
+      font-size: 16px;
+      color: $neutrals-300;
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: $neutrals-200;
+      }
+    }
+
+    .messageHeader {
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 18px;
+      color: $neutrals-500;
+    }
+  }
+
+ .Btn, .messageBtn {
+    margin: 5px 20px;
+    width: -webkit-fill-available;
+    color: $neutrals-500;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+
+  .Btn {
+    background-color: #FFF;
+    border: 1px solid $neutrals-500;
+  }
+}

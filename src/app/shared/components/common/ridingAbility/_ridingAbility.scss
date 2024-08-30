@@ -1,0 +1,17 @@
+@import "@shared/theme/colors.scss";
+
+.ridingAbilityContainer {
+  gap: 12px;
+
+  .ridingAbilityHeading {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  @media (min-width: 768px) {
+    .ridingAbilityHeading {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '@shared/theme/colors.scss';
+
+.searchScreenContainer {
+  overflow: auto;
+
+  .searchCategoriesContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    border-bottom: 2px solid $icon-bg-grey;
+
+    .searchCategoryLink {
+      font-family: Figtree;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: $neutrals-300;
+      padding: 16px 15px;
+    }
+
+    .active {
+      color: $neutrals-500;
+      font-weight: 600;
+      border-bottom: 2px solid $neutrals-500;
+      border-radius: 0;
+    }
+  }
+
+  .searchButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-height: 310px;
+    overflow: auto;
+  }
+
+  .topSearchText {
+    color: $neutrals-300;
+    font-family: Figtree;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .searchCategoriesContainer {
+      justify-content: space-between;
+
+      .searchCategoryLink {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.4px;
+
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+    .searchButtonsContainer {
+      max-height: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .topSearchText {
+      font-size: 16px;
+    }
+
+    .searchButtonsContainer {
+      gap: 12px
+    }
+  }
+}

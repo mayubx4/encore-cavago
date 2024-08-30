@@ -1,0 +1,147 @@
+@import '@shared/theme/colors.scss';
+
+.upcomingCard {
+  border: 1px solid $neutrals-100;
+  border-radius: 15px;
+
+  .details {
+    padding: 20px 35px;
+    box-shadow: none !important;
+  }
+
+  .upcomingTitle {
+    font-weight: 600;
+    font-size: 28px;
+    color: $neutrals-500;
+  }
+
+  .upcomingSecondary, .attributesText {
+    font-weight: 400;
+    font-size: 24px;
+    color: $neutrals-500;
+  }
+
+
+  .attributesText {
+    font-weight: 500;
+  }
+
+  .strike {
+    text-decoration: line-through;
+  }
+
+  .pendingDiv {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFFAEB;
+    border-bottom-left-radius: 15px;
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #B54708;
+    }
+
+    .messageBtn, .selectBtn {
+      height: 54px;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      color: $neutrals-500;
+      border-radius: 40px;
+      padding: 16px 24px;
+      border: 1px solid $neutrals-500;
+      width: 100%;
+    }
+
+    .selectBtn {
+      border-color: #B54708;
+      color: #B54708;
+    }
+  }
+
+  .imageHolder {
+    position: relative;
+  }
+
+  .left {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .success, .failure, .upcoming {
+    color: $greens-900;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: $greens-100;
+    border-radius: 15px;
+  }
+
+  .failure {
+    color: $reds-800;
+    background-color: $reds-100;
+  }
+
+  .upcoming {
+    color: $neutrals-600;
+    background-color: #4646465C;
+  }
+
+  .upcomingImg {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.modal {
+  .details {
+    padding: 10px 20px;
+  }
+
+  .upcomingTitle {
+    font-size: 18px;
+  }
+
+  .upcomingSecondary, .attributesText {
+    font-size: 16px;
+  }
+
+
+  .attributesText {
+    font-weight: 500;
+  }
+
+  .success, .failure, .upcoming {
+    color: $greens-900;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: $greens-100;
+    border-radius: 15px;
+  }
+
+  .failure {
+    color: $reds-800;
+    background-color: $reds-100;
+  }
+
+  .upcoming {
+    color: $neutrals-600;
+    background-color: #4646465C;
+  }
+
+  .upcomingImg {
+    height: 330px;
+  }
+}

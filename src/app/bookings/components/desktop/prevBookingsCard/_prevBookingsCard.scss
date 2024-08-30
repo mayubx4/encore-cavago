@@ -1,0 +1,55 @@
+@import '@shared/theme/colors.scss';
+
+.prevCard {
+  border: 1px solid $neutrals-100 !important;
+  border-radius: 15px;
+
+  .success, .failure {
+    color: $greens-900;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    width: fit-content;
+    background-color: $greens-100;
+    border-radius: 15px;
+  }
+
+  .details {
+    padding: 24px;
+    box-shadow: none !important;
+
+    .heading {
+      font-weight: 600;
+      font-size: 22px;
+      color: $neutrals-500;
+      margin: 0 0 5px 0;
+    }
+
+    .secondaryHeading, .secondaryTimeline {
+      font-weight: 500;
+      font-size: 18px;
+      color: $neutrals-400;
+      margin-bottom: 10px;
+    }
+
+    .secondaryTimeline {
+      font-weight: 400;
+      margin-bottom: 3px;
+    }
+
+
+  }
+
+  .failure {
+    color: $reds-800;
+    background-color: $reds-100;
+  }
+
+  .prevImg {
+    width: 182px;
+    height: 182px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+}

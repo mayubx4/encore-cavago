@@ -1,0 +1,84 @@
+@import '@shared/theme/colors.scss';
+
+.messageItem {
+  .infoMain {
+    border-bottom: 1px solid $neutrals-100;
+
+    .info {
+      padding: 35px;
+
+      h3 {
+        font-weight: 600;
+        font-size: 24px;
+        color: $neutrals-600;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        color: $neutrals-400;
+      }
+    }
+  }
+
+  .messagesMain {
+
+    .messageInboxContent {
+      overflow-y: auto;
+      padding: 24px 20px;
+      max-height: calc(100vh - 350px);
+      min-height: calc(100vh - 350px);
+      height: calc(100vh - 350px);
+      box-sizing: border-box;
+
+      .messagesDate {
+        text-align: center;
+        font-weight: 600;
+        font-size: 12px;
+        color: $neutrals-500;
+        margin: 10px 0;
+      }
+
+      &__scrolled {
+        max-height: calc(100vh - 380px);
+        margin-top: 20px;
+      }
+    }
+
+    .messageData {
+      position: relative;
+
+      .options {
+        position: absolute;
+        width: 100%;
+      }
+
+      .icon {
+        margin-left: 16px;
+        margin-top: 16px;
+      }
+
+      .messageIcon {
+        position: absolute;
+        right: 10px;
+        bottom: 12px;
+        z-index: 1;
+        border: none;
+        border-radius: 40px;
+        background-color: $neutrals-100;
+
+        .icon {
+            margin-left: 12px;
+            margin-top: 13px;
+        }
+      }
+      
+      .messageInput {
+        width: 100%;
+        border-radius: 25px;
+        height: 64px;
+        padding: 16px 24px;
+      }
+    }
+  }
+}

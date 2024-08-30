@@ -1,0 +1,45 @@
+@import "@shared/theme/colors.scss";
+
+.courseContainer {
+  width: 390px;
+  max-height: 90vh;
+  margin: auto;
+
+  .secondary {
+    color: $neutrals-300;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .option {
+    border: 1px solid $neutrals-100;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+
+    .ant-radio +span {
+      width: 100%;
+    }
+  }
+
+  .ant-radio-wrapper-checked {
+    border-color: $primary-500;
+  }
+
+  .disabled {
+    color: $neutrals-100 !important;
+    .ant-typography {
+      color: $neutrals-100 !important;
+    }
+  }
+
+  .soldOut.ant-typography{
+    color: #DC2727CC !important;
+  }
+
+  .btn {
+    width: 90%;
+    border-radius: 25px;
+    color: $neutrals-500;
+  }
+}

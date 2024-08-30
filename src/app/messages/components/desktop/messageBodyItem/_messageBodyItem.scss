@@ -1,0 +1,27 @@
+@import '@shared/theme/colors.scss';
+
+.messageBody {
+  .profileImage {
+    width: 24px;
+    height: 24px;
+    border-radius: 22.5px;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 18px;
+    color: $neutrals-500;
+  }
+
+  .time {
+    color: $neutrals-300;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .message {
+    font-weight: 500;
+    font-size: 18px;
+    color: $neutrals-500;
+  }
+}

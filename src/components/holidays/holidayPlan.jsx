@@ -1,5 +1,5 @@
 import React from "react";
-import holidayPlanBg from "@public/assets/images/holidayPlan.svg";
+import holidayPlanBg from "@public/assets/images/holidayPlan.png";
 import holidayPlanBgSm from "@public/assets/images/holidayPlanBgSm.png";
 import Image from "next/image";
 import Title from "antd/es/typography/Title";
@@ -9,13 +9,13 @@ const HolidayPlan = () => {
   return (
     <div className='px-10 xxldesktop:px-[100px] relative z-10'>
       <div className='w-full bg-[#533736] flex justify-between gap-5 rounded-3xl overflow-hidden mt-[120px]'>
-        <div className='py-[88px] lg:pl-[68px] pl-7 w-1/2 max-w-[571px] '>
+        <div className='py-[88px] lg:pl-[68px] pl-7 w-1/2'>
           <Title className=' !font-semibold !text-5xl xxldesktop:!text-6xl !text-[#E8DEDC] !mt-0 !mb-1'>
             Plan Your Own
             <br />
             Holiday in Minutes
           </Title>
-          <p className='xxldesktop:!text-[28px] text-lg !font-medium !text-[#E8DEDC] !m-0'>
+          <p className='xxldesktop:!text-[28px] text-lg !font-medium !text-[#E8DEDC] !mt-8 !mb-0'>
             Plan an equestrian holiday you&apos;ll never forget!
           </p>
           <div className='relative mt-16'>

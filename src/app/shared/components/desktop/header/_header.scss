@@ -1,0 +1,197 @@
+@import "@shared/theme/colors.scss";
+
+.header-desktop {
+    border-bottom: 1px solid $neutrals-100;
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .headerAuthButtons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .pillButton {
+                padding: 12px 16px;
+            }
+            button {
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+    .head-tab  {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        .btn-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            color: $neutrals-400;
+            padding: 12px;
+            &.active {
+                color: $neutrals-500;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.serch-head-holder {
+    margin: 24px auto 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    .searchField {
+        width: 100%;
+        border-radius: 40px;
+        border: 1px solid $neutrals-100;
+        color: $neutrals-300;
+        box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.05);
+        padding: 7px 8px 7px 24px;
+        background: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: 680px;
+        &__input {
+            border-width: 0px;
+            color: $neutrals-500;
+            padding: 5px 0;
+            font-size: 16px;
+            line-height: 20px;
+            box-shadow: none;
+            font-family: "FigTree";
+            &::placeholder {
+                color: $neutrals-300;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &:focus-within {
+          border-color: $brand-yellow;
+        }
+
+        &__button {
+            background-color: $brand-yellow;
+            border: none;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+
+            svg {
+                width: 26px;
+                height: 26px;
+                margin: 2px 0 0 2px;
+                path {
+                    fill: white;
+                }
+            }
+        }
+
+        .searchModal {
+            padding: 24px;
+            border-radius: 24px;
+            border: 1px solid $neutrals-100;
+            background: $white-100;
+            box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.15);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    .filtersButton {
+        align-items: center;
+        gap: 8px;
+        display: flex;
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        box-shadow: 0px 1px 4px 1px rgba(12, 12, 13, 0.05);
+        border-color: $neutrals-100;;
+
+        span {
+            color: $neutrals-500;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+.headerParent {
+    margin: 0 auto;
+    padding: 24px 15px;
+    max-width: 1598px;
+    .navLink {
+        font-size: 21px;
+        line-height: 16;
+        font-weight: 500;
+        color: $neutrals-400;
+
+        &_active {
+            font-size: 21px;
+            line-height: 16;
+            font-weight: 700;
+            color: $neutrals-600;
+        }
+    }
+
+}
+
+.profileHeaderButton {
+    padding: 8px 16px;
+    gap: 12px;
+    display: flex;
+    height: auto;
+    border: 1px solid $neutrals-100;
+
+    span {
+        line-height: 16px;
+        margin-top: -1px;
+        text-transform: capitalize;
+    }
+
+    svg {
+        transform: rotate(90deg);
+    }
+
+    &:hover {
+        border: 1px solid $neutrals-100 !important;
+    }
+
+    &.ant-popover-open{
+        box-shadow: 0 0 8px 1px  rgba(0, 0, 0, 0.15);
+    }
+}
+
+.profileOptPop {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .profileOptButton {
+        padding: 16px  4px;
+        color: $neutrals-600;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        min-width: 175px;
+    }
+}

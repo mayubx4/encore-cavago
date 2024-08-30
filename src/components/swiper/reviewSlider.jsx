@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
-import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
-import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
+import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.png";
+import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,0 +1,11 @@
+.imageCarousel {
+  .imageContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      border-radius: 8px;
+    }
+  }
+}

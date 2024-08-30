@@ -1,13 +1,31 @@
+"use client";
 import { AutoComplete, Button, Flex, Typography } from "antd";
 import Title from "antd/es/typography/Title";
 import Image from "next/image";
 import React from "react";
-import SettingIcon from "@public/assets/images/setting.svg";
+import SettingIcon from "@public/assets/images/setting.png";
 import { SearchOutlined } from "@ant-design/icons";
-import MouseIcon from "@public/assets/images/mouse.svg";
+import MouseIcon from "@public/assets/images/mouse.png";
 import SwiperSlider from "../swiper/swiperSlider";
+import SearchField from "@shared/components/desktop/header/searchField";
+import "@shared/components/desktop/header/_header.scss";
+import { HomeFiltersContextProvider } from "@shared/hooks/homeFiltersContext";
+import { DEFAULT_CATEGORY_ID, SearchCategories } from "@shared/constants/home";
+import FiltersModal from "@shared/components/desktop/filtersModal/filterModal";
+import useToggle from "@shared/hooks/useToggle";
+import Icon from "@shared/components/common/icons";
+import colors from "@shared/theme/colors";
 
 const HomeHero = () => {
+  const [openFilter, toggleOpenFilter] = useToggle();
+
+  const props = {
+    categoryId: DEFAULT_CATEGORY_ID,
+    subCategoryIds: null,
+    search: null,
+    searchCategory: SearchCategories.All,
+    filter: null,
+  };
   return (
     <div>
       <Flex align='center' justify='center'>
@@ -39,55 +57,24 @@ const HomeHero = () => {
         Plan an equestrian holiday you&apos;ll never forget!
       </Title>
       <Flex justify='center' gap={20} className='px-40'>
-        <Flex
-          align='center'
-          style={{
-            borderRadius: "999px",
-            width: "780px",
-            backgroundColor: "white",
-            overflow: "hidden",
-            padding: "10px",
-          }}
-        >
-          <AutoComplete
-            variant='borderless'
-            style={{
-              borderRadius: "999px",
-              width: "100%",
-              backgroundColor: "transparent",
-              outline: "none",
-              fontSizeAdjust: "40px",
-            }}
-            placeholder='Discover locations, hosts, or activities'
-          />
-          <Flex
-            style={{
-              backgroundColor: "#ED665F",
-              borderRadius: "999px",
-              padding: "10px",
-            }}
-          >
-            <SearchOutlined
-              size='large'
-              style={{ fontSize: "20px", color: "white" }}
-            />
-          </Flex>
-        </Flex>
-        <Button
-          type='text'
-          shape='round'
-          style={{
-            backgroundColor: "white",
-            // height: "64px",
-            fontSize: "18px",
-            fontWeight: "normal",
-            // padding: "28px 24px",
-          }}
-          icon={<Image src={SettingIcon} alt='share' width={20} height={20} />}
-          iconPosition='end'
-        >
-          Filter
-        </Button>
+        <HomeFiltersContextProvider {...props}>
+          <div className='serch-head-holder'>
+            <SearchField />
+            <button
+              className='filtersButton btn-outline bg-white h-full'
+              onClick={() => toggleOpenFilter()}
+            >
+              Filters
+              <Icon
+                name='filters'
+                color={colors.neutrals[500]}
+                width={24}
+                height={24}
+              />
+            </button>
+            <FiltersModal open={openFilter} toggleOpen={toggleOpenFilter} />
+          </div>
+        </HomeFiltersContextProvider>
       </Flex>
 
       <Flex vertical align='center'>
@@ -102,7 +89,7 @@ const HomeHero = () => {
         >
           Discover Holiday Packages
         </Typography>
-        <Image alt='mouse' src={MouseIcon} />
+        {/* <Image alt='mouse' src={MouseIcon} /> */}
       </Flex>
       <Flex
         align='center'
@@ -114,7 +101,7 @@ const HomeHero = () => {
           marginTop: "44px",
           padding: "24px",
           position: "relative",
-          zIndex: 10,
+          zIndex: 5,
         }}
         gap={24}
       >

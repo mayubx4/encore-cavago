@@ -1,0 +1,52 @@
+@import "@shared/theme/colors.scss";
+
+.numberStepperContainer {
+  .stepperButtonGroup {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 400px;
+    width: 105px;
+    height: 35px;
+    border: 1px solid $neutrals-300;
+    background: $white-100;
+
+    .stepperText {
+      color: $neutrals-500;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    .stepperButtons {
+      display: flex;
+      padding: 4px;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      background: $white-100;
+    }
+  }
+
+  .stepperButtonGroup:hover{
+    border-color: $primary-500 !important;
+  }
+
+  .button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button:disabled {
+    cursor: not-allowed;
+  }
+}

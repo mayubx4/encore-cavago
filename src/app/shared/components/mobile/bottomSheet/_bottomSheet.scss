@@ -1,0 +1,27 @@
+@import '@shared/theme/colors.scss';
+
+.bottomSheet {
+    .title {
+        color: $neutrals-500;
+        font-size: 22px;
+        font-family: Figtree;
+        font-weight: 700;
+        line-height: 20px;
+        word-wrap: break-word;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .saveButton {
+        padding: 21px;
+        width: 100%;
+        background-color: $primary-500;
+        border: none;
+        margin: 16px 0px;
+    }
+}

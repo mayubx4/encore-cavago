@@ -1,0 +1,37 @@
+@import "@shared/theme/colors.scss";
+
+.dateHeading {
+  color: $neutrals-500;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.dateValue {
+  color: $neutrals-400;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.editButton {
+  color: $neutrals-500;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration-line: underline;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .dateHeading {
+    font-size: 14px;
+  }
+  .dateValue {
+    font-size: 12px;
+  }
+}

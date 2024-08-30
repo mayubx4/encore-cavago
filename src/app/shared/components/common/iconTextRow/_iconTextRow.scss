@@ -1,0 +1,22 @@
+@import '@shared/theme/colors.scss';
+
+.iconTextRowContainer {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+
+    svg {
+        margin: 1px 0 0;
+
+        path {
+            fill: $primary-400;
+        }
+    }
+
+    .text {
+        color: $neutrals-500;
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 400;
+    }
+}

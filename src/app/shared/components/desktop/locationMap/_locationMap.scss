@@ -1,0 +1,20 @@
+@import '@shared/theme/colors.scss';
+
+.locationContainer {
+  .descriptionHeading {
+    font-size: 24px;
+    font-weight: 600;
+    color: $neutrals-600;
+    margin-bottom: 10px;
+  }
+
+  .location > div > div:first-child {
+    border-radius: 10px;
+  }
+
+  .location {
+    height: 427px;
+    width: 100%;
+    margin: 20px 0;
+  }
+}

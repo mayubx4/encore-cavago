@@ -1,0 +1,67 @@
+@import "@shared/theme/colors.scss";
+
+.dateRangeContainer {
+  gap: 12px;
+
+  .dateRangeHeading {
+    color: $neutrals-500;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .dateRangeInputContainer {
+    width: 50%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid $neutrals-100;
+  }
+
+  .dateRangeInputContainer:focus-within {
+    border-color: $primary-500;
+  }
+
+  .dateRangeInputLabel {
+    color: $neutrals-500;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .ant-picker {
+    border: none;
+    padding: 0px;
+    width: 100%;
+
+    .ant-picker-range-separator {
+      display: none;
+    }
+
+    .ant-picker-suffix {
+      display: none;
+    }
+
+    .ant-picker-input>input {
+      color: $neutrals-500;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+}.inline-range-picker .ant-picker {
+  display: inline-block;
+}
+
+.inline-range-picker .ant-picker-dropdown {
+  position: static !important;
+  display: block !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: auto !important;
+  width: auto;
+  box-shadow: none;
+}

@@ -1,0 +1,43 @@
+@import "@shared/theme/colors.scss";
+
+.subCategoryCheckboxTextContainer {
+  .subCategoryFilterHeading {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .checkboxText {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .customCheckboxRow {
+    flex: 1 1 100%;
+  }
+
+  @media (min-width: 768px) {
+    .subCategoryFilterHeading {
+      display: none;
+    }
+
+    .ant-checkbox-wrapper {
+      column-gap: 16px;
+    }
+
+    .ant-checkbox+span {
+      padding: 0;
+    }
+
+    .customCheckboxRow {
+      flex: 1 1 33%;
+    }
+
+    .customCheckboxLongRow {
+      flex: 1 1 50%;
+    }
+  }
+}

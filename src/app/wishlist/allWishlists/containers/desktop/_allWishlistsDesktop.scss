@@ -1,0 +1,20 @@
+@import '@shared/theme/colors.scss';
+
+.allWishlistsContainer {
+    padding: 40px;
+
+    .title {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        color: $neutrals-500;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .itemLists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

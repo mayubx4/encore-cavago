@@ -1,0 +1,28 @@
+@import "@shared/theme/colors.scss";
+
+.modalText {
+  color: $neutrals-300;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mainModalDiv {
+
+  .moreModalContent {
+    color: $neutrals-400;
+  }
+
+  .secondaryBtn, .messageBtn {
+    width: 100%;
+    margin-top: 15px;
+    color: $neutrals-500;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+
+  .secondaryBtn {
+    background: none !important;
+    border: 1px solid $neutrals-500;
+  }
+}

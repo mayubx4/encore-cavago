@@ -1,0 +1,10 @@
+@import '@shared/theme/colors.scss';
+
+.messages-container {
+    display: flex;
+    .messages-sidebar {
+        min-height: 100vh;
+        width: 500px;
+        border-right: 1px solid $neutrals-100;
+    }
+}

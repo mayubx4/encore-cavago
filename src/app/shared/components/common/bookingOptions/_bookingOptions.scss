@@ -1,0 +1,41 @@
+@import "@shared/theme/colors.scss";
+
+.bookingOptionsContainer {
+
+  .bookingOptionsHeading {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .instantBookingHeading {
+    color: $neutrals-500;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .instantBookingExplanationText {
+    color: $neutrals-300;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    .bookingOptionsHeading {
+      font-size: 24px;
+    }
+
+    .instantBookingHeading {
+      font-size: 20px;
+    }
+
+    .instantBookingExplanationText {
+      font-size: 16px;
+    }
+  }
+}

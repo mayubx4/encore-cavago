@@ -1,0 +1,116 @@
+@import '@shared/theme/colors.scss';
+
+.messagesMRoot {
+  padding: 30px 20px;
+  overflow: auto;
+
+  .heading {
+    color: $neutrals-600;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .searchButton {
+    height: 48px;
+    padding: 10px 14px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: $icon-bg-grey;
+    border: none;
+  }
+
+  .messageTypeContainer {
+    gap: 4px;
+    margin-top: 12px;
+
+    .typeButton {
+      display: flex;
+      padding: 16px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 40px;
+      border: 1px solid $neutrals-100;
+
+      p {
+        color: $neutrals-300;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      &__active {
+        border-color: $neutrals-500;
+
+        p {
+          color: $neutrals-500;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .noMessageContainer {
+    margin-top: 124px;
+    text-align: center;
+
+    h2 {
+      color: $neutrals-500;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    p {
+      color: $neutrals-400;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+
+  .messagesContainer {
+    margin-top: 24px;
+
+    .messageContent {
+      column-gap: 12px;
+      border-bottom: 1px solid $neutrals-100;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      .status {
+        color: #B54708;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .messageDetails {
+        color: $neutrals-500;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .cavagoSupport {
+        color: $neutrals-500;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .activityDetails {
+        color: $neutrals-300;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { Flex } from "antd";
 import Image from "next/image";
 import React from "react";
-import calander from "@public/assets/images/calander.svg";
+import calander from "@public/assets/images/calander.png";
 
 const Availability = ({ day, date }) => {
   return (

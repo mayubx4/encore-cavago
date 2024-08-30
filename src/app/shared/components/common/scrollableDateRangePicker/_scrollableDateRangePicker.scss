@@ -1,0 +1,248 @@
+@import "@shared/theme/colors.scss";
+
+.datepickerContainer {
+  width: 390px;
+  max-height: 90vh;
+  margin: auto;
+
+  .header {
+    padding: 20px 20px 0 20px;
+  }
+
+  .expensive {
+    position: absolute;
+    bottom: 2px;
+    font-size: 8px;
+    font-weight: 500;
+  }
+
+  .dateInfo {
+    color: $neutrals-300;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .grayHeader {
+    font-size: 16px;
+    font-weight: 400;
+    color: $neutrals-300;
+    margin-left: 3px;
+  }
+
+  .dateRange {
+    background-color: $icon-bg-grey;
+    border-radius: 25px;
+    color: $neutrals-500;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 13px;
+  }
+
+  .saveBtn, .backBtn, .slotBtn {
+    background-color: $primary-500;
+    border-color: $primary-500;
+    border-radius: 25px;
+    color: $neutrals-500;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin: 20px 0 100px 0;
+  }
+
+  .backBtn, .slotBtn {
+    background-color: #FFF;
+    border-color: $neutrals-500;
+  }
+
+  .slotBtn {
+    margin: 10px 0;
+    height: 44px;
+  }
+
+  .checked {
+    border: 3px solid $primary-500;
+  }
+
+  .timeSlots {
+    margin: 0 20px;
+  }
+
+  .h3 {
+    color: $neutrals-500;
+    font-size: 22px;
+    font-style: normal;
+    margin-left: 3px;
+    font-weight: 600;
+  }
+
+  .calendarWeekdayContainer {
+    padding: 0 20px;
+
+    .calendarWeekday {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      padding: 12px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+
+      p {
+        color: $neutrals-300;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .divider {
+    margin: 0;
+  }
+
+  .calendarScrollable {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    h4 {
+      color: $neutrals-500;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .calendarMonth {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      .calendarGrid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        row-gap: 2px;
+        column-gap: 0.7rem;
+
+        .calendarDayContainer {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+        }
+
+        .calendarDayContainer.in-range:not(.start):not(.end) {
+          background-color: $primary-100;
+          border-radius: 0;
+        }
+
+        .calendarDayContainer.start .calendarDay {
+          background-color: $primary-500;
+          color: $white-100;
+        }
+
+        .calendarDayContainer.end .calendarDay {
+          background-color: $primary-500;
+          color: $white-100;
+        }
+
+        .calendarDayContainer.in-range.start .calendarDay,
+        .calendarDayContainer.in-range.end .calendarDay {
+          border-radius: 50%;
+        }
+
+        .calendarDayContainer.in-range:not(.start):not(.end) {
+          background-color: $primary-100;
+        }
+
+        .calendarDayContainer.in-range:not(.start):not(.end)::before {
+          content: "";
+          position: absolute;
+          left: -10px;
+          right: -10px;
+          height: 40px;
+          background-color: $primary-100;
+          z-index: 0;
+        }
+
+        .calendarDayContainer.in-range.start::before {
+          content: "";
+          position: absolute;
+          left: 15px;
+          right: -10px;
+          height: 40px;
+          background-color: $primary-100;
+          z-index: 0;
+        }
+
+        .calendarDayContainer.in-range.end::before {
+          content: "";
+          position: absolute;
+          right: 15px;
+          left: -10px;
+          height: 40px;
+          background-color: $primary-100;
+          z-index: 0;
+        }
+
+        .calendarDay {
+          height: 40px;
+          width: 40px;
+          padding: 12px;
+          box-sizing: border-box;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 50%;
+          transition: background-color 0.3s;
+          z-index: 1;
+
+          p {
+            color: $neutrals-500;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+
+        .calendarDay:hover {
+          background-color: $neutrals-100;
+        }
+
+        .calendarDay.in-range {
+          background-color: transparent;
+        }
+
+        .calendarDay.disabled {
+          cursor: not-allowed;
+          text-decoration: line-through;
+          color: $neutrals-200;
+
+          p {
+            color: $neutrals-200;
+          }
+        }
+      }
+    }
+  }
+  .pkgStart p {
+    font-weight: 800 !important;
+  }
+}

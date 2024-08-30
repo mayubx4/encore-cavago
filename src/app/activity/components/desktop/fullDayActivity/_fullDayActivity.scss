@@ -1,0 +1,222 @@
+@import '@shared/theme/colors.scss';
+
+.mainRangeDiv {
+  position: relative;
+
+  .ant-picker-range {
+    width: 100%;
+    height: 56px;
+  }
+
+  .startDate {
+    font-size: 9px;
+    color: rgb(128, 140, 150);
+    position: absolute;
+    z-index: 1;
+    top: 7%;
+    left: 12px;
+  }
+
+  .endDate {
+    position: absolute;
+    z-index: 1;
+    right: 32%;
+    top: 7%; 
+    font-size: 9px;
+    color: rgb(128, 140, 150);
+  }
+
+  .ant-picker-input:first-of-type {
+    border-right: 1px solid #000 !important;
+  }
+
+  .ant-picker-input input {
+    padding-top: 15px !important;
+
+    ::placeholder {
+      color: #2C3F50 !important;
+    }
+  }
+
+  .ant-picker-cell-in-view:hover {
+    border: 1px solid $primary-500 !important;
+    border-radius: 50%;
+  }
+
+
+  @media (min-width: 1300px) {
+    .endDate {
+      right: 33%;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .endDate {
+      right: 34%;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .endDate {
+      right: 35%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .endDate {
+      right: 36%;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .endDate {
+      right: 37%;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .endDate {
+      right: 38%;
+    }
+  }
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-in-range:not(.ant-picker-cell-disabled):before, .ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled):before, .ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled):before {
+  background: $secondary-yellow !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start, .ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end {
+  background: $primary-500 !important;
+  border-radius: 50% !important;
+}
+
+.header {
+  padding: 20px 20px 0 20px;
+
+  h5 {
+    margin: 0px;
+  }
+
+  .secondary {
+    font-size: 14px;
+    font-weight: 400;
+    color: $neutrals-100;
+  }
+
+  .pkgDays {
+    padding: 5px;
+    border-radius: 25px;
+    background-color: $icon-bg-grey;
+    color: $neutrals-500;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .error {
+    background-color: $reds-100;
+    color: $reds-700;
+  }
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.expensive {
+  position: absolute;
+  bottom: 1px;
+  left: 12px;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.seasonalDate {
+  font-size: 18px;
+}
+
+.date, .seasonalDate {
+  color: $neutrals-500;
+}
+
+.date-disabled {
+  color: $neutrals-100 !important;
+}
+
+.ant-picker-dropdown {
+  .ant-picker-cell-hover.ant-picker-cell-in-view {
+    background: $secondary-yellow !important;
+    border-radius: 50% !important;
+  }
+
+  .ant-picker-cell-in-view.ant-picker-cell-selected {
+    background: $primary-500 !important;
+    border-radius: 50% !important;
+  }
+}
+
+.datePicker {
+  .ant-picker-cell-inner {
+    border-radius: 50% !important;
+  }
+  
+  .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+    border-radius: 50% !important;
+  }
+
+  .ant-picker-cell-disabled {
+    text-decoration: line-through !important;
+  }
+
+  .ant-picker-cell-disabled::before {
+    background: none !important;
+  }
+
+}
+
+.dateChoices {
+  margin-top: 30px;
+
+  .selector {
+    width: 100%;
+  
+    .ant-select-selector {
+      height: 56px !important;
+    }
+  
+    .ant-select-selection-item {
+      padding-top: 17px !important;
+    }
+  
+    .ant-select-arrow {
+      padding-top: 26px;
+    }
+  }
+  
+  
+  .placeholder {
+    font-size: 9px;
+    color: $neutrals-100;
+    position: absolute;
+    padding-top: 11px;
+    padding-left: 12px;
+    z-index: 1;
+  }
+  .ant-picker {
+    width: 100%;
+    height: 56px;
+  }
+
+  .ant-picker-input input {
+    padding-top: 15px !important;
+  }
+
+  .ant-select-selection-placeholder {
+    padding-top: 15px !important;
+  }
+
+  .ant-picker-suffix {
+    padding-top: 13px;
+  }
+
+}
+

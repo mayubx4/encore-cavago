@@ -1,0 +1,95 @@
+@import '@shared/theme/colors.scss';
+
+.bookingCard {
+  margin-top: 20px;
+  border-radius: 15px;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  .topRow {
+    padding: 20px;
+    min-height: 165px;
+  }
+
+  .mainDetails {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+
+    .bold {
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .semibold {
+      margin-top: 5px;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .divider {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #FFF;
+    }
+
+    .date {
+      font-weight: 600;
+      font-size: 12px;
+      color: #FFF;
+    }
+  }
+
+  .pendingDiv {
+    padding: 20px;
+    background-color: #FFFAEB;
+    border-bottom-left-radius: 15px;
+
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      color: #B54708;
+    }
+
+    .messageBtn, .selectBtn {
+      height: 48px;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      color: $neutrals-500;
+      border-radius: 40px;
+      padding: 10.28px 27.41px;
+      border: 1px solid $neutrals-500;
+      width: 100%;
+    }
+
+    .selectBtn {
+      border-color: #B54708;
+      color: #B54708;
+    }
+  }
+
+  .pill {
+    max-width: fit-content;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    color: $greens-500;
+    background-color: #FFF;
+  }
+
+  .success {
+    background: $greens-200;
+  }
+
+  .failure {
+    color: $reds-500;
+    background: $reds-100;
+  }
+}

@@ -1,0 +1,36 @@
+@import '@shared/theme/colors.scss';
+
+.item {
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  .hostProfile {
+    border-radius: 25px;
+    width: 48px;
+    height: 48px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: $neutrals-500;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: $neutrals-400;
+  }
+
+  :hover {
+    background-color: $icon-bg-grey;
+    border-radius: 10px;
+  }
+
+}
+
+.selected {
+  background-color: $icon-bg-grey;
+  border-radius: 10px;
+}

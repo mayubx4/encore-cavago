@@ -1,0 +1,135 @@
+@import "@shared/theme/colors.scss";
+
+.card {
+  display: flex;
+  min-width: 450px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 12px;
+  border: 1px solid var($neutrals-100, #D5D9DC);
+  background: #FFF;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.15);
+  overflow: scroll;
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  border-radius: 18px;
+
+  .image {
+    width: 270px !important;
+    height: 190px !important;
+    border-radius: 18px;
+  }
+
+  .text {
+    color: $neutrals-600;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .location {
+    color: $neutrals-400;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .review {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.priceBreakDownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+
+  .headingContainer {
+    display: flex;
+    width: 355px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    color: $neutrals-500;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .priceDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    align-self: stretch;
+  }
+
+  .subDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .text {
+    color: $neutrals-500;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .priceValue {
+    color: $neutrals-500;
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .promoText {
+    color: $blues-500;
+  }
+}
+
+.divider {
+  max-width: 607px !important;
+  height: 1px;
+  background: $neutrals-100;
+  margin: 0px !important;
+}
+
+.grandTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+
+  .grandTotalText {
+    color: $neutrals-500;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

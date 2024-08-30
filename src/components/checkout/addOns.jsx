@@ -15,7 +15,7 @@ const AddOns = ({ title, text }) => {
   };
 
   return (
-    <div className='flex justify-between flex-col xxldesktop::flex-row gap-3'>
+    <div className='flex justify-between items-center flex-col xxldesktop:flex-row gap-3'>
       <Text style={{ color: "#2C3F50", fontSize: "18px" }}>
         Single Supplement
       </Text>

@@ -1,0 +1,37 @@
+@import '@shared/theme/colors.scss';
+
+.ddContainer {
+    .dropDownTitle {
+        color: $neutrals-500;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 20px;
+        word-wrap: break-word;
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+
+        .option {
+            padding: 16px 0;
+            color: $neutrals-500;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 34px;
+        }
+
+        .active {
+            background-color: $light-neutrals-300;
+        }
+    }
+
+    .saveButton {
+        padding: 21px;
+        width: 100%;
+        background-color: $primary-500;
+        border: none;
+        margin: 16px 0px;
+    }
+}

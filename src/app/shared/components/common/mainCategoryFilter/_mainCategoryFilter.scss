@@ -1,0 +1,51 @@
+@import "@shared/theme/colors.scss";
+
+.mainCategoryFilterContainer {
+  .mainCategoryFilterHeading {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .mainCategoryFilterButton {
+    padding: 16px;
+    width: 100%;
+    border-radius: 40px;
+    border: 1px solid $neutrals-100;
+    color: $neutrals-300;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .activeMainCategoryFilter {
+    border-color: $primary-500;
+    color: $neutrals-500;
+  }
+
+  .activeMainCategoryFilter:hover {
+    border-color: $primary-500 !important;
+  }
+
+  .mainCategoriesContainer {
+    overflow: auto;
+    scrollbar-width: none;
+  }
+
+  @media (min-width: 768px) {
+    .mainCategoryFilterHeading {
+      font-size: 24px;
+    }
+
+    .mainCategoryFilterButton {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .mainCategoriesContainer {
+      flex-flow: nowrap;
+    }
+  }
+
+}

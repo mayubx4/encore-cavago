@@ -1,0 +1,277 @@
+@import "@shared/theme/colors.scss";
+
+.mobilePageContainer {
+    padding: 20px;
+
+    .headerNav {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 8px;
+
+        .link {
+            color: $neutrals-300;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-decoration: none;
+            padding: 12px 0;
+        }
+
+        .active {
+            font-weight: 600;
+            color: $neutrals-500;
+        }
+    }
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .searchFieldContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 8px 8px 16px;
+            border-radius: 100px;
+            background: $white-100;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+            border: 1px #F5F7FA solid;
+
+            .searchInputField {
+                color: $neutrals-500;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                border-width: 0;
+
+                &::placeholder {
+                    color: $neutrals-300;
+
+                }
+            }
+
+            &:focus-within {
+              border-color: $primary-400;
+            }
+        }
+
+        .cancelSearchButton {
+            color: $neutrals-300;
+            text-align: center;
+            font-family: Figtree;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            padding: 0;
+            border: none;
+            background: transparent;
+        }
+
+        .categoriesContainer {
+            padding: 0px;
+            gap: 16px;
+            margin: 0;
+            width: calc(100% + 20px);
+            max-width: initial;
+
+            .categoryLink {
+                font-size: 12px;
+                padding: 16px 0;
+            }
+
+            .cat-holder {
+                gap: 16px;
+                padding: 6px 45px 6px 0;
+
+                .btn-text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14.4px;
+                    color: $neutrals-300;
+
+                    &.active {
+                       font-weight: 600;
+                       color: $neutrals-500;
+                    }
+                }
+            }
+        }
+
+        .subCategoriesContainer {
+            width: calc(100% + 20px);
+            max-width: initial;
+            padding: 0;
+            margin: 0;
+
+          .cat-holder {
+            gap: 4px;
+            padding: 0 45px 12px 0;
+
+            .btn-outline {
+              height: auto;
+              padding: 7px 16px;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 24px;
+              border-color: $neutrals-300;
+
+              .icon {
+                display: none;
+              }
+
+              &.active {
+                font-weight: 500;
+                color: $neutrals-500;
+                border-color: $neutrals-500;
+              }
+            }
+          }
+
+            .subcategoryLink {
+                padding: 16px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .listingContainer {
+        padding: 12px 0;
+
+        .backIcon {
+            padding-bottom: 20px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+
+            button {
+                padding: 0;
+            }
+
+            h2 {
+                color: $neutrals-500;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+            }
+        }
+
+        .activitiesScroller {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 0 0 26px;
+            width: calc(100% + 20px);
+            scrollbar-width: none;
+
+            .cardContainer {
+                min-width: 277px;
+                &:last-child {
+                    margin-right: 16px;
+                }
+                .activityImageContainer {
+                    img {
+                        height: 196px;
+                    }
+                }
+            }
+        }
+
+        .activityImageContainer {
+            margin: 0 0 12px;
+
+            img {
+                border-radius: 12px;
+            }
+        }
+
+        .titleTxtContainer {
+            .titleTxt {
+                line-height: 16.8px;
+            }
+        }
+
+        .locationtxt {
+            font-size: 12px;
+            line-height: 14.4px;
+            margin: 0 0 8px;
+            color: $neutrals-300;
+        }
+
+        .price-text {
+            font-size: 12px;
+            line-height: 14.4px;
+            color: $neutrals-300;
+
+            span {
+                color: $neutrals-500;
+            }
+        }
+
+        .activities-holder {
+            border-bottom: 1px solid $neutrals-100;
+            margin: 0 0 24px;
+
+            .head {
+              margin: 0 0 12px;
+              display: flex;
+              justify-content: space-between;
+
+              h2 {
+                  color: $neutrals-500;
+                  font-size: 16px;
+                  font-weight: 600;
+              }
+
+              .btn-text {
+                color: $neutrals-500;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+        }
+
+        .activitiesScrollerVert {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .cardContainer {
+                width: 100%;
+
+                .activityImageContainer {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchScreenContainerHome {
+        padding: 0;
+        padding-top: 16px;
+
+        .searchResultText {
+            color: $neutrals-300;
+            font-family: Figtree;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    .searchResultText {
+      color: $neutrals-300;
+      font-family: Figtree;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      padding: 20px 0;
+    }
+}

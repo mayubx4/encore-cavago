@@ -1,0 +1,70 @@
+import { z } from 'zod';
+
+export const bookingSchema = z.object({
+  id: z.number(),
+  booking_fc_id: z.number().nullish(),
+  main_activity_id: z.number(),
+  booking_user_id: z.number(),
+  sub_activity_id: z.number().nullish(),
+  m_activity_name: z.string().nullish(),
+  s_activity_name: z.string().nullish(),
+  from_date: z.string(),
+  to_date: z.string().nullish(),
+  time_slots: z.string().nullish(),
+  activity_quantity: z.number().nullish(),
+  activity_price: z.string().nullish(),
+  host_note: z.string().nullish(),
+  status: z.string(),
+  created_at: z.string(),
+  updated_at: z.string(),
+  postponed_datetime: z.string().nullish(),
+  duration: z.string().nullish(),
+  booking_fac_details: z.object({
+    id: z.number(),
+    vat: z.string().nullish(),
+    total: z.string(),
+    grand_total: z.string(),
+    currency_type: z.string(),
+    b_user: z.object({
+      id: z.number(),
+      user_id: z.number(),
+      phone: z.string(),
+      city: z.string().nullish(),
+      address: z.string().nullish(),
+      country: z.string(),
+      img_1_url: z.string().nullish(),
+      user_info: z.object({
+        id: z.number(),
+        first_name: z.string(),
+        last_name: z.string(),
+        email: z.string().email(),
+      }),
+    }),
+    facility_details: z.object({
+      id: z.number(),
+      facility_name: z.string(),
+      address_line_1: z.string(),
+      address_line_2: z.string().nullish(),
+      city: z.string(),
+      country: z.string(),
+      base_currency: z.string(),
+      contact_person: z.string(),
+      profile_picture: z.string().nullish(),
+      facility_user: z.object({
+        id: z.number(),
+        first_name: z.string(),
+        last_name: z.string(),
+      }).nullish(),
+    }).nullish(),
+  }),
+  activity_details: z.object({
+    id: z.number(),
+    name: z.string(),
+    img_1_url: z.string().nullish(),
+  }),
+});
+
+export const upcomingBookingSchemaTemp = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+});

@@ -1,0 +1,22 @@
+@import "@shared/theme/colors.scss";
+
+.customCheckboxContainer {
+  padding: 12px 0;
+
+  .customCheckboxLabel {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .checkedCustomCheckboxLabel {
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    .customCheckboxLabel {
+      font-size: 18px;
+    }
+  }
+}

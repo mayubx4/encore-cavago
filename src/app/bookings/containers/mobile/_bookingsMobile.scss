@@ -1,0 +1,73 @@
+@import '@shared/theme/colors.scss';
+
+.bookingsContainer {
+  padding: 10px;
+  margin-top: 20px;
+
+  .heading {
+    font-weight: 700;
+    font-size: 22px;
+    color: $neutrals-500;
+  }
+
+  .secondary {
+    font-weight: 400;
+    font-size: 14px;
+    color: $neutrals-300;
+    margin-top: 10px;
+  }
+
+  .cardContent {
+    height: calc(100vh - 230px);
+    overflow: auto;
+  }
+
+  .noBookings {
+    text-align: center;
+    width: 100%;
+
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+      color: $neutrals-500;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: $neutrals-400;
+    }
+
+    button {
+      margin-top: 30px;
+      height: 50px;
+      border-radius: 40px;
+      border: 1px solid $neutrals-500;
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  .col {
+    color: $neutrals-300;
+    margin-top: 30px;
+    height: 40px;
+    text-align: center;
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .selected {
+    border-bottom: 1px solid $primary-500;
+    color: $primary-500;
+
+    p {
+      font-weight: 700;
+    }
+  }
+}

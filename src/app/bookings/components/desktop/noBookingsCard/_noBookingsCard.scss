@@ -1,0 +1,40 @@
+@import '@shared/theme/colors.scss';
+
+.notfoundCard {
+  border: 1px solid $neutrals-100;
+  border-radius: 15px;
+
+  .details {
+    padding: 20px 35px;
+  }
+
+  .notfoundTitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: $neutrals-500;
+  }
+
+  .notfoundSecondary {
+    font-weight: 400;
+    font-size: 18px;
+    color: $neutrals-400;
+  }
+
+  .notfoundBtn {
+    height: 54px;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: $neutrals-500;
+    border: 1px solid $neutrals-500;
+    border-radius: 40px;
+    margin-top: 30px;
+  }
+
+  .notfoundImg {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}

@@ -1,0 +1,55 @@
+@import "@shared/theme/colors.scss";
+
+.filterDesktopContainer {
+
+  .filterHeaderContainer {
+    padding-top: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid $neutrals-100;
+
+    .filterHeading {
+      color: $neutrals-600;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  .filterContent {
+    height: 65vh;
+    overflow: auto;
+  }
+
+}
+
+.filterFooter {
+  padding: 40px 20px;
+  border-top: 1px solid $neutrals-100;
+
+  .filterButton {
+    width: 275px;
+    padding: 14px 10px;
+    border-radius: 200px;
+    background: $primary-500 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.489px;
+    box-sizing: content-box;
+    flex: 1 0 0;
+    border: none;
+    color: $neutrals-500 !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .clearButton {
+    color: $neutrals-500 !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+  }
+}

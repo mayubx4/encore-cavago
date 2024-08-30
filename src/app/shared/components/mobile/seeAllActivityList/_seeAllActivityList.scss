@@ -1,0 +1,25 @@
+@import '@shared/theme/colors.scss';
+
+.seeAllContainer {
+    .activitiesScroller {
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+
+        .activityImage {
+            border-radius: 12px;
+        }
+
+        .activityImageContainer {
+            margin-bottom: 12px;
+        }
+
+        .titleTxtContainer {
+            .titleTxt {
+                color: $neutrals-500;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+}

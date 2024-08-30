@@ -1,9 +1,9 @@
 import Title from "antd/es/typography/Title";
 import React from "react";
-import tripIcon1 from "@public/assets/images/tripIcon1.svg";
-import tripIcon2 from "@public/assets/images/tripIcon2.svg";
-import tripIcon3 from "@public/assets/images/tripIcon3.svg";
-import flower from "@public/assets/images/flower.svg";
+import tripIcon1 from "@public/assets/images/tripIcon1.png";
+import tripIcon2 from "@public/assets/images/tripIcon2.png";
+import tripIcon3 from "@public/assets/images/tripIcon3.png";
+import flower from "@public/assets/images/flower.png";
 import { Flex } from "antd";
 import Image from "next/image";
 

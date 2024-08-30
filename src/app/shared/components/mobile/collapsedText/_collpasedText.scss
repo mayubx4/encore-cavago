@@ -1,0 +1,22 @@
+@import "@shared/theme/colors.scss";
+
+.collapsed {
+  overflow: hidden;
+  max-height: 64px;  
+}
+
+.expand {
+  color: $neutrals-600;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.right {
+  position: absolute;
+  right: 5px;
+}
+
+.expand:hover {
+  text-decoration: underline;
+}

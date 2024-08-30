@@ -1,0 +1,49 @@
+@import "@shared/theme/colors.scss";
+
+.durationContainer {
+  gap: 16px;
+
+  .durationHeading {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 8px;
+    overflow: scroll;
+
+    .button {
+      padding: 16px 24px;
+      border-radius: 40px;
+      border: 1px solid $neutrals-100;
+      color: $neutrals-300;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .activeButton {
+      border-color: $primary-500;
+      color: $neutrals-500;
+    }
+
+    .activeButton:hover {
+      border-color: $primary-500 !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .durationHeading {
+      font-size: 24px;
+    }
+    .buttonGroup {
+      gap: 16px
+    }
+    .button {
+      width: 90px;
+    }
+  }
+}

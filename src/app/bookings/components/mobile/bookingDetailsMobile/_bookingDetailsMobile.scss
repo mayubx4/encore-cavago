@@ -1,0 +1,71 @@
+@import '@shared/theme/colors.scss';
+
+.bookingDetailsContainer {
+  max-height: calc(100vh - 80px);
+  padding-bottom: 10px;
+  overflow: auto;
+  .images {
+    position: relative;
+
+    .cross {
+      position: absolute;
+      border: none;
+      top: 20px;
+      left: 20px;
+      border-radius: 40px;
+      z-index: 1;
+    }
+  }
+
+  .attributes {
+    margin: 5px;
+    position: relative;
+
+    p.info {
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      color: $neutrals-500 !important;
+    }
+
+    .pill {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .success {
+      color: $greens-900;
+      background-color: $greens-100;
+    }
+
+    .failure {
+      color: $reds-800;
+      background-color: $reds-100;
+    }
+  }
+
+  .amountInfo {
+    padding: 0px 20px;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: $neutrals-300;
+    }
+
+    h4 {
+      font-weight: 700;
+      font-size: 16px;
+      color: $neutrals-500;
+    }
+  }
+
+  .activityHeading {
+    font-weight: 600;
+    font-size: 18px;
+    color: $neutrals-600;
+  }
+}

@@ -1,0 +1,57 @@
+@import "@shared/theme/colors.scss";
+
+.bookingRootContainer {
+
+  .guestSelection {
+    .ant-select {
+      border-radius: 12px;
+      border: 1px solid $neutrals-100;
+      width: 167px;
+      padding: 12px 16px;
+      height: 40px;
+    }
+
+    .ant-select-selector {
+      color: $neutrals-500;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      border: none !important;
+    }
+
+    .ant-select-dropdown .ant-select-item-option {
+      color: $neutrals-500;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .text {
+    color: $neutrals-500;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .dateValue {
+    margin-top: 5px;
+    color: $neutrals-400;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+}
+
+.ant-select-dropdown .ant-select-item-option {
+  color: $neutrals-500 !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}

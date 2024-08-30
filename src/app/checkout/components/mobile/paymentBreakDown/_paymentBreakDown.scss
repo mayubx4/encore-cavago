@@ -1,0 +1,31 @@
+@import "@shared/theme/colors.scss";
+
+.breakDownMContainer {
+  .breakdownHeading {
+    color: $neutrals-500;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .breakdownText {
+    color: $neutrals-500;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .promoCodeText {
+    color: $blues-500;
+  }
+
+  .totalPriceText {
+    color: $neutrals-500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}

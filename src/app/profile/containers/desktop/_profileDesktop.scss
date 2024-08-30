@@ -1,0 +1,56 @@
+@import '@shared/theme/colors.scss';
+
+.profileContainer {
+    padding: 40px;
+
+    .contentContainer {
+        margin: 120px 0;
+        display: flex;
+        flex-direction: column;
+
+        h2.title {
+            color: $neutrals-600;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        p.subTitle {
+            color: $neutrals-400;
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 16px;
+            margin-bottom: 96px;
+        }
+
+        .options {
+            display: flex;
+            gap: 46px;
+
+
+            .profileOption {
+                padding: 40px;
+                border-radius: 24px;
+                gap: 40px;
+                border: 1px $neutrals-500 solid;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .title {
+                    color: $neutrals-500;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28.8px;
+                    margin: 0 0 10px;
+                    display: block;
+                }
+
+                .subtitle {
+                    color: $neutrals-400 !important;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

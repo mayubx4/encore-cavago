@@ -1,0 +1,40 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .searchFieldWrapper {
+        flex: 1;
+    }
+
+    .searchFieldContainer {
+        gap: 4px;
+
+        .searchInputField {
+            align-self: stretch;
+            flex: 1;
+            padding: 4px 2px;
+            box-shadow: none;
+
+            &:focus-within {
+                box-shadow: none;
+            }
+        }
+
+        .searchIcon {
+            margin-top: 2px ;
+        }
+
+       button {
+        .funnelSvg {
+            margin: 2px 0 0 1.5px;
+        }
+       }
+    }
+
+    .cancelButtonWrapper {
+        button {
+            margin: 0 0 0 8px;
+        }
+    }
+}
