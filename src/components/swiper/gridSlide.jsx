@@ -24,7 +24,9 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
             overflow: "hidden",
           }}
         >
-         <FavouriteBar/>
+          <div className='absolute w-full flex justify-between p-4 box-border'>
+            <FavouriteBar />
+          </div>
           <Image
             alt='card'
             src={g2}

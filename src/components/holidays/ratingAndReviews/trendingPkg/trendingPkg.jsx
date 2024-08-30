@@ -3,14 +3,10 @@ import Image from "next/image";
 import React from "react";
 import trendingPkgBg from "@public/assets/images/trendingPkgBg.png";
 import trendingPkgBgSm from "@public/assets/images/trendingPkgBgSm.png";
-import trending from "@public/assets/images/trending.png";
-import trendingCard2 from "@public/assets/images/trendingCard2.png";
-import trendingCard3 from "@public/assets/images/trendingCard3.png";
 import trendingStar from "@public/assets/images/trendingStar.svg";
-import holidayPlanBg from "@public/assets/images/holidayPlanBg.png";
 import Title from "antd/es/typography/Title";
 import { ArrowRightOutlined } from "@ant-design/icons";
-import FavouriteBar from "../shared/favouriteBar";
+import TrendingCard from "./trendingCard";
 
 const TrendingPkg = () => {
   return (
@@ -52,36 +48,37 @@ const TrendingPkg = () => {
       {/* <div className='flex justify-between w-full px-9'> */}
       <Row className='w-full px-9 !m-0' gutter={[24, 0]}>
         <Col span={24 / 3}>
-          <div className="bg-[url('/assets/images/trendingCard1.png')] p-4 rounded-2xl ">
-            <div className='relative overflow-hidden'>
-              <Image
-                alt='trending'
-                src={trending}
-                className='w-full rounded-2xl h-[508px] object-cover'
-              />
-              <div className='bg-[linear-gradient(180deg,rgba(0,0,0,0)_20.66%,#000000_113.35%)] h-full w-full absolute top-0 left-0 box-border p-4 rounded-2xl'>
-                <FavouriteBar /> Your overlay content goes here
-              </div>
-            </div>
-          </div>
+          <TrendingCard
+            bgImage='/assets/images/trendingCard1.png'
+            imageSrc='/assets/images/trending.png'
+            category='Equestrian Festivals'
+            title='Doñana Experience Route'
+            rating='4.5'
+            location='Turismo Ecuestre Doñana, Spain'
+            price='£180.00'
+          />
         </Col>
         <Col span={24 / 3}>
-          <div className="bg-[url('/assets/images/trendingCard2.png')] p-4 rounded-2xl">
-            <Image
-              alt='trending'
-              src={trending}
-              className='w-full rounded-2xl h-[508px] object-cover'
-            />
-          </div>
+          <TrendingCard
+            bgImage='/assets/images/trendingCard2.png'
+            imageSrc='/assets/images/trending.png'
+            category='Equestrian Festivals'
+            title='Doñana Experience Route'
+            rating='4.5'
+            location='Turismo Ecuestre Doñana, Spain'
+            price='£180.00'
+          />
         </Col>
         <Col span={24 / 3}>
-          <div className="bg-[url('/assets/images/trendingCard3.png')] p-4 rounded-2xl">
-            <Image
-              alt='trending'
-              src={trending}
-              className='w-full rounded-2xl h-[508px] object-cover'
-            />
-          </div>
+          <TrendingCard
+            bgImage='/assets/images/trendingCard3.png'
+            imageSrc='/assets/images/trending.png'
+            category='Equestrian Festivals'
+            title='Doñana Experience Route'
+            rating='4.5'
+            location='Turismo Ecuestre Doñana, Spain'
+            price='£180.00'
+          />
         </Col>
       </Row>
       <Flex justify='center'>

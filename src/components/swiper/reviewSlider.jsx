@@ -26,14 +26,14 @@ import Image from "next/image";
 
 const ReviewSlider = ({
   slides = [
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
-    <ReviewCard />,
+    <ReviewCard key={1} />,
+    <ReviewCard key={2} />,
+    <ReviewCard key={3} />,
+    <ReviewCard key={4} />,
+    <ReviewCard key={5} />,
+    <ReviewCard key={6} />,
+    <ReviewCard key={7} />,
+    <ReviewCard key={8} />,
   ],
 }) => {
   const swiperRef = useRef(null);
@@ -70,11 +70,7 @@ const ReviewSlider = ({
         onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={"qwe" + i}>
-            <div key={"slide" + i} className='w-full'>
-              {slide}
-            </div>
-          </SwiperSlide>
+          <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
       <div className='swiper-custom-pagination items-center'>
