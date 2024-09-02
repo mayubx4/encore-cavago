@@ -1,8 +1,8 @@
 import { getToken } from '@shared/api/utils';
 import axios from 'axios';
 
-// const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-const API_BASE_URL = 'https://dev2.mycavago.com/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+// const API_BASE_URL = 'https://dev2.mycavago.com/api';
 
 const getHeaders = () => {
   const token = getToken() || '';

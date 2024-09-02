@@ -40,7 +40,6 @@ function CheckoutDesktop() {
   const activity = activityQuery.data;
   const getActivityRatingQuery = ActivityApi.getActivityRating.useQuery(activityId || '0');
   const activityRating = getActivityRatingQuery.data;
-console.log(activity,'activity');
 
   const applyPromoCodeQuery = checkoutApi.applyPromoCode.useMutation({
     onSuccess: (data) => {
@@ -93,23 +92,21 @@ console.log(activity,'activity');
     }
   };
 
-  // if (!activityId) {
-  //   return (
-  //     <Spin />
-  //   );
-  // }
+  if (!activityId) {
+    return (
+      <Spin />
+    );
+  }
 
-  // if (!activity) {
-  //   return (
-  //     <Spin />
-  //   );
-  // }
+  if (!activity) {
+    return (
+      <Spin />
+    );
+  }
 
   const activityCharges = {
-    description:'asd' ,
-    // activity.activity_types !== 4 ? `Activity charges x ${numberOfAdults} adults${numberOfChildren > 0 ? ` x ${numberOfChildren} children` : ''}` : 'Course fee',
-    price:'asd'
-    //  (basePrice * numberOfAdults) + (basePrice * numberOfChildren),
+    description: activity.activity_types !== 4 ? `Activity charges x ${numberOfAdults} adults${numberOfChildren > 0 ? ` x ${numberOfChildren} children` : ''}` : 'Course fee',
+    price: (basePrice * numberOfAdults) + (basePrice * numberOfChildren),
   };
 
   const addOnCharges = {
@@ -118,18 +115,15 @@ console.log(activity,'activity');
   };
 
   const vat = {
-    description:'xzc', 
-    // `Vat (${activity?.facility_details?.vat_percentage || 0}%)`,
-    price:'asd' 
-    // (activityCharges.price + addOnCharges.price) * ((activity?.facility_details?.vat_percentage || 0) / 100),
+    description: `Vat (${activity?.facility_details?.vat_percentage || 0}%)`,
+    price: (activityCharges.price + addOnCharges.price) * ((activity?.facility_details?.vat_percentage || 0) / 100),
   };
 
   const totalCharges = [activityCharges, vat];
-  // if (activity.activity_add_ons && activity.activity_add_ons.length) {
-  //   totalCharges.splice(1, 0, addOnCharges);
-  // }
-  const totalPrice =123 
-  // activityCharges.price + addOnCharges.price + vat.price - (promoCodeData?.discounted_amount || 0);
+  if (activity.activity_add_ons && activity.activity_add_ons.length) {
+    totalCharges.splice(1, 0, addOnCharges);
+  }
+  const totalPrice = activityCharges.price + addOnCharges.price + vat.price - (promoCodeData?.discounted_amount || 0);
 
   const updateQuantity = (id: number, quantity: number) => {
     if (addOns) {
@@ -156,39 +150,39 @@ console.log(activity,'activity');
         toDate = moment(toDate).toISOString();
       }
 
-      // createSessionQuery.mutate({
-      //   line_items: [
-      //     {
-      //       name: activity.name,
-      //       description: activity.name,
-      //       amount: Math.round(totalPrice * 100),
-      //       currency: activity.facility_details.base_currency,
-      //       quantity: 1,
-      //     }],
-      //   customer_email: authContext?.user?.email,
-      //   success_url: `${window.location.origin}/checkout/payment-success`,
-      //   cancel_url: `${window.location.origin}/checkout/payment-cancelled`,
-      //   metadata: {
-      //     activity_id: activity.id,
-      //     payment_details: {
-      //       voucher_id: promoCodeData?.voucher_id,
-      //       sub_total: activityCharges.price + addOnCharges.price,
-      //       grand_total: totalPrice,
-      //       vat: vat.price,
-      //       discounted_amount: promoCodeData?.discounted_amount,
-      //     },
-      //     currency_details: {
-      //       currency_code: activity.facility_details.base_currency,
-      //       exchange_rate: 0,
-      //     },
-      //     from_date: fromDate,
-      //     to_date: toDate,
-      //     time_slots: time ? [{
-      //       name: time,
-      //     }] : null,
-      //     activity_qty: numberOfAdults + numberOfChildren,
-      //   },
-      // });
+      createSessionQuery.mutate({
+        line_items: [
+          {
+            name: activity.name,
+            description: activity.name,
+            amount: Math.round(totalPrice * 100),
+            currency: activity.facility_details.base_currency,
+            quantity: 1,
+          }],
+        customer_email: authContext?.user?.email,
+        success_url: `${window.location.origin}/checkout/payment-success`,
+        cancel_url: `${window.location.origin}/checkout/payment-cancelled`,
+        metadata: {
+          activity_id: activity.id,
+          payment_details: {
+            voucher_id: promoCodeData?.voucher_id,
+            sub_total: activityCharges.price + addOnCharges.price,
+            grand_total: totalPrice,
+            vat: vat.price,
+            discounted_amount: promoCodeData?.discounted_amount,
+          },
+          currency_details: {
+            currency_code: activity.facility_details.base_currency,
+            exchange_rate: 0,
+          },
+          from_date: fromDate,
+          to_date: toDate,
+          time_slots: time ? [{
+            name: time,
+          }] : null,
+          activity_qty: numberOfAdults + numberOfChildren,
+        },
+      });
     }
   };
 
@@ -224,7 +218,7 @@ console.log(activity,'activity');
             <BookingCard
               imageSrc={activity?.img_1_url || ''}
               rating={activityRating?.rating || 0}
-              title={activity?.name}
+              title={activity.name}
               currency={activity.facility_details.base_currency}
               location={`${activity.facility_details.facility_name} ${activity.facility_details.country}`}
               totalCharges={totalCharges}

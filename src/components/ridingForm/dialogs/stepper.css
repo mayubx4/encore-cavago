@@ -1,0 +1,14 @@
+.ant-modal-close {
+  top: 40px !important;
+  right: 40px !important;
+}
+
+.ant-steps-item-tail {
+  /* height: 29px !important; */
+}
+.ant-steps-item-tail::after {
+  background-color: #c3afaf !important;
+}
+.ant-steps-item-finish .ant-steps-item-tail::after {
+  background-color: #a37b7b !important;
+}

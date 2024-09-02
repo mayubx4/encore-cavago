@@ -3,7 +3,7 @@ import { Button, Col, Row } from 'antd';
 import './_personalInformationDesktop.scss';
 import React from 'react';
 import Icon from '@shared/components/common/icons';
-// import ProfileForm from '@app/profile/components/desktop/profileForm /profileForm';
+import ProfileForm from '@app/profile/components/desktop/profileForm/profileForm';
 import { useRouter } from 'next/navigation';
 
 export default function PersonalInformationDesktop() {
@@ -28,7 +28,7 @@ export default function PersonalInformationDesktop() {
                 <p className="subTitle">Edit your personal information here</p>
               </div>
               <div className="form">
-                {/* <ProfileForm /> */}
+                <ProfileForm />
               </div>
             </div>
           </Col>
