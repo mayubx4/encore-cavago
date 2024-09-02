@@ -40,7 +40,7 @@ const btnsStep3 = [
   },
 ];
 const RidingForm = () => {
-  const [current, setCurrent] = useState(2);
+  const [current, setCurrent] = useState(0);
   const [steps, setSteps] = useState([
     {
       title: "Riding ability",
