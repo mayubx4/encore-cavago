@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, ConfigProvider, Flex, Steps } from "antd";
 import activeStepIcon from "@public/assets/images/activeStep.png"; // Update with actual path
-import inactiveStepIcon from "@public/assets/images/inactiveStep.png"; // Update with actual path
+import inactiveStepIcon from "@public/assets/images/inActiveStep.png"; // Update with actual path
 import completeStepIcon from "@public/assets/images/completeStep.png"; // Update with actual path
 import Image from "next/image";
 import "./stepper.css";
