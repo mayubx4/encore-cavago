@@ -13,8 +13,8 @@
 }
 
 .custom-pagination .ant-pagination-item-active {
-  border-color: #ed665f !important;
-  background: #ed665f !important;
+  border-color: #A37B7B !important;
+  background: #A37B7B !important;
 }
 .custom-pagination .ant-pagination-item-active > a {
   color: white !important;

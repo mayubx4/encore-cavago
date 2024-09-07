@@ -27,8 +27,10 @@ const GridFilters = () => {
             // fontSize: "18px",
             fontWeight: "normal",
             // padding: "21px 24px",
+            border: "1px solid #A37B7B",
+            color: "#A37B7B",
+            backgroundColor:'#C3AFAF33'
           }}
-          danger
         >
           Trending Packages
         </Button>

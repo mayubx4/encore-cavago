@@ -42,23 +42,35 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
         </Flex>
       }
     >
-      <Flex vertical justify='space-between' className={""}>
+      <Flex vertical justify='space-between' gap={8}>
         <p style={{ color: "#566573", fontSize: "14px", margin: 0 }}>
           Equestrian Festivals
         </p>
-        <p
-          style={{
-            color: "#2C3F50",
-            fontSize: "18px",
-            fontWeight: "bold",
-            margin: 0,
-          }}
-        >
-          Doñana Experience Route
-        </p>
-        <p style={{ color: "#566573", fontSize: "14px", margin: 0 }}>
-          Turismo Ecuestre Doñana, Spain
-        </p>
+
+        <div>
+          <p
+            style={{
+              color: "#2C3F50",
+              fontSize: "18px",
+              fontWeight: "bold",
+              margin: 0,
+              lineHeight: 1,
+              textDecoration: "underline",
+            }}
+          >
+            Doñana Experience Route
+          </p>
+          <p
+            style={{
+              color: "#566573",
+              fontSize: "14px",
+              margin: 0,
+              lineHeight: 1,
+            }}
+          >
+            Turismo Ecuestre Doñana, Spain
+          </p>
+        </div>
         <p
           style={{
             color: "#2C3F50",

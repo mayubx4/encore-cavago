@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,29 +20,35 @@ import "swiper/css/scrollbar";
 import { Button } from "antd";
 import Slide from "./slide";
 import Image from "next/image";
-import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.png";
-import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.png";
+import ArrowRightCircleIcon from "@public/assets/images/arrow-right-circle.svg";
+import ArrowLeftCircleIcon from "@public/assets/images/arrow-left-circle.svg";
+import ViewAll from "@/components/festivals/icons/viewAll";
+import EquestrianFestivals from "@/components/festivals/icons/equestrianFestivals";
+import SafariRidingHolidays from "@/components/festivals/icons/safariRidingHolidays";
+import BeachRidingHolidays from "@/components/festivals/icons/beachRidingHolidays";
+import DesertRidingHolidays from "@/components/festivals/icons/desertRidingHolidays";
 
 const SwiperSlider = ({
   slides = [
-    <Slide key={1} />,
-    <Slide key={2} title='Equestrian Festivals' />,
-    <Slide key={3} title='Safari Riding Holidays' />,
-    <Slide key={4} title='Beach Riding Holidays' />,
-    <Slide key={5} title='Desert Riding Holidays' />,
-    <Slide key={6} />,
-    <Slide key={7} />,
-    <Slide key={8} />,
+    { title: "View All", icon: ViewAll },
+    { title: "Equestrian Festivals", icon: EquestrianFestivals },
+    { title: "Safari Riding Holidays", icon: SafariRidingHolidays },
+    { title: "Beach Riding Holidays", icon: BeachRidingHolidays },
+    { title: "Desert Riding Holidays", icon: DesertRidingHolidays },
+    { title: "View All", icon: ViewAll },
+    { title: "View All", icon: ViewAll },
+    { title: "View All", icon: ViewAll },
   ],
 }) => {
+  const [selectedSlide, setSelectedSlide] = useState(0);
   return (
     <>
       <Button
-        className='back !hidden md:!flex !p-0 !w-auto !bg-transparent'
+        className='back !hidden md:!flex !p-0 !w-auto '
         shape='circle'
-      >
-        <Image alt='arrow-left-circle' src={ArrowLeftCircleIcon} />
-      </Button>
+        type='text'
+        icon={<ArrowLeftCircleIcon />}
+      ></Button>
       <Swiper
         breakpoints={{
           1: {
@@ -62,22 +68,38 @@ const SwiperSlider = ({
             spaceBetween: 24,
           },
         }}
-        key={"qwe"}
+        key={"c"}
         navigation={{ prevEl: ".back", nextEl: ".next" }}
         modules={[Navigation]}
         className='mySwiper'
         // slidesPerView={5}
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
+          <SwiperSlide
+            key={"c" + i}
+            onClick={() => setSelectedSlide(i)}
+            className='cursor-pointer'
+          >
+            <Slide
+              textColor={selectedSlide === i ? "#F9F6F1" : "#2C3F50"}
+              bgColor={selectedSlide === i ? "#A37B7B" : "#FFFFFF"}
+              key={"s" + i}
+              title={slide.title}
+              icon={
+                <slide.icon
+                  fill={selectedSlide === i ? "#F9F6F1" : "#A37B7B"}
+                />
+              }
+            />
+          </SwiperSlide>
         ))}
       </Swiper>
       <Button
-        className='next !hidden md:!flex !p-0 !w-auto !bg-transparent'
+        className='next !hidden md:!flex !p-0 !w-auto '
+        type='text'
         shape='circle'
-      >
-        <Image alt='arrow-right-circle' src={ArrowRightCircleIcon} />
-      </Button>
+        icon={<ArrowRightCircleIcon />}
+      ></Button>
     </>
   );
 };

@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import TextAndAmount from "./textAndAmount";
 import g1 from "@public/assets/images/g1.png";
-import ratingStar from "@public/assets/images/ratingStar.png";
+import ratingStar from "@public/assets/images/ratingStar.svg";
 
 const PriceBox = () => {
   return (
@@ -62,7 +62,7 @@ const PriceBox = () => {
               margin: 0,
             }}
           >
-            <Image alt='rating' src={ratingStar} /> 4.9
+            <ratingStar /> 4.9
           </Text>
         </Flex>
       </div>

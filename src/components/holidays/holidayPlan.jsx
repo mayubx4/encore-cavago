@@ -45,20 +45,20 @@ const HolidayPlan = () => {
                 </p>
                 <div className='flex flex-row mt-10 xxldesktop:gap-6 gap-1'>
                   <Button
-                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 !py-[21.5px]'
+                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 '
                     shape='round'
                     onClick={() => toggleOpenForm()}
                   >
                     Solo
                   </Button>
                   <Button
-                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 xxldesktop:!py-[21.5px]'
+                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 '
                     shape='round'
                   >
                     With a group
                   </Button>
                   <Button
-                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 xxldesktop:!py-[21.5px]'
+                    className='!font-semibold !text-[#533736] !text-sm xxldesktop:!text-lg xxldesktop:!px-6 '
                     shape='round'
                   >
                     With my partner

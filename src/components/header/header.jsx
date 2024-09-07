@@ -4,7 +4,8 @@ import { Button, Flex } from "antd";
 import Image from "next/image";
 import CavagoImages from "@shared/components/common/cavagoImages";
 import Link from "next/link";
-// import logo from '@public/assets/images/logo.svg'
+import HolidayLogo from "@public/assets/images/holidayLogo.svg";
+import HolidayLogoWhite from "@public/assets/images/holidayLogoWhite.svg";
 
 const Header = ({ isTransparent = false }) => (
   <Flex
@@ -20,7 +21,7 @@ const Header = ({ isTransparent = false }) => (
   >
     <Flex justify='space-between' style={{ width: "100%" }}>
       <Link href='/'>
-        <CavagoImages image='icon' />
+        {isTransparent ? <HolidayLogoWhite /> : <HolidayLogo />}
       </Link>
       <Flex align='center' gap={16}>
         <Button

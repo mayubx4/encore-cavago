@@ -15,8 +15,8 @@ import {
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import Option from "antd/es/select/index";
-import ApplePayIcon from "@public/assets/images/applePay.png";
-import DebitCardIcon from "@public/assets/images/debitCard.png";
+import ApplePayIcon from "@public/assets/images/applePay.svg";
+import DebitCardIcon from "@public/assets/images/debitCard.svg";
 import Image from "next/image";
 import AddOns from "@/components/checkout/addOns";
 import PriceBox from "@/components/checkout/priceBox";
@@ -211,7 +211,7 @@ const Checkout = () => {
                   fontWeight: "normal",
                 }}
               >
-                Pay with <Image alt='apple pay' src={ApplePayIcon} />
+                Pay with <ApplePayIcon />
               </Button>
               <Button
                 block
@@ -226,8 +226,7 @@ const Checkout = () => {
                   fontWeight: "normal",
                 }}
               >
-                <Image alt='apple pay' src={DebitCardIcon} /> Add a debit or
-                credit card
+                <DebitCardIcon /> Add a debit or credit card
               </Button>
             </Form>
           </div>

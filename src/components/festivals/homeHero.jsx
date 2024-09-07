@@ -1,11 +1,8 @@
 "use client";
-import { AutoComplete, Button, Flex, Typography } from "antd";
+import { Button, Flex, Typography } from "antd";
 import Title from "antd/es/typography/Title";
-import Image from "next/image";
 import React from "react";
-import SettingIcon from "@public/assets/images/setting.png";
-import { SearchOutlined } from "@ant-design/icons";
-import MouseIcon from "@public/assets/images/mouse.png";
+import MouseIcon from "@public/assets/images/mouse.svg";
 import SwiperSlider from "../swiper/swiperSlider";
 import SearchField from "@shared/components/desktop/header/searchField";
 import "@shared/components/desktop/header/_header.scss";
@@ -35,13 +32,13 @@ const HomeHero = () => {
         <Button
           type='text'
           style={{
-            color: "#ED665F",
-            borderBottom: "1px solid #ED665F",
+            color: "#A37B7B",
+            borderBottom: "1px solid #A37B7B",
             borderRadius: 0,
             padding: "20px",
           }}
         >
-          Holidays by Cavago
+          Holidays with Cavago
         </Button>
         <Button type='text' style={{ color: "white", padding: "20px" }}>
           Competitions
@@ -89,7 +86,7 @@ const HomeHero = () => {
         >
           Discover Holiday Packages
         </Typography>
-        {/* <Image alt='mouse' src={MouseIcon} /> */}
+        <MouseIcon />
       </Flex>
       <Flex
         align='center'
