@@ -14,9 +14,9 @@ const GridFilters = () => {
         <Button
           shape='round'
           style={{
-            fontSize: "18px",
+            // fontSize: "18px",
             fontWeight: "normal",
-            padding: "21px 24px",
+            // padding: "21px 24px",
           }}
         >
           All Packages
@@ -24,9 +24,9 @@ const GridFilters = () => {
         <Button
           shape='round'
           style={{
-            fontSize: "18px",
+            // fontSize: "18px",
             fontWeight: "normal",
-            padding: "21px 24px",
+            // padding: "21px 24px",
           }}
           danger
         >
@@ -35,9 +35,9 @@ const GridFilters = () => {
         <Button
           shape='round'
           style={{
-            fontSize: "18px",
+            // fontSize: "18px",
             fontWeight: "normal",
-            padding: "21px 24px",
+            // padding: "21px 24px",
           }}
         >
           Wishlist Packages

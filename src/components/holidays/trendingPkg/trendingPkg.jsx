@@ -16,7 +16,7 @@ const TrendingPkg = () => {
         className='w-full object-contain hidden lg:block h-full '
         style={{
           objectFit: "cover",
-          maxWidth: "1728px",
+          maxWidth: "1648px",
           position: "absolute",
           zIndex: 0,
         }}
@@ -27,7 +27,7 @@ const TrendingPkg = () => {
         className='w-full object-contain lg:hidden h-full'
         style={{
           objectFit: "cover",
-          maxWidth: "1728px",
+          maxWidth: "1648px",
           position: "absolute",
           zIndex: 0,
         }}

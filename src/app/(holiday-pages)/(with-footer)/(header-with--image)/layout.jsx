@@ -13,7 +13,7 @@ const layout = ({ children }) => {
         style={{
           objectFit: "cover",
           width: "100%",
-          maxWidth: "1728px",
+          maxWidth: "1648px",
           position: "absolute",
           zIndex: -1,
         }}

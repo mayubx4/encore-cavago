@@ -33,7 +33,11 @@ const DropdownFilter = () => (
     <Button
       shape='round'
       onClick={e => e.preventDefault()}
-      style={{ fontSize: "18px", fontWeight: "normal" ,padding:'21px 24px'}}
+      style={{
+        // fontSize: "18px",
+        fontWeight: "normal",
+        // padding:'21px 24px'
+      }}
     >
       <Space>
         Sort By

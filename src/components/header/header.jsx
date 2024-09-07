@@ -2,32 +2,27 @@
 import React from "react";
 import { Button, Flex } from "antd";
 import Image from "next/image";
+import CavagoImages from "@shared/components/common/cavagoImages";
+import Link from "next/link";
 // import logo from '@public/assets/images/logo.svg'
 
 const Header = ({ isTransparent = false }) => (
   <Flex
-    className='xxldesktop:px-[129px] sm:px-10'
     style={{
-      height: "128px",
-      // paddingInline: "129px",
+      width: "100%",
+      marginInline: "auto",
+      maxWidth: "1598px",
+      padding: "24px 15px",
       borderBottom: isTransparent ? "none" : "1px solid #D5D9DC",
-      boxShadow: isTransparent ? "none" : "0px 0px 8px 1px #00000026",
     }}
     align='center'
     justify='center'
   >
     <Flex justify='space-between' style={{ width: "100%" }}>
-      <Image
-        alt='logo'
-        src={
-          isTransparent
-            ? "/assets/images/logo-white.svg"
-            : "/assets/images/logo.svg"
-        }
-        width={170}
-        height={47.22}
-      />
-      <Flex align='center' gap={24}>
+      <Link href='/'>
+        <CavagoImages image='icon' />
+      </Link>
+      <Flex align='center' gap={16}>
         <Button
           style={{
             border: `1px solid ${isTransparent ? "white" : "#233240"}`,
@@ -38,11 +33,17 @@ const Header = ({ isTransparent = false }) => (
         >
           Become a Tour Leader
         </Button>
-        <Button type='text' style={{ color: isTransparent ? "white" : "" }}>
-          Sign up
+        <Button
+          type='text'
+          style={{ color: isTransparent ? "white" : "", padding: 0 }}
+        >
+          Sign Up
         </Button>
-        <Button type='text' style={{ color: isTransparent ? "white" : "" }}>
-          Sign in
+        <Button
+          type='text'
+          style={{ color: isTransparent ? "white" : "", padding: 0 }}
+        >
+          Sign In
         </Button>
       </Flex>
     </Flex>

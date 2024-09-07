@@ -9,19 +9,17 @@ const Availability = ({ day, date }) => {
       style={{
         backgroundColor: "#F7F3F2",
         borderRadius: "8px",
-        // padding: "24px",
-        // paddingRight: "100px",
       }}
-      className='lg:pr-28  pr-8 p-6'
+      className=' p-6'
     >
-      <Flex align='center' gap={20}>
+      <Flex align='center' gap={20} className='xxldesktop:mr-16 mr-0'>
         <Image alt='calander' src={calander} />
         <Flex vertical gap={8}>
           <p
             style={{
               fontSize: "18px",
               fontWeight: "600",
-              color: "#561931",
+              color: "#A37B7B",
               margin: 0,
             }}
           >
@@ -31,7 +29,7 @@ const Availability = ({ day, date }) => {
             style={{
               fontSize: "18px",
               fontWeight: "500",
-              color: "#233240",
+              color: "#2C3F4F",
               margin: 0,
             }}
           >

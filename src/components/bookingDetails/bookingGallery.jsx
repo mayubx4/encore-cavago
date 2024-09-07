@@ -12,17 +12,17 @@ const BookingGallery = () => {
   return (
     <div>
       <div
-        className='flex flex-col lg:flex-row justify-between gap-6 relative'
+        className='flex flex-col lg:flex-row justify-between gap-3 relative'
         style={{ borderRadius: "18px", overflow: "hidden", width: "100%" }}
       >
         <Flex className='flex-grow'>
           <Image alt='image' src={g1} className='w-full h-full object-cover' />
         </Flex>
-        <div className='flex flex-row lg:flex-col justify-between flex-grow gap-6'>
+        <div className='flex flex-row lg:flex-col justify-between flex-grow gap-3'>
           <Image alt='image' src={g2} className='w-full h-full object-cover' />
           <Image alt='image' src={g3} className='w-full h-full object-cover' />
         </div>
-        <div className='flex flex-row lg:flex-col justify-between flex-grow gap-6'>
+        <div className='flex flex-row lg:flex-col justify-between flex-grow gap-3'>
           <Image alt='image' src={g4} className='w-full h-full object-cover' />
           <Image alt='image' src={g5} className='w-full h-full object-cover' />
         </div>

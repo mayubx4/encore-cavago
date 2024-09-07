@@ -9,50 +9,33 @@ import Image from "next/image";
 const BookingTitle = () => {
   return (
     <>
-      <Space>
-        <Button
-          type='text'
-          style={{
-            border: "1px solid #D5D9DC",
-            borderRadius: "4px",
-            width: "32px",
-          }}
+      <Flex vertical gap={2}>
+        <Title
+          level={2}
+          style={{ color: "#2C3F50", fontWeight: "600", marginBottom: "5px" }}
         >
-          <LeftOutlined
-            style={{
-              color: "#797B86",
-            }}
-          />
-        </Button>
-      </Space>
-      <Flex vertical style={{ marginTop: "27px" }} gap={2}>
-        <Title style={{ color: "#2C3F50", fontWeight: "bold" }}>
           Oman Sea Side & Desert Ride 2024
         </Title>
         <Flex justify='space-between'>
           <Typography style={{ color: "#566573" }}>
             Princess Taghreed street, Oman
           </Typography>
-          <Space>
-            <Button
-              type='text'
-              style={{ fontWeight: "600" }}
-              icon={
-                <Image src={ShareIcon} alt='share' width={20} height={20} />
-              }
-            >
-              Share
-            </Button>
-            <Button
-              type='text'
-              style={{ fontWeight: "600" }}
-              icon={
-                <Image src={HeartIcon} alt='share' width={20} height={20} />
-              }
-            >
-              Wishlist
-            </Button>
-          </Space>
+        </Flex>
+        <Flex justify='end' gap={8}>
+          <Button
+            type='text'
+            style={{ fontWeight: "600", fontSize: "18px", padding: 0 }}
+            icon={<Image src={ShareIcon} alt='share' width={20} height={20} />}
+          >
+            Share
+          </Button>
+          <Button
+            type='text'
+            style={{ fontWeight: "600", fontSize: "18px", padding: 0 }}
+            icon={<Image src={HeartIcon} alt='share' width={20} height={20} />}
+          >
+            Wishlist
+          </Button>
         </Flex>
       </Flex>
       <Divider style={{ color: "#D5D9DC" }} />

@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
           },
           components: {
             Button: {
-              fontSize: "18px",
+              fontSize: "14px",
               fontWeight: "bold",
-              paddingBlock: "16px",
-              paddingInline: "20px",
+              paddingBlock: "12px",
+              paddingInline: "16px",
               colorText: "#233240",
               colorTextSecondary: "#2C3F50",
               colorBorder: "white",
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           },
         }}
       >
-        <div className='max-w-[1728px] mx-auto'>{children}</div>
+        <div className='max-w-[1648px] mx-auto'>{children}</div>
       </ConfigProvider>
     </AntdRegistry>
   );

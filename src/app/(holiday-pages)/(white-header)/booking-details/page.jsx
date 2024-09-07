@@ -1,6 +1,7 @@
 import BookingGallery from "@/components/bookingDetails/bookingGallery";
 import BookingTitle from "@/components/bookingDetails/bookingTitle";
 import BookingDetail from "@/components/bookingDetails/bookingDetail";
+import BookingPriceDetails from "@/components/bookingDetails/bookingPriceDetails";
 import { Col, Flex, Row } from "antd";
 import BookingAvailability from "@/components/bookingDetails/bookingAvailability/bookingAvailability";
 import BookingActivity from "@/components/bookingDetails/bookingActivites/bookingActivity";
@@ -14,12 +15,17 @@ export default function page() {
     <>
       <BookingTitle />
       <BookingGallery />
-      <Row>
-        <Col span={12}>
-          <BookingDetail />
-          <BookingAvailability />
-          <BookingActivity />
-          <BookingItinerary />
+      <Row className='mt-10'>
+        <Col md={14} xl={15}>
+          <div className='pr-10'>
+            <BookingDetail />
+            <BookingAvailability />
+            <BookingActivity />
+            <BookingItinerary />
+          </div>
+        </Col>
+        <Col md={9} xl={8}>
+          <BookingPriceDetails />
         </Col>
       </Row>
       <Flex vertical style={{ width: "100%" }}>

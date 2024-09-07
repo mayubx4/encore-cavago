@@ -9,7 +9,7 @@ const ScheduleStep = ({ title, amount, description }) => {
         style={{
           fontSize: "18px",
           fontWeight: "600",
-          color: "#561931",
+          color: "#533736",
           margin: 0,
           textAlign: "center"
         }}

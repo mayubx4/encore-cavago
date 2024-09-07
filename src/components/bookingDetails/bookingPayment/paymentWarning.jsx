@@ -7,7 +7,7 @@ const PaymentWarning = () => {
   return (
     <Flex
       style={{
-        backgroundColor: "#F7E4DC",
+        backgroundColor: "#E8DEDC",
         borderRadius: "8px",
         padding: "24px 68px",
         marginBlock: "40px",
@@ -16,7 +16,7 @@ const PaymentWarning = () => {
       gap={40}
     >
       <Image alt='questionMark' src={questionMark} />
-      <p style={{ fontSize: "18px", color: "#561931" }}>
+      <p style={{ fontSize: "18px", color: "#533736" }}>
         This is the standard pricing per person without any add-ons or
         selections. To view your final price and the payment plan, please make
         your selections for customers and add-ons.

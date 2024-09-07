@@ -9,6 +9,7 @@ const TextAndAmount = ({ text, amont, style }) => {
         style={{
           fontSize: "18px",
           color: "#2C3F50",
+          fontWeight: "500",
           ...style,
         }}
       >
@@ -18,6 +19,7 @@ const TextAndAmount = ({ text, amont, style }) => {
         style={{
           fontSize: "18px",
           color: "#2C3F50",
+          fontWeight: "500",
           ...style,
         }}
       >

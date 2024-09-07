@@ -1,0 +1,78 @@
+@import '@shared/theme/colors.scss';
+
+.selector {
+  width: 100%;
+
+  .ant-select-selector {
+    height: 56px !important;
+  }
+
+  .ant-select-selection-item {
+    padding-top: 17px !important;
+  }
+
+  .ant-select-arrow {
+    padding-top: 26px;
+  }
+}
+
+.priceHeading {
+  font-size: 16px;
+  font-weight: 600;
+  color: $neutrals-500;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 400;
+  color: $neutrals-100;
+}
+
+
+.btnSpace {
+  .ant-btn-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+.placeholder {
+  font-size: 9px;
+  color: $neutrals-100;
+  position: absolute;
+  padding-top: 11px;
+  padding-left: 12px;
+  z-index: 1;
+}
+
+.pricingDetails {
+  border: 1px solid #d5d9dc;
+  border-radius: 20px;
+  padding: 40px;
+  .priceText {
+    font-weight: 500;
+    color: #2c3f50;
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .priceDetails {
+    color: #808c96;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .dropdownSelector {
+    margin-top: 20px;
+  }
+  .button {
+    background-color: #a37b7b;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    height: 54px;
+    margin-top: 30px;
+    color: white;
+    border-radius: 25px !important;
+  }
+}
