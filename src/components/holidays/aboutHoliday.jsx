@@ -1,8 +1,22 @@
-import { Col, Row } from "antd";
+"use client";
+import { Button, Col, Row } from "antd";
 import Title from "antd/es/typography/Title";
-import React from "react";
+import React, { useRef, useState } from "react";
+import { PauseCircleOutlined, PlayCircleOutlined } from "@ant-design/icons";
 
 const AboutHoliday = () => {
+  const [play, setPlay] = useState(true);
+  const videoRef = useRef(null); // Create a ref for the video element
+
+  const handlePlayPause = () => {
+    if (play) {
+      videoRef.current.pause(); // Pause the video
+    } else {
+      videoRef.current.play(); // Play the video
+    }
+    setPlay(!play); // Toggle the play state
+  };
+
   return (
     <div className='px-10 xxldesktop:px-[100px]  pt-20'>
       <Title className='text-[40p] font-semibold text-[#2C3F4F] mt-0'>
@@ -28,6 +42,27 @@ const AboutHoliday = () => {
           </p>
         </Col>
       </Row>
+      <div className='relative mt-10'>
+        <video
+          ref={videoRef} // Attach the ref to the video element
+          style={{ width: "100%", borderRadius: "24px" }}
+          autoPlay={play}
+          muted={play}
+          loop={true}
+        >
+          <source src='/assets/videos/about.mp4' type='video/mp4' />
+          Your browser does not support the video tag.
+        </video>
+        <Button
+          ghost
+          className='absolute bottom-4 right-8'
+          style={{ fontSize: "48px", color: "white", padding: 0 }}
+          type='text'
+          shape='circle'
+          icon={play ? <PauseCircleOutlined /> : <PlayCircleOutlined />} // Change icon based on play state
+          onClick={handlePlayPause} // Call the play/pause handler
+        />
+      </div>
     </div>
   );
 };
