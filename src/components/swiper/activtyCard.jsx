@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import GridSlide from "./gridSlide";
-import { Button, Col, Flex, Pagination, Row } from "antd";
+import { Button, Col, Flex, Row } from "antd";
 import CustomPagination from "../shared/customPagination";
 import { ArrowRightOutlined } from "@ant-design/icons";
 
-export default function SwiperSliderGrid({
+export default function ActivityCard({
   disablepagination,
   slides = [
     <GridSlide key={1} disableBodyPadding />,
@@ -27,14 +27,9 @@ export default function SwiperSliderGrid({
     <GridSlide key={17} disableBodyPadding />,
   ],
 }) {
-  const swiperRef = useRef(null);
-
   return (
     <>
-      <Row
-        className='xxldesktop:!px-24 md:px-16 sm:px-5 !m-auto'
-        gutter={[24, 24]}
-      >
+      <Row className='max-w-[1648px] px-10 !m-auto' gutter={[24, 32]}>
         {slides.map((slide, i) => (
           <Col
             key={i}

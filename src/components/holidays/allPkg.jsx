@@ -1,6 +1,6 @@
 import Title from "antd/es/typography/Title";
 import React from "react";
-import SwiperSliderGrid from "../swiper/swiperSliderGrid";
+import ActivityCard from "../swiper/activtyCard";
 import GridSlide from "../swiper/gridSlide";
 
 const AllPkg = () => {
@@ -13,7 +13,7 @@ const AllPkg = () => {
         Explore all types of our latest trending packages.
       </Title>
       <div className='mt-[60px]'>
-        <SwiperSliderGrid
+        <ActivityCard
           disablepagination
           slides={[
             <GridSlide key={1} transparent={false} />,

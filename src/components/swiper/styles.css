@@ -17,6 +17,7 @@
   display: block;
   object-fit: cover;
 }
-.disableBodyPadding > .ant-card-body {
+.ant-card-body {
   padding: 0 !important;
 }
+

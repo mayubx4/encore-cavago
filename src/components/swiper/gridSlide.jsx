@@ -13,7 +13,7 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
       hoverable
       style={{
         maxWidth: "350px",
-        padding: "0 0 24px",
+        padding: "0",
         flexGrow: 1,
       }}
       cover={
@@ -54,8 +54,7 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
               fontSize: "18px",
               fontWeight: "bold",
               margin: 0,
-              lineHeight: 1,
-              textDecoration: "underline",
+              lineHeight: "22px",
             }}
           >
             Doñana Experience Route
@@ -64,23 +63,23 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
             style={{
               color: "#566573",
               fontSize: "14px",
-              margin: 0,
+              margin: "6px 0",
               lineHeight: 1,
             }}
           >
             Turismo Ecuestre Doñana, Spain
           </p>
+          <p
+            style={{
+              color: "#2C3F50",
+              fontSize: "14px",
+              fontWeight: 500,
+              margin: 0,
+            }}
+          >
+            Starting from £180.00
+          </p>
         </div>
-        <p
-          style={{
-            color: "#2C3F50",
-            fontSize: "16px",
-            fontWeight: "bold",
-            margin: 0,
-          }}
-        >
-          Starting from £180.00
-        </p>
       </Flex>
     </Card>
   );
