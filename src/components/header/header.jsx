@@ -12,8 +12,8 @@ const Header = ({ isTransparent = false }) => (
     style={{
       width: "100%",
       marginInline: "auto",
-      maxWidth: "1598px",
-      padding: "24px 15px",
+      maxWidth: "1648px",
+      padding: "24px 40px",
       borderBottom: isTransparent ? "none" : "1px solid #D5D9DC",
     }}
     align='center'
