@@ -31,27 +31,27 @@ const Carousel = () => {
       className='carouselSwiper'
     >
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden'>
+        <div className='w-full rounded-3xl overflow-hidden '>
           <Image src={c1} alt='c1' className='w-full' />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden'>
+        <div className='w-full rounded-3xl overflow-hidden '>
           <Image src={c2} alt='c1' className='w-full' />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden'>
+        <div className='w-full rounded-3xl overflow-hidden '>
           <Image src={c1} alt='c1' className='w-full' />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden'>
+        <div className='w-full rounded-3xl overflow-hidden '>
           <Image src={c2} alt='c1' className='w-full' />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden'>
+        <div className='w-full rounded-3xl overflow-hidden '>
           <Image src={c1} alt='c1' className='w-full' />
         </div>
       </SwiperSlide>

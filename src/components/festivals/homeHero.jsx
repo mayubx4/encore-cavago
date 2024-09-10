@@ -25,77 +25,100 @@ const HomeHero = () => {
   };
   return (
     <div>
-      <Flex align='center' justify='center'>
-        <Button type='text' style={{ color: "white", padding: "20px" }}>
+      <Flex align='center' justify='center' gap={32}>
+        <Button
+          type='text'
+          className='!text-sm desktop:!text-base'
+          style={{
+            color: "white",
+            padding: 0,
+            paddingBottom: "10px",
+            fontWeight: 500,
+          }}
+        >
           Experiences
         </Button>
         <Button
           type='text'
+          className='!text-sm desktop:!text-lg'
           style={{
-            color: "#A37B7B",
-            borderBottom: "1px solid #A37B7B",
+            color: "#E3B8AF",
+            borderBottom: "2px solid #E3B8AF",
             borderRadius: 0,
-            padding: "20px",
+            padding: 0,
+            paddingBottom: "10px",
+            fontWeight: 600,
           }}
         >
           Holidays with Cavago
         </Button>
-        <Button type='text' style={{ color: "white", padding: "20px" }}>
+        <Button
+          type='text'
+          className='!text-sm desktop:!text-base'
+          style={{
+            color: "white",
+            padding: 0,
+            paddingBottom: "10px",
+            fontWeight: 500,
+          }}
+        >
           Competitions
         </Button>
       </Flex>
-      <Title style={{ textAlign: "center", fontSize: "60px", color: "white" }}>
-        What are you looking for?
-      </Title>
-      <Title
-        level={2}
-        style={{ textAlign: "center", fontSize: "28px", color: "white" }}
-      >
-        Plan an equestrian holiday you&apos;ll never forget!
-      </Title>
-      <Flex justify='center' gap={20} className='px-40'>
-        <HomeFiltersContextProvider {...props}>
-          <div className='serch-head-holder'>
-            <SearchField />
-            <button
-              className='filtersButton btn-outline bg-white h-full'
-              onClick={() => toggleOpenFilter()}
-            >
-              Filters
-              <Icon
-                name='filters'
-                color={colors.neutrals[500]}
-                width={24}
-                height={24}
-              />
-            </button>
-            <FiltersModal open={openFilter} toggleOpen={toggleOpenFilter} />
-          </div>
-        </HomeFiltersContextProvider>
-      </Flex>
 
-      <Flex vertical align='center'>
-        <Typography
-          style={{
-            fontSize: "18px",
-            color: "white",
-            // textAlign: "center",
-            marginTop: "34px",
-            marginBottom: "8px",
-          }}
+      <Flex vertical justify='space-between' className='xxldesktop:mt-10 mt-7'>
+        <Title
+          style={{ textAlign: "center", color: "white", fontWeight: 500 }}
+          className='xxldesktop:!text-6xl desktop:!text-[42px] !text-[32px]'
         >
-          Discover Holiday Packages
-        </Typography>
-        <MouseIcon />
+          What are you looking for?
+        </Title>
+        <Title
+          level={2}
+          style={{ textAlign: "center", color: "white" }}
+          className='xxldesktop:!text-[28px] desktop:!text-[20px] !text-base !m-0'
+        >
+          Plan an equestrian holiday you&apos;ll never forget!
+        </Title>
+        <Flex justify='center' gap={20} className='px-40'>
+          <HomeFiltersContextProvider {...props}>
+            <div className='serch-head-holder'>
+              <SearchField />
+              <button
+                className='filtersButton btn-outline bg-white h-full'
+                onClick={() => toggleOpenFilter()}
+              >
+                Filters
+                <Icon
+                  name='filters'
+                  color={colors.neutrals[500]}
+                  width={24}
+                  height={24}
+                />
+              </button>
+              <FiltersModal open={openFilter} toggleOpen={toggleOpenFilter} />
+            </div>
+          </HomeFiltersContextProvider>
+        </Flex>
+
+        <Flex vertical align='center' gap={8} className='xxldesktop:mt-8 mt-4'>
+          <Typography
+            className='desktop:!text-lg !text-base'
+            style={{
+              color: "white",
+            }}
+          >
+            Discover Holiday Packages
+          </Typography>
+          <MouseIcon />
+        </Flex>
       </Flex>
       <Flex
         align='center'
-        className='bg-[#F7F3F2] md:w-9/12 w-full md:mx-auto mx-3'
+        className='bg-[#F7F3F2] md:w-9/12 w-full md:mx-auto mx-3 xxldesktop:mt-11 mt-4'
         style={{
           borderRadius: "16px",
           maxWidth: "1103px",
-          // height: "211px",
-          marginTop: "44px",
           padding: "24px",
           position: "relative",
           zIndex: 5,

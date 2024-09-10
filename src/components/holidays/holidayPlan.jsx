@@ -15,20 +15,20 @@ const HolidayPlan = () => {
 
   return (
     <>
-      <div className='px-10 xxldesktop:px-[100px] relative z-10 mt-[120px]'>
+      <div className='px-10 xxldesktop:px-[100px] relative overflow-hidden rounded-3xl z-10 xxldesktop:mt-[120px] mt-20 aspect-[3]'>
         <Carousel />
 
-        <div className='w-[calc(100%-200px)] h-full box-border bg-[linear-gradient(270deg,rgba(0,0,0,0)_53.2%,#000000_108.18%)] absolute top-0 z-10 flex justify-between gap-5 rounded-3xl overflow-hidden pt-[120px]'>
-          <div className=' lg:pl-[68px] pl-7 '>
+        <div className=' w-[calc(100%-200px)] h-full box-border bg-[linear-gradient(270deg,rgba(0,0,0,0)_53.2%,#000000_108.18%)] absolute top-0 z-10 flex justify-between gap-5 rounded-3xl overflow-hidden '>
+          <div className='my-auto lg:pl-[68px] pl-7 '>
             <Title className=' !font-semibold !text-5xl xxldesktop:!text-6xl !text-[#FAFAFA] !mt-0 !mb-1'>
               Plan Your Own
               <br />
               Holiday in Minutes
             </Title>
-            <p className='xxldesktop:!text-[28px] text-lg !font-medium !text-[#FAFAFA] !mt-8 !mb-0'>
+            <p className='xxldesktop:!text-[28px] text-lg !font-medium !text-[#FAFAFA] desktop:mt-8 mt-3 mb-0'>
               Plan an equestrian holiday you&apos;ll never forget!
             </p>
-            <div className='relative z-20 mt-16 bg-[#E3B8AF33] backdrop-blur-md rounded-3xl shadow-lg'>
+            <div className='relative z-20 desktop:mt-16 mt-5 bg-[#E3B8AF33] backdrop-blur-md rounded-3xl shadow-lg'>
               <div className='p-4 xxldesktop:p-8'>
                 <p className='text-xl xxldesktop:!text-[28px] !font-semibold !text-[#FAFAFA] !m-0  relative'>
                   I&apos;m travelling . . .

@@ -2,7 +2,15 @@ import { Col, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Image from "next/image";
 import React from "react";
-import g2 from "@public/assets/images/g2.png";
+import image0 from "@public/assets/images/image-0.png";
+import image1 from "@public/assets/images/image-1.png";
+import image2 from "@public/assets/images/image-2.png";
+import image3 from "@public/assets/images/image-3.png";
+import image4 from "@public/assets/images/image-4.png";
+import image5 from "@public/assets/images/image-5.png";
+import image6 from "@public/assets/images/image-6.png";
+import image7 from "@public/assets/images/image-7.png";
+import image8 from "@public/assets/images/image-8.png";
 
 const Gallery = () => {
   return (
@@ -16,57 +24,57 @@ const Gallery = () => {
       <Row
         gutter={[
           { xl: 44, lg: 24, md: 24, sm: 24, xs: 24 },
-          { xl: 44, xs: 20 },
+          { xl: 44, lg: 24, md: 24, sm: 24, xs: 24 },
         ]}
       >
         <Col lg={24 / 3} xs={24}>
           <Image
             alt='gallery image'
-            src={g2}
+            src={image0}
             className='h-[620px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image1}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image2}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
         </Col>
         <Col lg={24 / 3} xs={24}>
           <Image
             alt='gallery image'
-            src={g2}
+            src={image3}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image4}
             className='h-[620px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image5}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
         </Col>
         <Col lg={24 / 3} xs={24}>
           <Image
             alt='gallery image'
-            src={g2}
+            src={image6}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image7}
             className='h-[296px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
           <Image
             alt='gallery image'
-            src={g2}
+            src={image8}
             className='h-[620px] w-full xxldesktop:mb-[35px] mb-4 object-cover rounded-lg'
           />
         </Col>

@@ -46,7 +46,7 @@ const TrendingPkg = () => {
         </Title>
       </div>
       {/* <div className='flex justify-between w-full px-9'> */}
-      <Row className='w-full px-9 !m-0' gutter={[24, 0]}>
+      <Row className='w-full px-5 !m-0' gutter={[24, 0]}>
         <Col span={24 / 3}>
           <TrendingCard
             bgImage='/assets/images/trendingCard1.png'

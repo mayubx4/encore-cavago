@@ -46,6 +46,7 @@ const AboutHoliday = () => {
         <video
           ref={videoRef} // Attach the ref to the video element
           style={{ width: "100%", borderRadius: "24px" }}
+          className="aspect-video"
           autoPlay={play}
           muted={play}
           loop={true}

@@ -10,8 +10,10 @@ const layout = ({ children }) => {
       <Image
         alt='home'
         src={homeHero}
+        className='desktop:object-contain object-cover'
         style={{
-          objectFit: "cover",
+          objectPosition: "top",
+          backgroundColor: "#f7f3f2",
           width: "100%",
           maxWidth: "1648px",
           position: "absolute",
