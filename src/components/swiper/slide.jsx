@@ -11,18 +11,19 @@ const Slide = ({
     vertical
     style={{
       width: "100%",
-      height: "163px",
       backgroundColor: bgColor,
       borderRadius: "8px",
-      // paddingInline: "23px",
       minWidth: "100px",
     }}
     align='center'
     justify='center'
-    gap={10}
+    className='lg:gap-[10px] lg:py-6 py-3'
   >
     {icon}
-    <p style={{ fontSize: "18px", maxWidth: "117px", color: textColor }}>
+    <p
+      style={{ color: textColor }}
+      className='text-[10px] lg:text-lg max-w-20 lg:max-w-[117px] lg:!leading-6 !leading-none lg:h-12 h-6'
+    >
       {title}
     </p>
   </Flex>

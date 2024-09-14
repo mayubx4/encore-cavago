@@ -5,7 +5,7 @@ import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
 
 const CustomPagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 100; // Adjust this according to your total pages
+  const totalPages = 5; // Adjust this according to your total pages
 
   const handlePageChange = page => {
     setCurrentPage(page);

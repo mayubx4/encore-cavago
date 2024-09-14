@@ -10,7 +10,7 @@ import TrendingCard from "./trendingCard";
 
 const TrendingPkg = () => {
   return (
-    <Flex vertical className='mt-12 xxldesktop:mx-24 mx-10 relative'>
+    <Flex vertical className='mt-12 xxldesktop:mx-24 mx-3 relative'>
       <Image
         alt='trending Package background'
         className='w-full object-contain hidden lg:block h-full '
@@ -33,23 +33,33 @@ const TrendingPkg = () => {
         }}
         src={trendingPkgBgSm}
       />
-      <div className='mt-20 mb-[60px] relative z-[1]'>
+      <div className='mt-8 md:mt-20 mb-6 md:mb-[60px] relative z-[1]'>
         <Flex align='center' justify='center' gap={11}>
-          <Image alt='trendingStar' src={trendingStar} />
-          <Title className='!text-[32px] !font-semibold text-[#2C3F4F] !m-0'>
+          <Image
+            alt='trendingStar'
+            src={trendingStar}
+            className='w-6 h-6 md:w-10 md:h-10'
+          />
+          <Title className='!text-2xl md:!text-[32px] !font-semibold text-[#2C3F4F] !m-0'>
             Trending packages
           </Title>
-          <Image alt='trendingStar' src={trendingStar} />
+          <Image
+            alt='trendingStar'
+            src={trendingStar}
+            className='w-6 h-6 md:w-10 md:h-10'
+          />
         </Flex>
-        <Title className='!text-[21px] text-center !font-medium text-[#2C3F4F] mt-3'>
+        <Title className='!text-sm md:!text-[21px] text-center !font-medium text-[#2C3F4F] mt-3'>
           Explore all types of our latest trending packages.
         </Title>
       </div>
       {/* <div className='flex justify-between w-full px-9'> */}
-      <Row className='w-full px-5 !m-0' gutter={[24, 0]}>
-        <Col span={24 / 3}>
+      <Row
+        className='w-full md:px-5 !m-0 lg:!flex-wrap !flex-nowrap overflow-auto z-10'
+        gutter={[{ md: 24, xs: 8 }, 0]}
+      >
+        <Col flex={1}>
           <TrendingCard
-            bgImage='/assets/images/trendingCard1.png'
             imageSrc='/assets/images/trending.png'
             category='Equestrian Festivals'
             title='Doñana Experience Route'
@@ -58,9 +68,8 @@ const TrendingPkg = () => {
             price='£180.00'
           />
         </Col>
-        <Col span={24 / 3}>
+        <Col flex={1}>
           <TrendingCard
-            bgImage='/assets/images/trendingCard2.png'
             imageSrc='/assets/images/trending.png'
             category='Equestrian Festivals'
             title='Doñana Experience Route'
@@ -69,9 +78,8 @@ const TrendingPkg = () => {
             price='£180.00'
           />
         </Col>
-        <Col span={24 / 3}>
+        <Col flex={1}>
           <TrendingCard
-            bgImage='/assets/images/trendingCard3.png'
             imageSrc='/assets/images/trending.png'
             category='Equestrian Festivals'
             title='Doñana Experience Route'

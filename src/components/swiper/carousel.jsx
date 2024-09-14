@@ -18,10 +18,10 @@ import Image from "next/image";
 const Carousel = () => {
   return (
     <Swiper
-      autoplay={{
-        delay: 1500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 1500,
+      //   disableOnInteraction: false,
+      // }}
       spaceBetween={30}
       effect={"fade"}
       pagination={{
@@ -31,29 +31,39 @@ const Carousel = () => {
       className='carouselSwiper'
     >
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden '>
-          <Image src={c1} alt='c1' className='w-full' />
-        </div>
+        <Image
+          src={c1}
+          alt='c1'
+          className='rounded-3xl overflow-hidden h-full aspect-[0.432] lg:aspect-[2.38] object-bottom'
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden '>
-          <Image src={c2} alt='c1' className='w-full' />
-        </div>
+        <Image
+          src={c2}
+          alt='c2'
+          className='rounded-3xl overflow-hidden h-full aspect-[0.432] lg:aspect-[2.38] lg:object-bottom object-[70%]'
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden '>
-          <Image src={c1} alt='c1' className='w-full' />
-        </div>
+        <Image
+          src={c1}
+          alt='c1'
+          className='rounded-3xl overflow-hidden h-full aspect-[0.432] lg:aspect-[2.38] object-bottom'
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden '>
-          <Image src={c2} alt='c1' className='w-full' />
-        </div>
+        <Image
+          src={c2}
+          alt='c2'
+          className='rounded-3xl overflow-hidden h-full aspect-[0.432] lg:aspect-[2.38] lg:object-bottom object-[70%]'
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <div className='w-full rounded-3xl overflow-hidden '>
-          <Image src={c1} alt='c1' className='w-full' />
-        </div>
+        <Image
+          src={c1}
+          alt='c1'
+          className='rounded-3xl overflow-hidden h-full aspect-[0.432] lg:aspect-[2.38] object-bottom'
+        />
       </SwiperSlide>
     </Swiper>
   );

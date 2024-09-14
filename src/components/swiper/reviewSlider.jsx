@@ -31,9 +31,6 @@ const ReviewSlider = ({
     <ReviewCard key={3} />,
     <ReviewCard key={4} />,
     <ReviewCard key={5} />,
-    <ReviewCard key={6} />,
-    <ReviewCard key={7} />,
-    <ReviewCard key={8} />,
   ],
 }) => {
   const swiperRef = useRef(null);
@@ -62,18 +59,32 @@ const ReviewSlider = ({
       <Swiper
         ref={swiperRef}
         slidesPerView={1.5}
-        spaceBetween={"40px"}
+        // spaceBetween={"40px"}
+        breakpoints={{
+          1: {
+            spaceBetween: 10,
+          },
+          768: {
+            spaceBetween: 15,
+          },
+          1024: {
+            spaceBetween: 30,
+          },
+          1440: {
+            spaceBetween: 40,
+          },
+        }}
         centeredSlides
         loop
         key={"review"}
-        className='review relative !w-[calc(100%+5rem)] xxldesktop:!w-[calc(100%+200px)] !-ml-[2.5rem] xxldesktop:!-ml-[100px]'
+        className='review relative !w-[calc(100%+4rem)] xxldesktop:!w-[calc(100%+200px)] !-ml-[2.5rem] xxldesktop:!-ml-[100px]'
         onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={"qwe" + i}>{slide}</SwiperSlide>
         ))}
       </Swiper>
-      <div className='swiper-custom-pagination items-center'>
+      <div className='swiper-custom-pagination items-center !hidden md:!flex'>
         <Button
           className='!p-0 !w-auto !bg-transparent'
           shape='circle'

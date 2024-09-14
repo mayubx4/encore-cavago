@@ -182,7 +182,7 @@ const Checkout = () => {
                 Cancellation Policy
               </Title>
               <Text>
-                <ul style={{ listStyleType: "disc" }}>
+                <ul style={{ listStyleType: "disc" }} className="cancel-policy">
                   <li>
                     Notify at least 48 hours in advance to receive a full
                     refund.

@@ -53,15 +53,15 @@ const SwiperSlider = ({
         breakpoints={{
           1: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 15,
           },
           1440: {
             slidesPerView: 5,
@@ -87,6 +87,7 @@ const SwiperSlider = ({
               title={slide.title}
               icon={
                 <slide.icon
+                  className='w-8 lg:!w-16 lg:h-16'
                   fill={selectedSlide === i ? "#F9F6F1" : "#A37B7B"}
                 />
               }

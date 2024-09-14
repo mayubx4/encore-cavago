@@ -1,7 +1,8 @@
-import { Button, Card, Flex, Space } from "antd";
+import { Card, Flex } from "antd";
 import Image from "next/image";
 import React from "react";
 import g2 from "@public/assets/images/g2.png";
+import { StarFilled } from "@ant-design/icons";
 import FavouriteBar from "../shared/favouriteBar";
 
 const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
@@ -9,10 +10,11 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
     <Card
       className={`${disableBodyPadding && "disableBodyPadding"} ${
         transparent && "!bg-transparent"
-      }`}
+      } `}
       hoverable
       style={{
         maxWidth: "350px",
+        margin: "auto",
         padding: "0",
         flexGrow: 1,
       }}
@@ -48,17 +50,14 @@ const GridSlide = ({ disableBodyPadding = false, transparent = true }) => {
         </p>
 
         <div>
-          <p
-            style={{
-              color: "#2C3F50",
-              fontSize: "18px",
-              fontWeight: "bold",
-              margin: 0,
-              lineHeight: "22px",
-            }}
-          >
-            Doñana Experience Route
-          </p>
+          <Flex align='center' justify='space-between'>
+            <p className='text-base lg:text-lg m-0 font-semibold'>
+              Doñana Experience Route
+            </p>
+            <p className='text-sm lg:text-base m-0'>
+              <StarFilled style={{ color: "#F5B946" }} /> 4.5
+            </p>
+          </Flex>
           <p
             style={{
               color: "#566573",

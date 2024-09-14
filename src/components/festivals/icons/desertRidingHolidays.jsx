@@ -1,8 +1,9 @@
 import React from "react";
 
-const DesertRidingHolidays = ({ fill = "#F9F6F1" }) => {
+const DesertRidingHolidays = ({ fill = "#F9F6F1", className }) => {
   return (
     <svg
+      className={className}
       width='58'
       height='62'
       viewBox='0 0 58 62'

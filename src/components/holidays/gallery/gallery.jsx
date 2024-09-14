@@ -14,11 +14,11 @@ import image8 from "@public/assets/images/image-8.png";
 
 const Gallery = () => {
   return (
-    <div className='bg-white px-10 xxldesktop:px-[100px] pt-[126px]'>
-      <Title className='text-[40p] font-semibold text-[#2C3F4F] text-center mt-0'>
+    <div className='bg-white px-3 xxldesktop:px-[100px] pt-10 lg:pt-[126px]'>
+      <Title className='!text-2xl lg:!text-[40px] font-semibold text-[#2C3F4F] text-center mt-0'>
         Gallery
       </Title>
-      <p className='text-[22px] font-semibold text-[#2C3F4F] text-center mt-6 mb-10'>
+      <p className='text-sm lg:text-[22px] font-semibold text-[#2C3F4F] text-center mt-2 lg:mt-6 mb-10'>
         Featured photos from recent tours
       </p>
       <Row

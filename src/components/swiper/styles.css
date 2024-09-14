@@ -17,7 +17,10 @@
   display: block;
   object-fit: cover;
 }
+
 .ant-card-body {
+  padding: 24px !important;
+}
+.disableBodyPadding > .ant-card-body {
   padding: 0 !important;
 }
-

@@ -25,7 +25,7 @@ const HomeHero = () => {
   };
   return (
     <div>
-      <Flex align='center' justify='center' gap={32}>
+      <Flex align='center' justify='center' className='md:gap-8 gap-3'>
         <Button
           type='text'
           className='!text-sm desktop:!text-base'
@@ -69,16 +69,18 @@ const HomeHero = () => {
       <Flex vertical justify='space-between' className='xxldesktop:mt-10 mt-7'>
         <Title
           style={{ textAlign: "center", color: "white", fontWeight: 500 }}
-          className='xxldesktop:!text-6xl desktop:!text-[42px] !text-[32px]'
+          className='xxldesktop:!text-6xl desktop:!text-[42px] !text-[32px] '
         >
-          What are you looking for?
+          What are
+          <br className='block md:hidden' /> you looking for?
         </Title>
         <Title
           level={2}
           style={{ textAlign: "center", color: "white" }}
           className='xxldesktop:!text-[28px] desktop:!text-[20px] !text-base !m-0'
         >
-          Plan an equestrian holiday you&apos;ll never forget!
+          Plan an equestrian holiday
+          <br className='block md:hidden' /> you&apos;ll never forget!
         </Title>
         <Flex justify='center' gap={20} className='px-40'>
           <HomeFiltersContextProvider {...props}>
@@ -115,11 +117,10 @@ const HomeHero = () => {
       </Flex>
       <Flex
         align='center'
-        className='bg-[#F7F3F2] md:w-9/12 w-full md:mx-auto mx-3 xxldesktop:mt-11 mt-4'
+        className='bg-[#F7F3F2] md:w-9/12 md:mx-auto mx-3 xxldesktop:mt-11 mt-4 p-4 md:p-6'
         style={{
           borderRadius: "16px",
           maxWidth: "1103px",
-          padding: "24px",
           position: "relative",
           zIndex: 5,
         }}

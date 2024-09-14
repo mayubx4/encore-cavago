@@ -8,58 +8,64 @@ export default function Footer() {
     <footer className='site-footer'>
       <div className='footerContainer'>
         <div className='footer-top'>
-          <div className='col'>
-            <h2>Cavago Links</h2>
-            <ul>
-              <li>
-                <a href='#'>User T&C</a>
-              </li>
-              <li>
-                <a href='#'>Privacy & Cookies Policy</a>
-              </li>
-              <li>
-                <a href='#'>Payments & Refund</a>
-              </li>
-            </ul>
-          </div>
-          <div className='col'>
-            <h2>User Links</h2>
-            <ul>
-              <li>
-                <a href='#'>Sign In</a>
-              </li>
-              <li>
-                <a href='#'>Sign Up</a>
-              </li>
-              <li>
-                <a href='#'>My Profile</a>
-              </li>
-            </ul>
-          </div>
-          <div className='col'>
-            <h2>Connect Links</h2>
-            <ul>
-              <li>
-                <a href='#'>About Us</a>
-              </li>
-              <li>
-                <a href='#'>Contact Us</a>
-              </li>
-              <li>
-                <a href='#'>Become a Partner & Host</a>
-              </li>
-            </ul>
-          </div>
-          <div className='col'>
-            <h2>Media Links</h2>
-            <ul>
-              <li>
-                <a href='#'>Blog</a>
-              </li>
-              <li>
-                <a href='#'>Newsroom</a>
-              </li>
-            </ul>
+          <div className='flex flex-col md:flex-row gap-10 lg:gap-[150px] w-full'>
+            <div className='flex justify-between gap-10 lg:gap-[150px]'>
+              <div className='col'>
+                <h2>Cavago Links</h2>
+                <ul>
+                  <li>
+                    <a href='#'>User T&C</a>
+                  </li>
+                  <li>
+                    <a href='#'>Privacy & Cookies Policy</a>
+                  </li>
+                  <li>
+                    <a href='#'>Payments & Refund</a>
+                  </li>
+                </ul>
+              </div>
+              <div className='col'>
+                <h2>User Links</h2>
+                <ul>
+                  <li>
+                    <a href='#'>Sign In</a>
+                  </li>
+                  <li>
+                    <a href='#'>Sign Up</a>
+                  </li>
+                  <li>
+                    <a href='#'>My Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='flex justify-between gap-10 lg:gap-[150px]'>
+              <div className='col'>
+                <h2>Connect Links</h2>
+                <ul>
+                  <li>
+                    <a href='#'>About Us</a>
+                  </li>
+                  <li>
+                    <a href='#'>Contact Us</a>
+                  </li>
+                  <li>
+                    <a href='#'>Become a Partner & Host</a>
+                  </li>
+                </ul>
+              </div>
+              <div className='col'>
+                <h2>Media Links</h2>
+                <ul>
+                  <li>
+                    <a href='#'>Blog</a>
+                  </li>
+                  <li>
+                    <a href='#'>Newsroom</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div className='footer-bottom'>

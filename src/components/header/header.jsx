@@ -23,7 +23,7 @@ const Header = ({ isTransparent = false }) => (
       <Link href='/'>
         {isTransparent ? <HolidayLogoWhite /> : <HolidayLogo />}
       </Link>
-      <Flex align='center' gap={16}>
+      <Flex align='center' gap={16} className='hidden md:flex'>
         <Button
           style={{
             border: `1px solid ${isTransparent ? "white" : "#233240"}`,

@@ -1,12 +1,12 @@
 import React from "react";
-import ActivityCard from "@/components/swiper/activtyCard";
+import ActivityGrid from "@/components/swiper/activityGrid";
 import GridFilters from "@/components/swiper/gridFilters";
 
 const page = () => {
   return (
     <>
       <GridFilters />
-      <ActivityCard />
+      <ActivityGrid />
     </>
   );
 };

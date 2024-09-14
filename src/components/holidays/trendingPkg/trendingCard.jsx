@@ -5,7 +5,6 @@ import { StarFilled } from "@ant-design/icons";
 import FavouriteBar from "@/components/shared/favouriteBar";
 
 const TrendingCard = ({
-  bgImage,
   imageSrc,
   category,
   title,
@@ -13,11 +12,9 @@ const TrendingCard = ({
   location,
   price,
 }) => {
-  console.log(bgImage);
-
   return (
     <div className='rounded-2xl overflow-hidden'>
-      <div className='relative overflow-hidden aspect-[0.85] group'>
+      <div className='rounded-2xl overflow-hidden relative w-[277px] h-[322px] lg:aspect-[0.85] lg:h-full lg:w-full group'>
         <Image
           alt={title}
           src={imageSrc}
@@ -35,8 +32,8 @@ const TrendingCard = ({
           <div className='text-white relative transition-transform duration-1000 ease-in-out group-hover:-translate-y-2/3'>
             <p className='text-sm'>{category}</p>
             <Flex align='center' justify='space-between'>
-              <p className='text-lg m-0 font-semibold'>{title}</p>
-              <p className='text-base m-0'>
+              <p className='text-base lg:text-lg m-0 font-semibold'>{title}</p>
+              <p className='text-sm lg:text-base m-0'>
                 <StarFilled style={{ color: "#F5B946" }} /> {rating}
               </p>
             </Flex>

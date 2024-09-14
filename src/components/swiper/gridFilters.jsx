@@ -5,9 +5,8 @@ import DropdownFilter from "./dropdownFilter";
 const GridFilters = () => {
   return (
     <Flex
-      justify='space-between'
       style={{ marginBlock: "64px" }}
-      className='xxldesktop:px-[97px] xl:px-20 sm:px-10'
+      className='xxldesktop:px-[97px] xl:px-20 px-3 lg:justify-between flex-col lg:flex-row'
       gap={12}
     >
       <div className='flex gap-4 flex-col md:flex-row'>

@@ -1,8 +1,9 @@
 import React from "react";
 
-const ViewAll = ({ fill = "#F9F6F1" }) => {
+const ViewAll = ({ fill = "#F9F6F1", className }) => {
   return (
     <svg
+      className={className}
       width='61'
       height='61'
       viewBox='0 0 61 61'

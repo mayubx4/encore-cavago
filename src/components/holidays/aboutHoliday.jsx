@@ -18,16 +18,16 @@ const AboutHoliday = () => {
   };
 
   return (
-    <div className='px-10 xxldesktop:px-[100px]  pt-20'>
-      <Title className='text-[40p] font-semibold text-[#2C3F4F] mt-0'>
+    <div className='px-8 xxldesktop:px-[100px]  pt-20'>
+      <Title className='!text-2xl lg:!text-[40p] !text-center lg:text-left font-semibold text-[#2C3F4F] mt-0'>
         About Holiday with Cavago
       </Title>
-      <p className='text-[22px] font-semibold text-[#2C3F4F] mt-6 mb-10'>
+      <p className='text-sm lg:text-[22px] !text-center lg:!text-left font-semibold text-[#2C3F4F] lg:mt-6 lg:mb-10 my-4'>
         Know about us
       </p>
-      <Row gutter={[71, 0]}>
+      <Row gutter={[{lg:71,xs:0}, 0]}>
         <Col md={24 / 2}>
-          <p className='text-[21px] font-medium text-[#2C3F4F]'>
+          <p className='text-sm lg:text-[21px] text-center lg:text-left font-medium text-[#2C3F4F]'>
             Here you will find specially curated experiences created under
             themes of weekend getaways, valentines or riding tours with
             influencers such as Kerri Kasem, renowned photographers like Scott
@@ -35,7 +35,7 @@ const AboutHoliday = () => {
           </p>
         </Col>
         <Col md={24 / 2}>
-          <p className='text-[21px] font-medium text-[#2C3F4F]'>
+          <p className='text-sm lg:text-[21px] text-center lg:text-left font-medium text-[#2C3F4F]'>
             For the traveler who likes to do holidays off the beaten path and
             far from the madding crowd, these specials provide the ideal
             backdrop and activities.
@@ -46,7 +46,7 @@ const AboutHoliday = () => {
         <video
           ref={videoRef} // Attach the ref to the video element
           style={{ width: "100%", borderRadius: "24px" }}
-          className="aspect-video"
+          className='aspect-video'
           autoPlay={play}
           muted={play}
           loop={true}

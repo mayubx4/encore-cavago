@@ -16,4 +16,17 @@
   .swiper-pagination-bullet-active {
     background-color: #a37b7b;
   }
+  @media (max-width: 1024px) {
+    .swiper-pagination {
+      text-align: center;
+      padding-right: 0;
+    }
+    .swiper-pagination-bullet {
+      margin-right: 12px !important;
+    }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
