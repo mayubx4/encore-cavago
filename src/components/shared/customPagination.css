@@ -11,10 +11,19 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1024px) {
+  .custom-pagination .ant-pagination-item,
+  .custom-pagination .ant-pagination-prev,
+  .custom-pagination .ant-pagination-next,
+  .custom-pagination .ant-pagination-item-link {
+    width: 30px;
+    height: 30px !important;
+  }
+}
 
 .custom-pagination .ant-pagination-item-active {
-  border-color: #A37B7B !important;
-  background: #A37B7B !important;
+  border-color: #a37b7b !important;
+  background: #a37b7b !important;
 }
 .custom-pagination .ant-pagination-item-active > a {
   color: white !important;

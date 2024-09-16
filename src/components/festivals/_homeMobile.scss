@@ -1,0 +1,115 @@
+@import "@shared/theme/colors.scss";
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .searchFieldContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 8px 8px 16px;
+            border-radius: 100px;
+            background: $white-100;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+            border: 1px #F5F7FA solid;
+
+            .searchInputField {
+                color: $neutrals-500;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                border-width: 0;
+
+                &::placeholder {
+                    color: $neutrals-300;
+
+                }
+            }
+
+            &:focus-within {
+              border-color: $primary-400;
+            }
+        }
+
+        .cancelSearchButton {
+            color: $neutrals-300;
+            text-align: center;
+            font-family: Figtree;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            padding: 0;
+            border: none;
+            background: transparent;
+        }
+
+        .categoriesContainer {
+            padding: 0px;
+            gap: 16px;
+            margin: 0;
+            width: calc(100% + 20px);
+            max-width: initial;
+
+            .categoryLink {
+                font-size: 12px;
+                padding: 16px 0;
+            }
+
+            .cat-holder {
+                gap: 16px;
+                padding: 6px 45px 6px 0;
+
+                .btn-text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14.4px;
+                    color: $neutrals-300;
+
+                    &.active {
+                       font-weight: 600;
+                       color: $neutrals-500;
+                    }
+                }
+            }
+        }
+
+        .subCategoriesContainer {
+            width: calc(100% + 20px);
+            max-width: initial;
+            padding: 0;
+            margin: 0;
+
+          .cat-holder {
+            gap: 4px;
+            padding: 0 45px 12px 0;
+
+            .btn-outline {
+              height: auto;
+              padding: 7px 16px;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 24px;
+              border-color: $neutrals-300;
+
+              .icon {
+                display: none;
+              }
+
+              &.active {
+                font-weight: 500;
+                color: $neutrals-500;
+                border-color: $neutrals-500;
+              }
+            }
+          }
+
+            .subcategoryLink {
+                padding: 16px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    

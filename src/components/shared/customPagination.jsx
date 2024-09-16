@@ -17,7 +17,7 @@ const CustomPagination = () => {
         onClick={() => handlePageChange(1)}
         disabled={currentPage === 1}
         style={{ marginRight: "8px" }}
-        className='rounded-full w-12 h-12 bg-white border border-[#F1F1F1] border-solid'
+        className='rounded-full w-8 h-8 lg:w-12 lg:h-12 text-xs lg:text-sm leading-none bg-white border border-[#F1F1F1] border-solid'
       >
         <DoubleLeftOutlined />
       </button>
@@ -27,13 +27,13 @@ const CustomPagination = () => {
         total={totalPages * 10}
         onChange={handlePageChange}
         showSizeChanger={false}
-        className='custom-pagination flex'
+        className='custom-pagination flex text-xs lg:text-sm'
       />
       <button
         onClick={() => handlePageChange(totalPages)}
         disabled={currentPage === totalPages}
         style={{ marginLeft: "8px" }}
-        className='rounded-full w-12 h-12 bg-white border border-[#F1F1F1] border-solid'
+        className='rounded-full w-8 h-8 lg:w-12 lg:h-12 text-xs lg:text-sm leading-none bg-white border border-[#F1F1F1] border-solid'
       >
         <DoubleRightOutlined />
       </button>

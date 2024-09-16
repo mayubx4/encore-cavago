@@ -5,7 +5,7 @@ import "./_footer.scss";
 
 export default function Footer() {
   return (
-    <footer className='site-footer'>
+    <footer className='site-footer mb-10 lg:mb-0'>
       <div className='footerContainer'>
         <div className='footer-top'>
           <div className='flex flex-col md:flex-row gap-10 lg:gap-[150px] w-full'>

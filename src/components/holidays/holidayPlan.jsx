@@ -61,11 +61,11 @@ const HolidayPlan = () => {
             </div>
           </div>
         </div>
-        <CTop className='absolute top-0 z-10 lg:left-1/3 rotate-[270deg] hidden lg:block' />
+        <CTop className='absolute top-0 z-10 lg:left-1/3 hidden lg:block' />
         <CRight className='absolute top-12 z-10 right-0 xxldesktop:mr-[100px] mr-10 hidden lg:block' />
         <CBottom className='absolute bottom-6 z-10 left-1/2 hidden lg:block' />
-        <CTopMobile className='absolute z-10 top-4' />
-        <CRightMobile className='absolute z-10 right-0 top-40 mr-3' />
+        <CTopMobile className='absolute z-10 top-4 block lg:hidden' />
+        <CRightMobile className='absolute z-10 right-0 top-40 mr-3 block lg:hidden' />
       </div>
       <Dialog open={openForm} toggleOpen={toggleOpenForm}>
         <RidingForm />

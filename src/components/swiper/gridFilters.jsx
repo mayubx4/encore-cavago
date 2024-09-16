@@ -6,10 +6,10 @@ const GridFilters = () => {
   return (
     <Flex
       style={{ marginBlock: "64px" }}
-      className='xxldesktop:px-[97px] xl:px-20 px-3 lg:justify-between flex-col lg:flex-row'
+      className='xxldesktop:px-[97px] xl:px-20 px-3 lg:justify-between overflow-auto'
       gap={12}
     >
-      <div className='flex gap-4 flex-col md:flex-row'>
+      <div className='flex gap-4 '>
         <Button
           shape='round'
           style={{

@@ -20,6 +20,9 @@
 .ant-rate-star {
   margin-bottom: 0 !important;
 }
+.bottomNavContainer{
+  z-index: 50;
+}
 @layer tailwind-base, antd;
 
 @layer tailwind-base {

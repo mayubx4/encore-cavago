@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import homeHero from "@public/assets/images/home-hero.png";
 import HomeHero from "@/components/festivals/homeHero";
+import Footer from "components/footer/footer";
 
 const layout = ({ children }) => {
   return (
@@ -21,8 +22,10 @@ const layout = ({ children }) => {
         }}
       />
       <Header isTransparent />
-      <HomeHero />
-      <div className='bg-[#F7F3F2] -mt-24 !pt-24'>{children}</div>
+      <HomeHero>
+        {children}
+        <Footer />
+      </HomeHero>
     </div>
   );
 };
