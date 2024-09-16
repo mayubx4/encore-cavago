@@ -18,10 +18,10 @@ import Image from "next/image";
 const Carousel = () => {
   return (
     <Swiper
-      // autoplay={{
-      //   delay: 1500,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+         delay: 1500,
+        disableOnInteraction: false,
+      }}
       spaceBetween={30}
       effect={"fade"}
       pagination={{
