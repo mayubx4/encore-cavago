@@ -2,9 +2,24 @@
   top: 40px !important;
   right: 40px !important;
 }
-
-.ant-steps-item-tail {
-  /* height: 29px !important; */
+@media (max-width: 1023px) {
+  .ant-modal-close{
+    top: 20px !important;
+    left: 20px;
+  }
+  .ant-steps-item-content {
+    width: auto !important;
+    text-align: left !important;
+    margin-left: 15px;
+  }
+  .ant-steps-item-icon {
+    /* margin: auto !important; */
+    margin-left: 35px !important;
+  }
+  .ant-steps-item-tail::after {
+    /* height: 29px !important; */
+    margin-left: -5px !important;
+  }
 }
 .ant-steps-item-tail::after {
   background-color: #c3afaf !important;

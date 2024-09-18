@@ -21,7 +21,7 @@ const btnsStep2 = [
   "Saudi Arabia",
   "Usa - Midwest",
 ];
-const btnsStep3 = [
+const btnsStep4 = [
   {
     text: "Solo Self Discovery",
     image: "/assets/images/step4Btn1.png",
@@ -65,44 +65,50 @@ const RidingForm = () => {
     setSteps(stp);
   };
   return (
-    <Flex className='h-full'>
+    <div className='h-full flex lg:flex-row flex-col'>
       <Stepper current={current} setCurrent={setCurrent} steps={steps} />
 
-      <Flex vertical justify='space-between' className='w-full p-10'>
-        <div>
-          {current === 0 ? (
-            <Step1And2
-              title={"What is your riding ability?"}
-              key={0}
-              onSelect={onSelect(0)}
-              btns={btnsStep1}
-              selected={steps[0].content}
-              imgSrc={holidayFormStep1}
-            />
-          ) : current === 1 ? (
-            <Step1And2
-              title={"Where do you want to go?"}
-              key={1}
-              onSelect={onSelect(1)}
-              btns={btnsStep2}
-              selected={steps[1].content}
-              imgSrc={holidayFormStep2}
-            />
-          ) : current === 2 ? (
-            <Step3 onSelect={onSelect(2)} selected={steps[2].content} />
-          ) : current === 3 ? (
-            <Step4
-              onSelect={onSelect(3)}
-              selected={steps[3].content}
-              btns={btnsStep3}
-            />
-          ) : (
+      <Flex
+        vertical
+        justify='space-between'
+        className='w-full h-full lg:p-10 p-3'
+      >
+        {/* <div className='h-full'> */}
+        {current === 0 ? (
+          <Step1And2
+            title={"What is your riding ability?"}
+            key={0}
+            onSelect={onSelect(0)}
+            btns={btnsStep1}
+            selected={steps[0].content}
+            imgSrc={holidayFormStep1}
+          />
+        ) : current === 1 ? (
+          <Step1And2
+            title={"Where do you want to go?"}
+            key={1}
+            onSelect={onSelect(1)}
+            btns={btnsStep2}
+            selected={steps[1].content}
+            imgSrc={holidayFormStep2}
+          />
+        ) : current === 2 ? (
+          <Step3 onSelect={onSelect(2)} selected={steps[2].content} />
+        ) : current === 3 ? (
+          <Step4
+            onSelect={onSelect(3)}
+            selected={steps[3].content}
+            btns={btnsStep4}
+          />
+        ) : (
+          <div className='mt-20 lg:mt-0'>
             <ContactUsForm />
-          )}
-        </div>
+          </div>
+        )}
+        {/* </div> */}
         <Flex justify='space-between'>
           <Button
-            className='text-lg border-[#A37B7B] !text-[#A37B7B] !px-5 !py-4'
+            className='text-sm lg:!text-lg border-[#A37B7B] !text-[#A37B7B] !px-5 '
             shape='round'
             disabled={!current}
             onClick={() => setCurrent(prev => prev - 1)}
@@ -111,7 +117,7 @@ const RidingForm = () => {
             Back
           </Button>
           <Button
-            className='text-lg border-[#A37B7B] !text-[#A37B7B] !px-5 !py-4'
+            className='text-sm lg:!text-lg border-[#A37B7B] !text-[#A37B7B] !px-5 '
             shape='round'
             onClick={() => setCurrent(prev => prev + 1)}
           >
@@ -120,7 +126,7 @@ const RidingForm = () => {
           </Button>
         </Flex>
       </Flex>
-    </Flex>
+    </div>
   );
 };
 

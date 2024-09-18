@@ -9,9 +9,11 @@ import { QuestionCircleFilled } from "@ant-design/icons";
 import ContactUsForm from "./contactUsForm";
 import Dialog from "./dialog";
 import useToggle from "@shared/hooks/useToggle";
+import { useWhichDeviceContext } from "@shared/hooks/whichDeviceContext";
 
 const Stepper = ({ current, setCurrent, steps }) => {
   const [openForm, toggleOpenForm] = useToggle();
+  const device = useWhichDeviceContext();
   const getIcon = index => {
     if (index < current) {
       return (
@@ -30,14 +32,20 @@ const Stepper = ({ current, setCurrent, steps }) => {
 
   const items = steps.map((item, index) => ({
     key: item.title,
-    title: item.title,
+    title: (
+      <span className='text-xs mt-0 xs:-mt-10 lg:mt-0 block lg:text-sm text-[#A37B7B] lg:text-[#566573] xs:text-nowrap'>
+        {item.title}
+      </span>
+    ),
     // Show description if the step is completed or active
     description: (
-      <div className='step-description mb-5'>
+      <div className='step-description mb-5 hidden lg:block text-lg font-semibold text-[#2C3F4F]'>
         {index < current ? (
           steps[index].content
         ) : (
-          <span className='opacity-0'>-</span>
+          <span className='opacity-0 text-lg font-semibold text-[#2C3F4F]'>
+            -
+          </span>
         )}
       </div>
     ),
@@ -45,9 +53,23 @@ const Stepper = ({ current, setCurrent, steps }) => {
   }));
 
   return (
-    <Flex vertical className='p-10 flex bg-[#F7F3F2] rounded-3xl w-[360px]'>
-      <Flex vertical className='h-[281px] mt-[77px]'>
-        <Steps current={current} direction='vertical' className='custom-steps'>
+    <Flex
+      vertical
+      className='lg:p-10 flex lg:bg-[#F7F3F2] justify-between items-start rounded-3xl lg:w-[360px] relative'
+    >
+      <Flex
+        vertical
+        className={`lg:h-[281px] mt-[77px] pr-10 w-full ${
+          current === 4 && device === "mobile" ? "hidden" : "flex"
+        }`}
+      >
+        <Steps
+          current={current}
+          direction={device === "desktop" ? "vertical" : "horizontal"}
+          labelPlacement={device === "desktop" ? "horizontal" : "vertical"}
+          className='custom-steps'
+          responsive={false}
+        >
           {items.map((item, index) => (
             <Steps.Step
               key={item.key}
@@ -62,12 +84,23 @@ const Stepper = ({ current, setCurrent, steps }) => {
       </Flex>
       <ConfigProvider wave={{ disabled: true }}>
         <Button
+          // ghost
+          type='text'
+          className='!m-0 !p-0 lg:hidden  bg-[#A37B7B] text-[#F7F3F2] !h-5 w-5 absolute top-5 right-5'
+          onClick={() => toggleOpenForm()}
+          shape='circle'
+          icon={
+            <QuestionCircleFilled className='text-5xl   rounded-full relative h-8 w-8' />
+          }
+        ></Button>
+        <Button
           ghost
-          className='!m-0 !mt-[297px] !p-0 !border-none'
+          type='text'
+          className='!m-0 !p-0 hidden lg:block'
           onClick={() => toggleOpenForm()}
         >
           <Flex
-            className='bg-[#533736] rounded-lg p-6 '
+            className='bg-[#A37B7B] rounded-lg p-6 w-full'
             align='center'
             gap={10}
           >
@@ -80,8 +113,8 @@ const Stepper = ({ current, setCurrent, steps }) => {
         </Button>
       </ConfigProvider>
       <Dialog open={openForm} toggleOpen={toggleOpenForm}>
-        <div className='p-10'>
-          <ContactUsForm detailsReqired/>
+        <div className='lg:p-10'>
+          <ContactUsForm detailsReqired />
         </div>
       </Dialog>
     </Flex>

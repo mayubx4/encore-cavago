@@ -71,3 +71,14 @@
     display: none;
   }
 }
+
+@media (max-width: 1023px) {
+  .rdrMonthName {
+    position: unset !important;
+    margin-top: -10px;
+    margin-left: 0 !important;
+  }
+  .rdrMonths {
+    flex-direction: column;
+  }
+}
